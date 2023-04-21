@@ -1,0 +1,8 @@
+---
+title: 'Deutsche Elite misst sich in Rehlingen im Hochsprung'
+date: '2022-05-12'
+image: 'images/2019/Imke_Onnen-Rolf_Ruppenthal.jpg'
+---
+Spannende Hochsprungwettbewerbe haben in Rehlingen schon lange Tradition. Ebenso gehört familiäre Atmosphäre und die Nähe zu den Athletinnen und Athleten für die Zuschauer eigentlich zum Pfingstsportfest dazu. Coronabedingt waren Zuschauer in den vergangenen zwei Jahren gar nicht bis nur eingeschränkt möglich. Nun dürfen Zuschauer am Pfingstsonntag, 5. Juni 2022, wieder uneingeschränkt im Bungertstadion Weltklassesport miterleben.
+
+Im Hochsprung der Frauen ist fast die gesamte deutsche Elite beim 57. Pfingstsportfestes am Start. Insbesondere werden Leichtathletikfans ein Auge auf die EM-Dritte **Marie-Laurence Jungfleisch** (VfB Stuttgart) und die Deutsche Meisterin **Imke Onnen** (Hannover 96) – beide schon bekannte Gesichter beim Pfingstsportfest – werfen. Und beide haben auch gute Erinnerungen an das Bungertstadion. Onnen feierte dort 2019 nach langer Verletzungspause mit übersprungenen 1,92 m ein starkes Comeback. Marie-Laurence Jungfleisch gewann den Wettbewerb im vergangenen Jahr; sie hatte zuvor aufgrund eines Achillessehnenrisses lange pausieren müssen. **Christina Honsel** (TV Wattenscheid 01), U23-Vize-Europameisterin von 2019, hatte noch im März einen Bänderriss am Sprungfuß erlitten und möchte spätestens in Rehlingen auf der Wettkampfbühne ihre Form testen. Die saarländischen Leichtathletikfans freuen sich besonders auf den Start der Deutschen Vizemeisterin **Lea Halmas** von SV GO! Saar 05. Starke Konkurrenz erwartet die deutschen Springerinnen aus Usbekistan: Die Olympia-Sechste von Tokio **Safina Sadullaeva** (Bestleistung 1,96 m) wird ebenfalls beim Pfingstsportfest an den Start gehen.

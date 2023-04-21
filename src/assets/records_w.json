@@ -1,0 +1,129 @@
+[
+    {
+      "Disziplin": "100 m",
+      "Name": "Laura Müller",
+      "Land": "GER",
+      "Jahr": "2019",
+      "Leistung": "11,15 s"
+    },
+    {
+      "Disziplin": "200 m",
+      "Name": "Jarmila Kratochvilova",
+      "Land": "CSSR",
+      "Jahr": "1984",
+      "Leistung": "22,76 s"
+    },
+    {
+      "Disziplin": "400 m",
+      "Name": "Seyni Ominatou",
+      "Land": "NIG",
+      "Jahr": "2019",
+      "Leistung": "50,97 s"
+    },
+    {
+      "Disziplin": "800 m",
+      "Name": "Dagmar Rübsam",
+      "Land": "GDR",
+      "Jahr": "1984",
+      "Leistung": "1:59,52 min"
+    },
+    {
+      "Disziplin": "1500 m",
+      "Name": "Ketema Tigist",
+      "Land": "ETH",
+      "Jahr": "2019",
+      "Leistung": "4:05,76 min"
+    },
+    {
+      "Disziplin": "3000 m",
+      "Name": "Edith Masai",
+      "Land": "KEN",
+      "Jahr": "2003",
+      "Leistung": "9:10,06 min"
+    },
+    {
+      "Disziplin": "100 m Hürden",
+      "Name": "Jordanka Donkova",
+      "Land": "BUL",
+      "Jahr": "1987",
+      "Leistung": "12,61 s"
+    },
+    {
+      "Disziplin": "400 m Hürden",
+      "Name": "Fabienne Kohlmann",
+      "Land": "GER",
+      "Jahr": "2010",
+      "Leistung": "56,01 s"
+    },
+    {
+      "Disziplin": "3000 m Hindernis",
+      "Name": "Antje Möldner",
+      "Land": "GER",
+      "Jahr": "2009",
+      "Leistung": "9:27,22 min"
+    },
+    {
+      "Disziplin": "Hochsprung",
+      "Name": "Stefka Kostadinova",
+      "Land": "BUL",
+      "Jahr": "1987",
+      "Leistung": "2,00 m"
+    },
+    {
+      "Disziplin": "Stabhochsprung",
+      "Name": "Iirina Ptacnikova",
+      "Land": "CZE",
+      "Jahr": "2012",
+      "Leistung": "4,65 m"
+    },
+    {
+      "Disziplin": "Weitsprung",
+      "Name": "Helga Radtke",
+      "Land": "GDR",
+      "Jahr": "1987",
+      "Leistung": "6,56 m"
+    },
+    {
+      "Disziplin": "Dreisprung",
+      "Name": "Katja Demut",
+      "Land": "GER",
+      "Jahr": "2015",
+      "Leistung": "13,56 m"
+    },
+    {
+      "Disziplin": "Kugelstoß",
+      "Name": "Helena Fibingerova",
+      "Land": "CSSR",
+      "Jahr": "1978",
+      "Leistung": "21,60 m"
+    },
+    {
+      "Disziplin": "Diskuswurf",
+      "Name": "Shanice Craft",
+      "Land": "GER",
+      "Jahr": "2014",
+      "Leistung": "65,17 m"
+    },
+    {
+      "Disziplin": "Speerwurf",
+      "Name": "Christin Hussong",
+      "Land": "GER",
+      "Jahr": "2021",
+      "Leistung": "66,96 m"
+    },
+    {
+      "Disziplin": "Hammerwurf",
+      "Name": "Manuela Priemer",
+      "Land": "GER",
+      "Jahr": "1999",
+      "Leistung": "65,75 m"
+    },
+    {
+      "Disziplin": "4 x 100 m",
+      "Name": "Schweiz",
+      "Land": "SUI",
+      "Jahr": "1999",
+      "Leistung": "44,68 s"
+    }
+  ]
+  

@@ -1,0 +1,157 @@
+[
+    {
+      "Disziplin": "100 m",
+      "Name": "Frank Fredericks",
+      "Land": "NAM",
+      "Jahr": "1995",
+      "Leistung": "10,07 s"
+    },
+    {
+      "Disziplin": "100 m",
+      "Name": "Itsekiri Usheoritse",
+      "Land": "NGR",
+      "Jahr": "2019",
+      "Leistung": "10:07 s"
+    },
+    {
+      "Disziplin": "200 m",
+      "Name": "Frank Fredericks",
+      "Land": "NAM",
+      "Jahr": "1994",
+      "Leistung": "20,37 s"
+    },
+    {
+      "Disziplin": "400 m",
+      "Name": "Calvin Davis",
+      "Land": "USA",
+      "Jahr": "1996",
+      "Leistung": "45,16 s"
+    },
+    {
+      "Disziplin": "800 m",
+      "Name": "Mbulaene Mulaudzi",
+      "Land": "RSA",
+      "Jahr": "2003",
+      "Leistung": "1:43,25 min"
+    },
+    {
+      "Disziplin": "1000 m",
+      "Name": "Harald Norpoth",
+      "Land": "GER",
+      "Jahr": "1967",
+      "Leistung": "2:22,2 min"
+    },
+    {
+      "Disziplin": "1500 m",
+      "Name": "Laban Rotich",
+      "Land": "KEN",
+      "Jahr": "1997",
+      "Leistung": "3:30,41 min"
+    },
+    {
+      "Disziplin": "3000 m",
+      "Name": "Salim Jahwer Mushir",
+      "Land": "BAH",
+      "Jahr": "2004",
+      "Leistung": "7:42,08 min"
+    },
+    {
+      "Disziplin": "5000 m",
+      "Name": "Salah Hissou",
+      "Land": "MAR",
+      "Jahr": "1995",
+      "Leistung": "13:23,54min"
+    },
+    {
+      "Disziplin": "110 m Hürden",
+      "Name": "Derek Knight",
+      "Land": "USA",
+      "Jahr": "2001",
+      "Leistung": "13,59 s"
+    },
+    {
+      "Disziplin": "400 m Hürden",
+      "Name": "Eric Thomas",
+      "Land": "USA",
+      "Jahr": "2001",
+      "Leistung": "48,49 s"
+    },
+    {
+      "Disziplin": "3000 m Hindernis",
+      "Name": "Wilson Boit Kipketer",
+      "Land": "KEN",
+      "Jahr": "1997",
+      "Leistung": "8:08,36 min"
+    },
+    {
+      "Disziplin": "Hochsprung",
+      "Name": "Jim Howard",
+      "Land": "USA",
+      "Jahr": "1987",
+      "Leistung": "2,36 m"
+    },
+    {
+      "Disziplin": "Stabhochsprung",
+      "Name": "Björn Otto",
+      "Land": "GER",
+      "Jahr": "2012",
+      "Leistung": "5,72 m"
+    },
+    {
+      "Disziplin": "Stabhochsprung",
+      "Name": "Lita Baehre Bo Kanda",
+      "Land": "GER",
+      "Jahr": "2019",
+      "Leistung": "5,72 m"
+    },
+    {
+      "Disziplin": "Weitsprung",
+      "Name": "Christian Reif",
+      "Land": "GER",
+      "Jahr": "2014",
+      "Leistung": "8,00 m"
+    },
+    {
+      "Disziplin": "Dreisprung",
+      "Name": "Christo Markow",
+      "Land": "BUL",
+      "Jahr": "1984",
+      "Leistung": "16,67 m"
+    },
+    {
+      "Disziplin": "Kugelstoß",
+      "Name": "Udo Beyer",
+      "Land": "GDR",
+      "Jahr": "1984",
+      "Leistung": "22,04 m"
+    },
+    {
+      "Disziplin": "Diskuswurf",
+      "Name": "Lukas Weisshaidinger",
+      "Land": "AUT",
+      "Jahr": "2018",
+      "Leistung": "68,98 m"
+    },
+    {
+      "Disziplin": "Speerwurf",
+      "Name": "Andreas Hofmann",
+      "Land": "GER",
+      "Jahr": "2018",
+      "Leistung": "91,44 m"
+    },
+    {
+      "Disziplin": "Hammerwurf",
+      "Name": "Igor Nikulin",
+      "Land": "RUS",
+      "Jahr": "1992",
+      "Leistung": "82,50 m"
+    },
+    {
+      "Disziplin": "4 x 100 m",
+      "Name": "Kuba",
+      "Land": "CUB",
+      "Jahr": "2000",
+      "Leistung": "39,03 s"
+    }
+  ]
+  

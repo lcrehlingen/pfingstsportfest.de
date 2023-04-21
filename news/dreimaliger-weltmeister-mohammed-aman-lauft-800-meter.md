@@ -1,0 +1,10 @@
+---
+title: 'Dreimaliger Weltmeister Mohammed Aman läuft 800 Meter'
+date: '2018-05-08'
+image: 'images/lcrehlingen.png'
+---
+In den vergangenen Jahren sorgten beim Rehlinger Pfingstsportfest meistens die Frauen für die Highlights auf der Mittelstrecke über 800 Meter. Bei der 54. Auflage am Pfingstsonntag (20. Mai) ist dagegen das Männerrennen so prominent besetzt wie schon lange nicht mehr. Angeführt wird das Teilnehmerfeld von dem 24-Jährigen Äthiopier Mohammed Aman, dem Weltmeister von 2013 in Moskau und zweimaligen Hallen-Weltmeister. Sein Stern ging schon im Alter von 17 Jahren auf, als er 2011 im französischen Lille U18-Vizeweltmeister wurde. Im bis heute schnellsten U18-WM-Finale aller Zeiten stellte der Sieger in 1:44,08 Minuten einen neuen U18-Weltrekord auf. Knapp zwei Monate später verbesserte Mohammed Aman diesen Rekord, den er bis heute hält, auf unfassbare 1:43,37 Minuten. Mit der Leichtathletik hatte er gerade einmal fünf Jahre zuvor als Sprinter begonnen. Zur Mittelstrecke kam er erst mit 14 Jahren. Seine aktuelle Bestleistung von 1:42,37 Minuten ist er 2013 beim Diamond League Finale in Brüssel gelaufen, womit er der neuntschnellste Läufer aller Zeiten ist. In der letzten Saison lag seine Saisonbestleistung zwar nur bei 1:45,40 Minuten, dank seiner Grundschnelligkeit im Endspurt belegte er bei der WM in London aber dennoch den sechsten Platz.
+
+Ein weiterer Siegkandidat beim Pfingstsportfest ist der Kenianer Cornelius Tuwei. Der 25-Jährige steigerte seine Bestzeit im Februar in Nairobi auf 1:44,91 Minuten und schaffte es ins Team für die Commonwealth Games in Gold Coast (Australien), wo er nur knapp das Finale verpasste. Ebenfalls mit im Feld ist der U20-WM-Sechste Riadh Chninni aus Tunesien, der eine Bestzeit von 1:46,24 Minuten hat, sowie weitere schnelle Kenianer.
+
+Exakt dieselbe Bestzeit kann auch Timo Benitz (LG farbtex Nordschwarzwald) vorweisen. Er ist damit der einzige deutsche Mittelstreckler in Rehlingen, der schon mal schneller als die geforderte Norm von 1:46,50 Minuten für die Europameisterschaften in Berlin (6. bis 12. August) war.
