@@ -2,15 +2,37 @@ import Navbar from "@/components/Navbar";
 import "./globals.css";
 import localFont from "next/font/local";
 import Footer from "@/components/Footer";
+import { Metadata } from "next";
 
-export const metadata = {
-  title: "Pfingstsportfest Rehlingen",
-  description: "Weltmeister, Olympiasieger oder Europameister - am Pfingstwochenende wird das Bungertstadion jedes Jahr zum Schauplatz für nationale und internationale Spitzenathleten.",
-  openGraph: {
+export async function generateMetadata(): Promise<Metadata> {
+  const vercel = process.env.VERCEL_URL ? true : false;
+  const url = vercel
+    ? "https://" + process.env.VERCEL_URL
+    : "http://localhost:3000";
+  return {
     title: "Pfingstsportfest Rehlingen",
-  },
-  keywords: "Leichtathletik, Rehlingen, Pfingstsportfest, Bungertstadion",
-};
+    description: "Weltmeister, Olympiasieger oder Europameister - am Pfingstwochenende wird das Bungertstadion jedes Jahr zum Schauplatz für nationale und internationale Spitzenathleten.",
+    openGraph: {
+      title: "Pfingstsportfest Rehlingen",
+      images: {
+        url: url + "/og-image.png",
+        width: 1920,
+        height: 1080,
+      }
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Pfingstsportfest Rehlingen",
+      images: {
+        height: 1080,
+        width: 1920,
+        url: url + "/og-image.png",
+      }
+    },
+    keywords: "Leichtathletik, Rehlingen, Pfingstsportfest, Bungertstadion",
+    themeColor: "#293847",
+  }
+}
 
 const worldAthleticsRegular = localFont({
   src: "../fonts/WorldAthletics-Regular.otf",
