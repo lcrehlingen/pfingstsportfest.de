@@ -27,6 +27,7 @@ export async function generateMetadata({
       title,
       type: "article",
       modifiedTime: date,
+      url: url + "/news/" + params.slug,
       images: {
         height: 1080,
         width: 1920,
