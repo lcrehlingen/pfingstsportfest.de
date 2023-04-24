@@ -9,26 +9,18 @@ export async function generateMetadata(): Promise<Metadata> {
   const url = vercel
     ? "https://" + process.env.VERCEL_URL
     : "http://localhost:3000";
-  const description =
-    "🚀 Weltmeister, Olympiasieger oder Europameister - am Pfingstwochenende wird das Bungertstadion jedes Jahr zum Schauplatz für nationale und internationale Spitzenathleten.";
-  const title = "58. Pfingstsportfest Rehlingen";
   const image = {
     url: url + "/og-image.png",
     width: 1920,
     height: 1080,
   };
   return {
-    title,
-    description,
     openGraph: {
-      title,
       images: image,
-      url
+      url,
     },
     twitter: {
       card: "summary_large_image",
-      title,
-      description,
       images: image,
     },
     keywords: "Leichtathletik, Rehlingen, Pfingstsportfest, Bungertstadion",
