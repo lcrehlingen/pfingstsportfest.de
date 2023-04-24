@@ -5,6 +5,9 @@ import Title from "@/components/Title";
 
 export const metadata = {
   title: "Stadionrekorde",
+  openGraph: {
+    title: "Stadionrekorde",
+  }
 };
 
 export default function Ausschreibung() {

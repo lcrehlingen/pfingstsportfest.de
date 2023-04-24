@@ -3,6 +3,9 @@ import Title from "@/components/Title";
 
 export const metadata = {
   title: "Zeitplan",
+  openGraph: {
+    title: "Zeitplan",
+  }
 };
 export default function Zeitplan() {
   return (

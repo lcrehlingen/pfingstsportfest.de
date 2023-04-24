@@ -5,6 +5,9 @@ import path from "path";
 
 export const metadata = {
   title: "Ergebnisse",
+  openGraph: {
+    title: "Ergebnisse",
+  }
 };
 
 export default async function Ergebnisse() {

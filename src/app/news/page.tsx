@@ -8,6 +8,9 @@ import ContentContainer from "@/components/ContentContainer";
 
 export const metadata = {
   title: "Aktuelles",
+  openGraph: {
+    title: "Aktuelles",
+  }
 };
 
 export default async function News() {

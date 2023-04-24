@@ -3,6 +3,9 @@ import Title from "@/components/Title";
 
 export const metadata = {
   title: "Ausschreibung",
+  openGraph: {
+    title: "Ausschreibung",
+  }
 };
 export default function Ausschreibung() {
   return (
