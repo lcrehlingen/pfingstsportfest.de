@@ -13,6 +13,7 @@ const eventSchema: WithContext<Event> = {
   startDate: "2019-07-20T16:00:00-02:00",
   endDate: "2021-05-28T19:15-02:00",
   eventStatus: "https://schema.org/EventScheduled",
+  eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
   location: {
     "@type": "Place",
     name: "Bungertstadion Rehlingen",
