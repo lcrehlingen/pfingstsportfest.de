@@ -34,7 +34,7 @@ export default function Navbar() {
               href="/"
               className="self-center whitespace-nowrap font-wa-headline text-xl font-semibold"
             >
-              58. Pfingstsporfest Rehlingen
+              58. Pfingstsportfest Rehlingen
             </Link>
             <button
               className="flex items-center rounded-lg p-2 text-sm text-gray-500 md:hidden"
