@@ -1,5 +1,6 @@
 import Image from "next/image";
 import background from "../../public/background.jpeg";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -22,23 +23,43 @@ export default function Hero() {
         />
         <span className="absolute h-full w-full bg-black opacity-50"></span>
         <div className="absolute w-full">
-          <div className="mx-auto max-w-screen-xl px-4 2xl:px-0">
-            <div className="flex flex-col gap-1">
-              <h2 className="whitespace-nowrap font-wa-headline text-5xl font-semibold text-white md:text-6xl">
-                28 Mai 2023
-              </h2>
-              <h2 className="font-wa-headline text-5xl font-semibold text-white md:text-6xl">
-                Pfingstsportfest Rehlingen
-              </h2>
+          <div className="mx-auto max-w-screen-xl px-4 2xl:px-0 flex flex-col gap-4">
+            <div>
+              <div className="flex flex-col gap-1">
+                <h2 className="whitespace-nowrap font-wa-headline text-5xl font-semibold text-white md:text-6xl">
+                  28 Mai 2023
+                </h2>
+                <h2 className="font-wa-headline text-5xl font-semibold text-white md:text-6xl">
+                  Pfingstsportfest Rehlingen
+                </h2>
+              </div>
+              <a
+                href="https://goo.gl/maps/jQbZfb5od2j4bcb49"
+                target="_blank"
+                rel="noreferrer"
+                className="mt-4 inline-block text-3xl font-semibold text-[#C1FB6E] md:text-4xl"
+              >
+                Bungertstadion
+              </a>
             </div>
-            <a
-              href="https://goo.gl/maps/jQbZfb5od2j4bcb49"
-              target="_blank"
-              rel="noreferrer"
-              className="mt-4 inline-block text-3xl font-semibold text-[#C1FB6E] md:text-4xl"
+            <Link
+              href="/eintritt"
+              className="inline-flex max-w-fit items-center rounded-lg bg-white px-5 py-2.5 text-center text-sm font-medium text-tourDarkBlue"
             >
-              Bungertstadion
-            </a>
+              Eintritt
+              <svg
+                className="-mr-1 ml-2 h-5 w-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+            </Link>
           </div>
         </div>
       </div>
