@@ -60,10 +60,18 @@ export default function Zeitplan() {
             </thead>
             <tbody>
               <tr>
-                <td>16.03</td>
+                <td>16.02</td>
                 <td>Pendelstaffel</td>
                 <td></td>
                 <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>16.05</td>
+                <td></td>
+                <td></td>
+                <td>Kugel Frauen</td>
                 <td></td>
                 <td></td>
               </tr>
@@ -144,14 +152,6 @@ export default function Zeitplan() {
                 <td>800m Frauen Zeitläufe</td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>17.27</td>
-                <td></td>
-                <td></td>
-                <td>Kugel Frauen</td>
                 <td></td>
                 <td></td>
               </tr>
