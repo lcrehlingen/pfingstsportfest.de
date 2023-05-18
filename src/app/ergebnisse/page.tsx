@@ -1,5 +1,7 @@
 import ContentContainer from "@/components/ContentContainer";
 import Title from "@/components/Title";
+import { EVENT_DATE } from "@/utils/constants";
+import { daysAway } from "@/utils/date";
 import { promises as fs } from "fs";
 import path from "path";
 
@@ -7,16 +9,25 @@ export const metadata = {
   title: "Ergebnisse",
   openGraph: {
     title: "Ergebnisse",
-  }
+  },
 };
 
 export default async function Ergebnisse() {
   const results = await getResults();
+
   return (
     <ContentContainer>
       <Title>Ergebnisse</Title>
 
       <article className="prose prose-xl max-w-none prose-table:tracking-wide">
+        {daysAway(EVENT_DATE) < 5 && (
+          <iframe
+            src="https://slv.laportal.net/Competitions/Competitoroverview/9829/"
+            className="w-full"
+            height={1000}
+          />
+        )}
+
         <table>
           <thead>
             <tr>
