@@ -5,7 +5,7 @@ export const metadata = {
   title: "Ausschreibung",
   openGraph: {
     title: "Ausschreibung",
-  }
+  },
 };
 export default function Ausschreibung() {
   return (
@@ -45,6 +45,18 @@ export default function Ausschreibung() {
           <li>40 min vor Start- Wurf/Hochsprung</li>
           <li>90 min vor Stabhochsprung</li>
         </ul>
+        <h2>Athleteneingang</h2>
+        <p>
+          Der Athleteneingang befindet sich hinter der Kultur-und Sporthalle:{" "}
+          <a
+            href="https://goo.gl/maps/SedUyjtRP63Lo9mk9"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Google Maps
+          </a>
+        </p>
+
         <h2>Hauptprogramm</h2>
         <div className="overflow-x-auto">
           <table>

@@ -14,10 +14,7 @@ export default function Ausschreibung() {
       <Title>Eintritt</Title>
       <article className="prose prose-xl max-w-max prose-table:tracking-wide">
         Eintrittskarten können an der Tageskasse am Stadioneingang erworben
-        werden. Am 23. Mai wird es im Rahmen der Saarländischen
-        Schullaufmeisterschaften (Merzig) eine Vorverkaufsstelle geben, an
-        welcher Erwachsene Karten für 8€ und Jugendliche für 4€ ermäßigt
-        erwerben können!
+        werden. Die Tageskasse öffnet um 14:00 Uhr.{" "}
         <ul>
           <li>Erwachsene: 12€</li>
           <li>Schüler und Jugendliche (12 bis 18 Jahre): 5€</li>

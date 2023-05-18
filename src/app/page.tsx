@@ -27,9 +27,7 @@ const eventSchema: WithContext<Event> = {
     },
   },
   image: [
-    "https://pfingstsportfest.de/og-image1x1.png",
-    "https://pfingstsportfest.de/og-image4x3.png",
-    "https://pfingstsportfest.de/og-image16x9.png",
+    "https://pfingstsportfest.de/images/2019/Julian_Weber-Rolf_Ruppenthal.jpg",
   ],
   description:
     "🚀 Weltmeister, Olympiasieger oder Europameister - am Pfingstwochenende wird das Bungertstadion jedes Jahr zum Schauplatz für nationale und internationale Spitzenathleten.",
