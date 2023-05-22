@@ -172,7 +172,7 @@ export default function Zeitplan() {
                 <td></td>
               </tr>
               <tr>
-                <td>17.53</td>
+                <td>17.50</td>
                 <td>3000m Hindernis Männer</td>
                 <td></td>
                 <td></td>
