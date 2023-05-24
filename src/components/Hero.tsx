@@ -47,7 +47,7 @@ export default function Hero() {
             {daysAway(EVENT_DATE) == 0 ? (
               <div className="flex flex-row gap-4">
                 <a
-                  href="https://www.ardmediathek.de/sr/live/Y3JpZDovL3NyLW9ubGluZS5kZS8yODQ4NjAvbGl2ZXN0cmVhbQ/"
+                  href="https://www.youtube.com/watch?v=lamehYbjYJs"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex max-w-fit items-center rounded-lg bg-sky-500 px-5 py-2.5 text-center text-lg font-medium text-white"
@@ -64,24 +64,34 @@ export default function Hero() {
                 </Link>
               </div>
             ) : (
-              <Link
-                href="/eintritt"
-                className="inline-flex max-w-fit items-center rounded-lg bg-white px-5 py-2.5 text-center text-lg font-medium text-tourDarkBlue"
-              >
-                Eintritt
-                <svg
-                  className="-mr-1 ml-2 h-5 w-5"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+              <div className="flex flex-row gap-4">
+                <Link
+                  href="/eintritt"
+                  className="inline-flex max-w-fit items-center rounded-lg bg-white px-5 py-2.5 text-center text-lg font-medium text-tourDarkBlue"
                 >
-                  <path
-                    fillRule="evenodd"
-                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  ></path>
-                </svg>
-              </Link>
+                  Eintritt
+                  <svg
+                    className="-mr-1 ml-2 h-5 w-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                </Link>
+                <Link
+                  href="/ergebnisse"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex max-w-fit items-center rounded-lg bg-red-500 px-5 py-2.5 text-center text-lg font-medium text-tourDarkBlue"
+                >
+                  Live-Ergebnisse
+                </Link>
+              </div>
             )}
           </div>
         </div>
