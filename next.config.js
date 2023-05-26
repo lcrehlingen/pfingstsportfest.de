@@ -7,7 +7,7 @@ const nextConfig = {
     return [
       {
         source: '/ergebnisse/live',
-        destination: 'https://www.leichtathletik.de/termine/wettkampf-kalender/veranstaltung/detail/58-Internationales-Pfingstsportfest-Rehlingen-23V14000008205101',
+        destination: 'https://pfingstsportfest.de/ergebnisse',
         permanent: false,
       },
     ]
