@@ -18,7 +18,24 @@ export default async function Ergebnisse() {
   return (
     <ContentContainer>
       <Title>Ergebnisse</Title>
-
+      <div className="flex flex-row gap-4">
+        <a
+          href="https://www.youtube.com/watch?v=lamehYbjYJs"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex max-w-fit items-center rounded-lg bg-sky-500 px-5 py-2.5 text-center text-lg font-medium text-white"
+        >
+          Live-Stream
+        </a>
+        <a
+          href="https://www.youtube.com/watch?v=jJVv5i6tenI"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex max-w-fit items-center rounded-lg bg-red-500 px-5 py-2.5 text-center text-lg font-medium text-tourDarkBlue"
+        >
+          Live-Stream (English)
+        </a>
+      </div>
       <article className="prose prose-xl max-w-none prose-table:tracking-wide">
         {daysAway(EVENT_DATE) < 5 && (
           <iframe

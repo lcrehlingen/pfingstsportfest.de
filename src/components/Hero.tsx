@@ -44,7 +44,6 @@ export default function Hero() {
                 Bungertstadion
               </a>
             </div>
-            {daysAway(EVENT_DATE) == 0 ? (
               <div className="flex flex-row gap-4">
                 <a
                   href="https://www.youtube.com/watch?v=lamehYbjYJs"
@@ -63,8 +62,7 @@ export default function Hero() {
                   Live-Ergebnisse
                 </Link>
               </div>
-            ) : (
-              <div className="flex flex-row gap-4">
+            {/*<div className="flex flex-row gap-4">
                 <Link
                   href="/eintritt"
                   className="inline-flex max-w-fit items-center rounded-lg bg-white px-5 py-2.5 text-center text-lg font-medium text-tourDarkBlue"
@@ -91,8 +89,7 @@ export default function Hero() {
                 >
                   Live-Ergebnisse
                 </Link>
-              </div>
-            )}
+  </div>*/}
           </div>
         </div>
       </div>
