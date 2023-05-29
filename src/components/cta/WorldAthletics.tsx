@@ -21,7 +21,7 @@ export default function WorldAthletics() {
           </p>
           <Link
             href="/ausschreibung"
-            className="inline-flex max-w-fit items-center rounded-lg bg-white px-5 py-2.5 text-center text-sm font-medium text-tourDarkBlue"
+            className="inline-flex max-w-fit items-center rounded-lg bg-white px-5 py-2.5 text-center text-lg font-medium text-tourDarkBlue"
           >
             Ausschreibung
             <svg

@@ -72,7 +72,7 @@ export default function Weltklasse() {
           </p>
           <Link
             href="/rekorde"
-            className="inline-flex max-w-fit items-center rounded-lg bg-tourDarkBlue px-5 py-2.5 text-center text-sm font-medium text-tourLightOrange"
+            className="inline-flex max-w-fit items-center rounded-lg bg-tourDarkBlue px-5 py-2.5 text-center text-lg font-medium text-tourLightOrange"
           >
             Stadionrekorde
             <svg
