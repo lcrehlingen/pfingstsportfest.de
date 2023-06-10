@@ -9,8 +9,8 @@ export default function Navbar() {
   const links = [
     { name: "Aktuelles", href: "/news" },
     { name: "Ausschreibung", href: "/ausschreibung" },
-    { name: "Zeitplan", href: "/zeitplan" },
-    { name: "Eintritt", href: "/eintritt" },
+    { name: "Ergebnisse", href: "/ergebnisse" },
+    { name: "Rekorde", href: "/rekorde" },
   ];
   const [opened, setOpened] = useState(false);
   const pathname = usePathname();
