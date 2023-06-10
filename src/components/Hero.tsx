@@ -53,8 +53,6 @@ export default function Hero() {
               </a>*/}
               <Link
                 href="/ergebnisse"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="inline-flex max-w-fit items-center rounded-lg bg-red-500 px-5 py-2.5 text-center text-lg font-medium text-tourDarkBlue"
               >
                 Ergebnisse
