@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import OutsideClickHandler from "./OutsideClickHandler";
 import { usePathname } from "next/navigation";
+import { TITLE } from "@/data";
 
 export default function Navbar() {
   const links = [
@@ -34,7 +35,7 @@ export default function Navbar() {
               href="/"
               className="self-center whitespace-nowrap font-wa-headline text-xl font-semibold"
             >
-              58. Pfingstsportfest Rehlingen
+              {TITLE}
             </Link>
             <button
               className="flex items-center rounded-lg p-2 text-sm text-gray-500 md:hidden"

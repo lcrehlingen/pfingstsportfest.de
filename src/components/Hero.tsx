@@ -1,6 +1,7 @@
 import Image from "next/image";
 import background from "../../public/background.jpeg";
 import Link from "next/link";
+import { EDITION_DATE } from "@/data";
 
 export default function Hero() {
   return (
@@ -25,12 +26,16 @@ export default function Hero() {
         <div className="absolute w-full">
           <div className="mx-auto max-w-screen-xl px-4 2xl:px-0 flex flex-col gap-4">
             <div>
-              <div className="flex flex-col gap-1">
-                <h2 className="whitespace-nowrap font-wa-headline text-5xl font-semibold text-white md:text-6xl">
-                  19 Mai 2024
-                </h2>
-                <h2 className="font-wa-headline text-5xl font-semibold text-white md:text-6xl">
+              <div className="flex flex-col gap-4">
+                <h1 className="whitespace-nowrap font-wa-headline text-5xl font-semibold text-white md:text-6xl">
                   Pfingstsportfest Rehlingen
+                </h1>
+                <h2 className="whitespace-nowrap font-wa-headline text-4xl font-semibold text-white md:text-5xl">
+                  {new Date(EDITION_DATE).toLocaleDateString("de-DE", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
                 </h2>
               </div>
               <a

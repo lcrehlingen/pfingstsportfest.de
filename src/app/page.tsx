@@ -3,15 +3,16 @@ import Sponsors from "@/components/Sponsors";
 import Live from "@/components/cta/Live";
 import Weltklasse from "@/components/cta/Weltklasse";
 import WorldAthletics from "@/components/cta/WorldAthletics";
+import { TITLE, EDITION_DATE } from "@/data";
 import { Metadata } from "next";
 import type { Event, WithContext } from "schema-dts";
 
 const eventSchema: WithContext<Event> = {
   "@context": "https://schema.org",
   "@type": "Event",
-  name: "58. Pfingstsportfest Rehlingen",
-  startDate: "2019-07-20T16:00:00-02:00",
-  endDate: "2021-05-28T19:15-02:00",
+  name: TITLE,
+  startDate: new Date(EDITION_DATE).toISOString().split('T')[0],
+  endDate: new Date(EDITION_DATE).toISOString().split('T')[0],
   eventStatus: "https://schema.org/EventScheduled",
   eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
   location: {
@@ -52,7 +53,7 @@ export async function generateMetadata(): Promise<Metadata> {
     : "http://localhost:3000";
   const description =
     "🚀 Weltmeister, Olympiasieger oder Europameister - am Pfingstwochenende wird das Bungertstadion jedes Jahr zum Schauplatz für nationale und internationale Spitzenathleten.";
-  const title = "58. Pfingstsportfest Rehlingen";
+  const title = TITLE
   const image = {
     url: url + "/og-image.png",
     width: 1920,
