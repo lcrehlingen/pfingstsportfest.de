@@ -20,7 +20,7 @@ export default function Navbar() {
     if (opened) {
       setOpened(false);
     }
-  }, [pathname]);
+  }, [pathname, opened]);
 
   return (
     <OutsideClickHandler

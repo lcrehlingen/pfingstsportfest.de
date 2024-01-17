@@ -3,6 +3,7 @@ import "./globals.css";
 import localFont from "next/font/local";
 import Footer from "@/components/Footer";
 import { Metadata } from "next";
+import type { Viewport } from 'next'
 
 export async function generateMetadata(): Promise<Metadata> {
   const vercel = process.env.VERCEL_URL ? true : false;
@@ -15,6 +16,7 @@ export async function generateMetadata(): Promise<Metadata> {
     height: 1080,
   };
   return {
+    metadataBase: new URL(url),
     openGraph: {
       images: image,
       url,
@@ -24,8 +26,11 @@ export async function generateMetadata(): Promise<Metadata> {
       images: image,
     },
     keywords: "Leichtathletik, Rehlingen, Pfingstsportfest, Bungertstadion",
-    themeColor: "#293847",
   };
+}
+
+export const viewport: Viewport = {
+  themeColor: "#293847",
 }
 
 const worldAthleticsRegular = localFont({

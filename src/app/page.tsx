@@ -74,7 +74,6 @@ export async function generateMetadata(): Promise<Metadata> {
       images: image,
     },
     keywords: "Leichtathletik, Rehlingen, Pfingstsportfest, Bungertstadion",
-    themeColor: "#293847",
   };
 }
 

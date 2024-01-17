@@ -18,7 +18,7 @@ export default function Ausschreibung() {
           Leichtathletik weltweit gelistet.
         </p>
         <ul>
-          <li>Datum: 28.05.2023</li>
+          <li>Datum: 19.05.2024</li>
           <li>
             Mail:{" "}
             <a href="mailto:pfingstsportfest@lcrehlingen.de">
@@ -35,7 +35,8 @@ export default function Ausschreibung() {
             Meeting-Direktor: <a href="tel:+491715463788">Werner Klein</a>
           </li>
           <li>
-            Sponsoring: <a href="tel:+491712772230">Thomas Klein</a>
+            Sponsoring: <a href="tel:+491712772230">Thomas Klein</a>,{" "}
+            <a href="mailto:philipp.stief@lcrehlingen.de">Philipp Stief</a>
           </li>
         </ul>
         <h2>Callroom</h2>
@@ -73,91 +74,109 @@ export default function Ausschreibung() {
                 <td>Männer</td>
                 <td>100m</td>
                 <td>10,60</td>
-                <td>A</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>400m</td>
+                <td>-</td>
+                <td>-</td>
               </tr>
               <tr>
                 <td></td>
                 <td>800m</td>
                 <td>1:49,50</td>
-                <td>B</td>
+                <td>-</td>
               </tr>
               <tr>
                 <td></td>
                 <td>1500m</td>
                 <td>3:45,00</td>
-                <td>A</td>
+                <td>-</td>
               </tr>
               <tr>
                 <td></td>
                 <td>400m Hürden</td>
                 <td>50,50</td>
-                <td>B</td>
+                <td>-</td>
               </tr>
               <tr>
                 <td></td>
                 <td>3000m Hindernis</td>
                 <td>8:35,00</td>
-                <td>A</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>5000m</td>
+                <td>-</td>
+                <td>-</td>
               </tr>
               <tr>
                 <td></td>
                 <td>Hochsprung</td>
                 <td>2,15</td>
-                <td>A</td>
+                <td>-</td>
               </tr>
               <tr>
                 <td></td>
                 <td>Stabhochsprung</td>
                 <td>5,40</td>
-                <td>A</td>
+                <td>-</td>
               </tr>
               <tr>
                 <td></td>
                 <td>Speerwurf</td>
                 <td>79,00</td>
-                <td>A</td>
+                <td>-</td>
               </tr>
               <tr>
                 <td>Frauen</td>
                 <td>100m</td>
                 <td>11,60</td>
-                <td>B</td>
+                <td>-</td>
               </tr>
               <tr>
                 <td></td>
                 <td>400m</td>
                 <td>54,00</td>
-                <td>A</td>
+                <td>-</td>
               </tr>
               <tr>
                 <td></td>
                 <td>800m</td>
                 <td>2:05,00</td>
-                <td>A</td>
+                <td>-</td>
               </tr>
               <tr>
                 <td></td>
                 <td>1500m</td>
                 <td>4:15,00</td>
-                <td>A</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>400m Hürden</td>
+                <td>-</td>
+                <td>-</td>
               </tr>
               <tr>
                 <td></td>
                 <td>Hochsprung</td>
                 <td>1,80</td>
-                <td>B</td>
+                <td>-</td>
               </tr>
               <tr>
                 <td></td>
                 <td>Kugelstoßen</td>
                 <td>17,00</td>
-                <td>B</td>
+                <td>-</td>
               </tr>
               <tr>
                 <td></td>
                 <td>Speerwurf</td>
                 <td>59,00</td>
-                <td>B</td>
+                <td>-</td>
               </tr>
             </tbody>
           </table>
@@ -211,7 +230,7 @@ export default function Ausschreibung() {
           <strong>
             Meldungen für das Nachwuchsprogramm erfolgen für alle deutschen
             Starter ausschließlich über{" "}
-            <a href="https://ladv.de/ausschreibung/detail/35335/58.-Internationales-Pfingstsportfest-Rehlingen-Rehlingen-Siersburg.htm">
+            <a href="https://ladv.de/ausschreibung/detail/38378/59.-Internationales-Pfingstsportfest-Rehlingen-Rehlingen.htm">
               LADV
             </a>
             .{" "}
