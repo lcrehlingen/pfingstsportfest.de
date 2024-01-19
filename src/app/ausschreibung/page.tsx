@@ -73,31 +73,31 @@ export default function Ausschreibung() {
               <tr>
                 <td>Männer</td>
                 <td>100m</td>
-                <td>10,60</td>
+                <td>10,50</td>
                 <td>-</td>
               </tr>
               <tr>
                 <td></td>
                 <td>400m</td>
-                <td>-</td>
+                <td>46,50</td>
                 <td>-</td>
               </tr>
               <tr>
                 <td></td>
                 <td>800m</td>
-                <td>1:49,50</td>
+                <td>1:48,50</td>
                 <td>-</td>
               </tr>
               <tr>
                 <td></td>
                 <td>1500m</td>
-                <td>3:45,00</td>
+                <td>3:42,00</td>
                 <td>-</td>
               </tr>
               <tr>
                 <td></td>
                 <td>400m Hürden</td>
-                <td>50,50</td>
+                <td>50,00</td>
                 <td>-</td>
               </tr>
               <tr>
@@ -109,7 +109,7 @@ export default function Ausschreibung() {
               <tr>
                 <td></td>
                 <td>5000m</td>
-                <td>-</td>
+                <td>13:35,00</td>
                 <td>-</td>
               </tr>
               <tr>
@@ -139,25 +139,25 @@ export default function Ausschreibung() {
               <tr>
                 <td></td>
                 <td>400m</td>
-                <td>54,00</td>
+                <td>53,50</td>
                 <td>-</td>
               </tr>
               <tr>
                 <td></td>
                 <td>800m</td>
-                <td>2:05,00</td>
+                <td>2:04,00</td>
                 <td>-</td>
               </tr>
               <tr>
                 <td></td>
                 <td>1500m</td>
-                <td>4:15,00</td>
+                <td>4:14,00</td>
                 <td>-</td>
               </tr>
               <tr>
                 <td></td>
                 <td>400m Hürden</td>
-                <td>-</td>
+                <td>57,00</td>
                 <td>-</td>
               </tr>
               <tr>
