@@ -1,5 +1,7 @@
 import ContentContainer from "@/components/ContentContainer";
 import Title from "@/components/Title";
+import { EVENT_DATE } from "@/utils/constants";
+import { daysAway } from "@/utils/date";
 
 export const metadata = {
   title: "Ausschreibung",
@@ -39,24 +41,29 @@ export default function Ausschreibung() {
             <a href="mailto:philipp.stief@lcrehlingen.de">Philipp Stief</a>
           </li>
         </ul>
-        <h2>Callroom</h2>
-        <ul>
-          <li>15 min vor Start -Nachwuchsläufe</li>
-          <li>20 min vor Start -Lauf</li>
-          <li>40 min vor Start- Wurf/Hochsprung</li>
-          <li>90 min vor Stabhochsprung</li>
-        </ul>
-        <h2>Athleteneingang</h2>
-        <p>
-          Der Athleteneingang befindet sich hinter der Kultur-und Sporthalle:{" "}
-          <a
-            href="https://goo.gl/maps/SedUyjtRP63Lo9mk9"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Google Maps
-          </a>
-        </p>
+        {daysAway(EVENT_DATE) < 14 && (
+          <>
+            <h2>Callroom</h2>
+            <ul>
+              <li>15 min vor Start -Nachwuchsläufe</li>
+              <li>20 min vor Start -Lauf</li>
+              <li>40 min vor Start- Wurf/Hochsprung</li>
+              <li>90 min vor Stabhochsprung</li>
+            </ul>
+            <h2>Athleteneingang</h2>
+            <p>
+              Der Athleteneingang befindet sich hinter der Kultur-und
+              Sporthalle:{" "}
+              <a
+                href="https://goo.gl/maps/SedUyjtRP63Lo9mk9"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Google Maps
+              </a>
+            </p>
+          </>
+        )}
 
         <h2>Hauptprogramm</h2>
         <div className="overflow-x-auto">
