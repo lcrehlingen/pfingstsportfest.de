@@ -34,10 +34,10 @@ export default function Ausschreibung() {
             </a>
           </li>
           <li>
-            Meeting-Direktor: <a href="tel:+491715463788">Werner Klein</a>
+            Meeting-Direktor: <a href="mailto:pfingstsportfest@lcrehlingen.de">Werner Klein</a>
           </li>
           <li>
-            Sponsoring: <a href="tel:+491712772230">Thomas Klein</a>,{" "}
+            Sponsoring: <a href="mailto:klein.thomas24@googlemail.com">Thomas Klein</a>,{" "}
             <a href="mailto:philipp.stief@lcrehlingen.de">Philipp Stief</a>
           </li>
         </ul>

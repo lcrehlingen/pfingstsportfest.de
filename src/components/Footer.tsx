@@ -52,7 +52,7 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="tel:+491712772230" className="hover:underline">
+                  <a href="mailto:klein.thomas24@googlemail.com" className="hover:underline">
                     Sponsoring
                   </a>
                 </li>
