@@ -6,7 +6,7 @@ import vse from "../../public/sponsors/vse.png";
 import heitz from "../../public/sponsors/heitz.png";
 import bitburger from "../../public/sponsors/bitburger.png";
 import sparkasse from "../../public/sponsors/sparkasse.png";
-import saartoto from "../../public/sponsors/saartoto.png";
+import saartoto from "../../public/sponsors/saartoto.jpg";
 import shs from "../../public/sponsors/shs.png";
 import ntaatos from "../../public/sponsors/ntaatos.png";
 
