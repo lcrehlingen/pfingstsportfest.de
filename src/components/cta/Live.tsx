@@ -23,7 +23,7 @@ export default function Live() {
           Livestream auf dem Youtube Kanal von European Athletics geben, welcher
           von Robert Baumann kommentiert wird.
         </p>
-        <a
+        {/*<a
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.youtube.com/watch?v=jJVv5i6tenI"
@@ -42,7 +42,7 @@ export default function Live() {
               clipRule="evenodd"
             ></path>
           </svg>
-        </a>
+  </a>*/}
       </div>
     </section>
   );

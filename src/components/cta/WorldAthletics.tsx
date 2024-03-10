@@ -16,7 +16,7 @@ export default function WorldAthletics() {
           </p>
           <p>
             Das Meeting bietet den Athleten eine hohe Qualität und einen
-            Preisgeldpool von 72.000€ welcher sich auf die besten sechs Athleten
+            Preisgeldpool von 78.000€ welcher sich auf die besten sechs Athleten
             jeder Disziplin verteilt.
           </p>
           <Link

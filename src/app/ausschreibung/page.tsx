@@ -81,109 +81,109 @@ export default function Ausschreibung() {
                 <td>Männer</td>
                 <td>100m</td>
                 <td>10,50</td>
-                <td>-</td>
+                <td>B</td>
               </tr>
               <tr>
                 <td></td>
                 <td>400m</td>
                 <td>46,50</td>
-                <td>-</td>
+                <td>A</td>
               </tr>
               <tr>
                 <td></td>
                 <td>800m</td>
                 <td>1:48,50</td>
-                <td>-</td>
+                <td>B</td>
               </tr>
               <tr>
                 <td></td>
                 <td>1500m</td>
                 <td>3:42,00</td>
-                <td>-</td>
+                <td>A</td>
               </tr>
               <tr>
                 <td></td>
                 <td>400m Hürden</td>
                 <td>50,00</td>
-                <td>-</td>
+                <td>A</td>
               </tr>
               <tr>
                 <td></td>
                 <td>3000m Hindernis</td>
                 <td>8:35,00</td>
-                <td>-</td>
+                <td>B</td>
               </tr>
               <tr>
                 <td></td>
                 <td>5000m</td>
                 <td>13:35,00</td>
-                <td>-</td>
+                <td>B</td>
               </tr>
               <tr>
                 <td></td>
                 <td>Hochsprung</td>
                 <td>2,15</td>
-                <td>-</td>
+                <td>A</td>
               </tr>
               <tr>
                 <td></td>
                 <td>Stabhochsprung</td>
                 <td>5,40</td>
-                <td>-</td>
+                <td>A</td>
               </tr>
               <tr>
                 <td></td>
                 <td>Speerwurf</td>
                 <td>79,00</td>
-                <td>-</td>
+                <td>A</td>
               </tr>
               <tr>
                 <td>Frauen</td>
                 <td>100m</td>
                 <td>11,60</td>
-                <td>-</td>
+                <td>B</td>
               </tr>
               <tr>
                 <td></td>
                 <td>400m</td>
                 <td>53,50</td>
-                <td>-</td>
+                <td>B</td>
               </tr>
               <tr>
                 <td></td>
                 <td>800m</td>
                 <td>2:04,00</td>
-                <td>-</td>
+                <td>A</td>
               </tr>
               <tr>
                 <td></td>
                 <td>1500m</td>
                 <td>4:14,00</td>
-                <td>-</td>
+                <td>B</td>
               </tr>
               <tr>
                 <td></td>
                 <td>400m Hürden</td>
                 <td>57,00</td>
-                <td>-</td>
+                <td>B</td>
               </tr>
               <tr>
                 <td></td>
                 <td>Hochsprung</td>
                 <td>1,80</td>
-                <td>-</td>
+                <td>A</td>
               </tr>
               <tr>
                 <td></td>
                 <td>Kugelstoßen</td>
                 <td>17,00</td>
-                <td>-</td>
+                <td>B</td>
               </tr>
               <tr>
                 <td></td>
                 <td>Speerwurf</td>
                 <td>59,00</td>
-                <td>-</td>
+                <td>B</td>
               </tr>
             </tbody>
           </table>
