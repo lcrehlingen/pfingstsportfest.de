@@ -9,7 +9,7 @@ export default function Hero() {
       className="
       relative
       min-h-[70vh]
-      content-center
+      content-start
       items-center
       justify-center
     "
@@ -30,7 +30,7 @@ export default function Hero() {
                 <h1 className="whitespace-nowrap font-wa-headline text-5xl font-semibold text-white md:text-6xl">
                   Pfingstsportfest Rehlingen
                 </h1>
-                <h2 className="whitespace-nowrap font-wa-headline text-4xl font-semibold text-white md:text-5xl">
+                <h2 className="font-wa-headline text-4xl font-semibold text-white md:text-5xl">
                   {new Date(EDITION_DATE).toLocaleDateString("de-DE", {
                     year: "numeric",
                     month: "long",
