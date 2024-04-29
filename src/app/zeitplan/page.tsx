@@ -24,23 +24,23 @@ export default function Zeitplan() {
             <tbody>
               <tr>
                 <td>15.00</td>
-                <td>800 m W14</td>
+                <td>800m W14</td>
               </tr>
               <tr>
                 <td>15.08</td>
-                <td>800 m W15</td>
+                <td>800m W15</td>
               </tr>
               <tr>
                 <td>15.16</td>
-                <td>800 m M14 / M15</td>
+                <td>800m M14 / M15</td>
               </tr>
               <tr>
                 <td>15.24</td>
-                <td>800m W U18/ U20</td>
+                <td>800mW U18/ U20</td>
               </tr>
               <tr>
                 <td>15.34</td>
-                <td>800 m M U18/U20</td>
+                <td>800m M U18/U20</td>
               </tr>
             </tbody>
           </table>
@@ -108,16 +108,16 @@ export default function Zeitplan() {
                 <td></td>
               </tr>
               <tr>
-                <td>16.45</td>
+                <td>16.42</td>
+                <td>100m VL Frauen</td>
                 <td></td>
-                <td>Weitsprung Para Männer/Frauen</td>
                 <td></td>
                 <td></td>
                 <td></td>
               </tr>
               <tr>
-                <td>16.50</td>
-                <td>400m Hürden Zeitläufe</td>
+                <td>16.54</td>
+                <td>400m Hürden Frauen Zeitlauf</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -133,7 +133,7 @@ export default function Zeitplan() {
               </tr>
               <tr>
                 <td>17.00</td>
-                <td>400m Hürden Zeitläufe</td>
+                <td>400m Hürden Frauen Zeitlauf</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -141,31 +141,47 @@ export default function Zeitplan() {
               </tr>
               <tr>
                 <td>17.12</td>
-                <td>800m Frauen Zeitläufe</td>
+                <td>800m Männer Zeitlauf</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
               </tr>
               <tr>
-                <td>17.20</td>
-                <td>800m Frauen Zeitläufe</td>
+                <td>17.18</td>
+                <td>800m Männer Zeitlauf</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
               </tr>
               <tr>
-                <td>17.33</td>
-                <td>100m VL Frauen</td>
+                <td>17.25</td>
+                <td>400m Frauen Zeitlauf</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
               </tr>
               <tr>
-                <td>17.40</td>
+                <td>17.30</td>
+                <td>400m Frauen Zeitlauf</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>17.38</td>
                 <td>100m Zeitendläufe Männer</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>17.45</td>
+                <td>100m Zeitendläufe Frauen</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -180,15 +196,23 @@ export default function Zeitplan() {
                 <td></td>
               </tr>
               <tr>
-                <td>17.58</td>
+                <td>18.07</td>
+                <td>400m Hürden Männer Zeitlauf</td>
                 <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>18.12</td>
+                <td>400m Hürden Männer Zeitlauf</td>
                 <td></td>
                 <td>Speerwurf Männer</td>
                 <td></td>
                 <td></td>
               </tr>
               <tr>
-                <td>18.00</td>
+                <td>18.15</td>
                 <td></td>
                 <td>Hochsprung Frauen</td>
                 <td></td>
@@ -196,32 +220,32 @@ export default function Zeitplan() {
                 <td></td>
               </tr>
               <tr>
-                <td>18.08</td>
-                <td>1500m Männer</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
                 <td>18.20</td>
-                <td>400m Frauen Zeitläufe</td>
+                <td>1500m Frauen</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
               </tr>
               <tr>
-                <td>18.25</td>
-                <td>400m Frauen Zeitläufe</td>
+                <td>18.27</td>
+                <td>400m Frauen Zeitlauf</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
               </tr>
               <tr>
-                <td>18.37</td>
-                <td>800m Männer Zeitläufe</td>
+                <td>18.32</td>
+                <td>400m Frauen Zeitlauf</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>18.38</td>
+                <td>800m Frauen Zeitlauf</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -229,23 +253,39 @@ export default function Zeitplan() {
               </tr>
               <tr>
                 <td>18.45</td>
-                <td>800m Männer Zeitläufe</td>
+                <td>800m Frauen Zeitlauf</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
               </tr>
               <tr>
-                <td>18.53</td>
-                <td>100m Frauen Finale</td>
+                <td>18.55</td>
+                <td>400m Männer Zeitlauf</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
               </tr>
               <tr>
-                <td>19.03</td>
-                <td>1500m Frauen</td>
+                <td>19.00</td>
+                <td>400m Männer Zeitlauf</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>19.05</td>
+                <td>1500m Männer</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>19.15</td>
+                <td>5000m Männer</td>
                 <td></td>
                 <td></td>
                 <td></td>

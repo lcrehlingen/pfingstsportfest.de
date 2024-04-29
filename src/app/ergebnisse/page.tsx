@@ -39,7 +39,7 @@ export default async function Ergebnisse() {
       <article className="prose prose-xl max-w-none prose-table:tracking-wide">
         {daysAway(EVENT_DATE) < 5 && (
           <iframe
-            src="https://red.laportal.net/Competitions/Details/9829"
+            src="https://red.laportal.net/Competitions/Details/12570"
             className="w-full"
             height={1000}
           />
