@@ -18,7 +18,7 @@
     "flowbite": "^2.2.1",
     "flowbite-react": "^0.7.2",
     "gray-matter": "^4.0.3",
-    "next": "v14.0.5-canary.60",
+    "next": "v14.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "remark": "^15.0.1",
