@@ -21,7 +21,6 @@ export default function Ausschreibung() {
           <li>Schüler bis 11 Jahre: frei</li>
           <li>Schwerbehinderte (mit Ausweis): 5€</li>
           <li>Studenten (mit Ausweis): 5€</li>
-          <li>Programmheft: 1€</li>
           <li>Tribüne: 25€</li>
 
           <li>
