@@ -57,10 +57,10 @@ export default function Hero() {
                   Live-Stream
               </a>*/}
               <Link
-                href="/ausschreibung"
+                href="/zeitplan"
                 className="inline-flex max-w-fit items-center rounded-lg bg-red-500 px-5 py-2.5 text-center text-lg font-medium text-tourDarkBlue"
               >
-                Ausschreibung
+                Zeitplan
               </Link>
               <Link
                 href="/eintritt"
