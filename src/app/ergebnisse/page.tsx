@@ -37,7 +37,7 @@ export default async function Ergebnisse() {
         </a>
       </div>
       <article className="prose prose-xl max-w-none prose-table:tracking-wide">
-        {daysAway(EVENT_DATE) < 5 && (
+        {daysAway(EVENT_DATE) < 7 && (
           <iframe
             src="https://red.laportal.net/Competitions/Details/12570"
             className="w-full"
