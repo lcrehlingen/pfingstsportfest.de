@@ -20,7 +20,7 @@ export default async function Ergebnisse() {
       <Title>Ergebnisse</Title>
       <div className="flex flex-row gap-4">
         <a
-          href="https://www.youtube.com/watch?v=lamehYbjYJs"
+          href="https://www.youtube.com/watch?v=0vQL8Yz00h0"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex max-w-fit items-center rounded-lg bg-sky-500 px-5 py-2.5 text-center text-lg font-medium text-white"
