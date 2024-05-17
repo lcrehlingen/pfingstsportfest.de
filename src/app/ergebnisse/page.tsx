@@ -28,12 +28,20 @@ export default async function Ergebnisse() {
           Live-Stream
         </a>
         <a
-          href="https://www.youtube.com/watch?v=jJVv5i6tenI"
+          href="https://www.youtube.com/watch?v=nts7TqhqbOM "
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex max-w-fit items-center rounded-lg bg-red-500 px-5 py-2.5 text-center text-lg font-medium text-tourDarkBlue"
         >
           Live-Stream (English)
+        </a>
+        <a
+          href="https://photofinish.lcrehlingen.de/pfingsten2024"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex max-w-fit items-center rounded-lg bg-green-500 px-5 py-2.5 text-center text-lg font-medium text-tourDarkBlue"
+        >
+          Photofinish
         </a>
       </div>
       <article className="prose prose-xl max-w-none prose-table:tracking-wide">
