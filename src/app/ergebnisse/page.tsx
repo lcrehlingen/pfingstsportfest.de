@@ -35,7 +35,7 @@ export default async function Ergebnisse() {
         >
           Live-Stream (English)
         </a>
-        <a
+        {/**<a
           href="https://photofinish.lcrehlingen.de/pfingsten2024"
           target="_blank"
           rel="noopener noreferrer"
@@ -43,7 +43,7 @@ export default async function Ergebnisse() {
         >
           Photofinish
         </a>
-      </div>
+      </div>**/}
       <article className="prose prose-xl max-w-none prose-table:tracking-wide">
         {daysAway(EVENT_DATE) < 7 && (
           <iframe
