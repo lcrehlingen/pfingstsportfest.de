@@ -42,8 +42,8 @@ export default async function Ergebnisse() {
           className="inline-flex max-w-fit items-center rounded-lg bg-green-500 px-5 py-2.5 text-center text-lg font-medium text-tourDarkBlue"
         >
           Photofinish
-        </a>
-      </div>**/}
+        </a>**/}
+      </div>
       <article className="prose prose-xl max-w-none prose-table:tracking-wide">
         {daysAway(EVENT_DATE) < 7 && (
           <iframe
