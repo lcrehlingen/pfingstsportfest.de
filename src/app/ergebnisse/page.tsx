@@ -12,6 +12,17 @@ export const metadata = {
   },
 };
 
+const photofinish = [
+  {
+    edition: 58,
+    link: "https://photofinish.lcrehlingen.de/pfingsten2023",
+  },
+  {
+    edition: 59,
+    link: "https://photofinish.lcrehlingen.de/pfingsten2024",
+  },
+];
+
 export default async function Ergebnisse() {
   const results = await getResults();
 
@@ -19,7 +30,7 @@ export default async function Ergebnisse() {
     <ContentContainer>
       <Title>Ergebnisse</Title>
       <div className="flex flex-row gap-4">
-        <a
+        {/*<a
           href="https://www.youtube.com/watch?v=0vQL8Yz00h0"
           target="_blank"
           rel="noopener noreferrer"
@@ -34,7 +45,7 @@ export default async function Ergebnisse() {
           className="inline-flex max-w-fit items-center rounded-lg bg-red-500 px-5 py-2.5 text-center text-lg font-medium text-tourDarkBlue"
         >
           Live-Stream (English)
-        </a>
+  </a>*/}
         {/**<a
           href="https://photofinish.lcrehlingen.de/pfingsten2024"
           target="_blank"
@@ -72,6 +83,19 @@ export default async function Ergebnisse() {
                 </td>
                 <td>
                   <a href={`/results/${result.filename}`}>Ergebnisse</a>
+                  {photofinish
+                    .filter((pf) => pf.edition === result.edition)
+                    .map((pf) => (
+                      <a
+                        key={pf.edition}
+                        href={pf.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {" "}
+                        (Photofinish)
+                      </a>
+                    ))}
                 </td>
               </tr>
             ))}
