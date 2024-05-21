@@ -68,7 +68,7 @@ export default async function Ergebnisse() {
           <thead>
             <tr>
               <th>Jahr</th>
-              <th>Autragung</th>
+              <th>Austragung</th>
               <th>Ergebnisse</th>
             </tr>
           </thead>
