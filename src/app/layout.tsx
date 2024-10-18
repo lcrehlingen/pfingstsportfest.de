@@ -4,7 +4,6 @@ import localFont from "next/font/local";
 import Footer from "@/components/Footer";
 import { Metadata } from "next";
 import type { Viewport } from "next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export async function generateMetadata(): Promise<Metadata> {
   const vercel = process.env.VERCEL_URL ? true : false;
@@ -57,7 +56,6 @@ export default function RootLayout({
       <body
         className={`${worldAthleticsBold.variable} ${worldAthleticsRegular.variable} ${worldAthleticsHeadline.variable} flex min-h-screen flex-col justify-between font-wa-regular bg-tourDarkBlue`}
       >
-        <SpeedInsights />
         <Navbar />
         {children}
         <Footer />

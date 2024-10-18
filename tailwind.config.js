@@ -1,8 +1,10 @@
+const flowbite = require("flowbite-react/tailwind");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
-    'node_modules/flowbite-react/lib/esm/**/*.js',
+    flowbite.content(),
   ],
   theme: {
     extend: {
@@ -55,5 +57,5 @@ module.exports = {
   corePlugins: {
     aspectRatio: false,
   },
-  plugins: [require('@tailwindcss/aspect-ratio'), require('@tailwindcss/typography'), require("flowbite/plugin")],
+  plugins: [require('@tailwindcss/aspect-ratio'), require('@tailwindcss/typography'), flowbite.plugin()],
 }
