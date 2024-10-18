@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbo",
-    "build": "next build",
+    "build": "next build && next-image-export-optimizer",
     "start": "next start"
   },
   "dependencies": {
@@ -15,6 +15,7 @@
     "flowbite-react": "^0.10.2",
     "gray-matter": "^4.0.3",
     "next": "14.2.15",
+    "next-image-export-optimizer": "^1.15.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "remark": "^15.0.1",

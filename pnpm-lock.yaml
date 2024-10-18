@@ -29,6 +29,9 @@ importers:
       next:
         specifier: 14.2.15
         version: 14.2.15(@opentelemetry/api@1.4.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      next-image-export-optimizer:
+        specifier: ^1.15.1
+        version: 1.15.1(next@14.2.15(@opentelemetry/api@1.4.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
       react:
         specifier: 18.3.1
         version: 18.3.1
@@ -864,6 +867,14 @@ packages:
     resolution: {integrity: sha512-eSRppjcPIatRIMC1U6UngP8XFcz8MQWGQdt1MTBQ7NaAmvXDfvNxbvWV3x2y6CdEUciCSsDHDQZbhYaB8QEo2g==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
+
+  next-image-export-optimizer@1.15.1:
+    resolution: {integrity: sha512-tx20p74EtW/VeIdoxPt9GtgagGJU3DVDXqBa0VgPYB2wiia6axiljiUeg9KoR1FPOduHxbjPPG3FtkKL0XN7Lg==}
+    engines: {node: '>=16.0.0'}
+    hasBin: true
+    peerDependencies:
+      next: '>=13.1.0'
+      react: ^18.0.0-0
 
   next@14.2.15:
     resolution: {integrity: sha512-h9ctmOokpoDphRvMGnwOJAedT6zKhwqyZML9mDtspgf4Rh3Pn7UTYKqePNoDvhsWBAO5GoPNYshnAUGIazVGmw==}
@@ -2138,6 +2149,13 @@ snapshots:
       thenify-all: 1.6.0
 
   nanoid@3.3.7: {}
+
+  next-image-export-optimizer@1.15.1(next@14.2.15(@opentelemetry/api@1.4.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1):
+    dependencies:
+      next: 14.2.15(@opentelemetry/api@1.4.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react: 18.3.1
+      sharp: 0.33.5
+      typescript: 5.6.3
 
   next@14.2.15(@opentelemetry/api@1.4.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:

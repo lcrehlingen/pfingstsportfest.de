@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import highjump from "../../../public/highjump_m.jpeg";
 import highjumpW from "../../../public/highjump.jpeg";
 import hurdles from "../../../public/hurdles.jpeg";
@@ -10,49 +9,50 @@ import rehli from "../../../public/rehli.jpeg";
 import sprint from "../../../public/100m.jpg";
 import Link from "next/link";
 import { Carousel } from "flowbite-react";
+import ExportedImage from "next-image-export-optimizer";
 
 export default function Weltklasse() {
   return (
     <section className="mx-auto grid max-w-screen-xl grid-cols-1 items-center gap-8 px-4 md:grid md:grid-cols-2 xl:gap-16 2xl:px-0">
       <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
         <Carousel>
-          <Image
+          <ExportedImage
             src={javelin}
             alt="Julian Weber"
             placeholder="blur"
             className="block h-full w-full rounded-lg object-cover object-center"
           />
-          <Image
+          <ExportedImage
             src={poleVault}
             alt="Bo Kanda Lita Baehre"
             placeholder="blur"
             className="block h-full w-full rounded-lg object-cover object-center"
           />
-          <Image
+          <ExportedImage
             src={highjumpW}
             alt="Imke Onnen"
             placeholder="blur"
             className="block h-full w-full rounded-lg object-cover object-center"
           />
-          <Image
+          <ExportedImage
             src={sprint}
             alt="100m Sprint"
             placeholder="blur"
             className="block h-full w-full rounded-lg object-cover object-center"
           />
-          <Image
+          <ExportedImage
             src={rehli}
             alt="Rehli"
             placeholder="blur"
             className="block h-full w-full rounded-lg object-cover object-center"
           />
-          <Image
+          <ExportedImage
             src={hurdles}
             alt="Joshua Abuaku"
             placeholder="blur"
             className="block h-full w-full rounded-lg object-cover object-center"
           />
-          <Image
+          <ExportedImage
             src={highjump}
             alt="Mateusz Przybylko"
             placeholder="blur"

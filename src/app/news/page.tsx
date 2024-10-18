@@ -2,9 +2,9 @@ import Link from "next/link";
 import { promises as fs } from "fs";
 import path from "path";
 import matter from "gray-matter";
-import Image from "next/image";
 import Title from "@/components/Title";
 import ContentContainer from "@/components/ContentContainer";
+import ExportedImage from "next-image-export-optimizer";
 
 export const metadata = {
   title: "Aktuelles",
@@ -23,7 +23,7 @@ export default async function News() {
           <article className="rounded-md bg-white" key={key}>
             <Link href={`news/${items.slug}`}>
               <div className="aspect-h-9 aspect-w-16">
-                <Image
+                <ExportedImage
                   src={`/` + items.image}
                   width={1920}
                   height={1080}

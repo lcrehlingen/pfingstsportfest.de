@@ -1,9 +1,9 @@
-import Image from "next/image";
 import background from "../../public/background.jpeg";
 import Link from "next/link";
 import { EDITION_DATE } from "@/data";
 import { daysAway } from "@/utils/date";
 import { EVENT_DATE } from "@/utils/constants";
+import ExportedImage from "next-image-export-optimizer";
 
 export default function Hero() {
   return (
@@ -17,7 +17,7 @@ export default function Hero() {
     "
     >
       <div className="absolute flex h-full w-full items-center bg-white ">
-        <Image
+        <ExportedImage
           className="absolute left-0 top-0 h-full w-full object-cover"
           src={background}
           priority

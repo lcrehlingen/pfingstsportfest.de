@@ -1,7 +1,7 @@
-import Image from "next/image";
 import wactSilver from "../../../public/wact_silver_white.png";
 import europeanAthltics from "../../../public/european_athletics.png";
 import Link from "next/link";
+import ExportedImage from "next-image-export-optimizer";
 export default function WorldAthletics() {
   return (
     <section className="bg-tourDarkBlue">
@@ -39,12 +39,12 @@ export default function WorldAthletics() {
           </Link>
         </div>
         <div className="grid grid-cols-2 items-center justify-center gap-8">
-          <Image
+          <ExportedImage
             className="w-full rounded-lg"
             src={wactSilver}
             alt="World Athletics Continental Tour Silver"
           />
-          <Image
+          <ExportedImage
             className="w-full rounded-lg"
             src={europeanAthltics}
             alt="European Athletics"
