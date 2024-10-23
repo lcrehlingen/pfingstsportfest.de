@@ -6,16 +6,17 @@ import html from "remark-html";
 import remarkGfm from "remark-gfm";
 import Title from "@/components/Title";
 import ContentContainer from "@/components/ContentContainer";
-import { Metadata } from "next";
+import * as React from 'react'
+import type { Metadata } from 'next'
+import { PageProps } from "../../../../.next/types/app/news/[slug]/page"
 
 export const dynamicParams = false;
 
 export async function generateMetadata({
   params,
-}: {
-  params: { slug: string };
-}): Promise<Metadata> {
-  const { title, date, image } = await getNews(params.slug);
+}: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const { title, date, image } = await getNews(slug);
   const vercel = process.env.VERCEL_URL ? true : false;
   const url = vercel
     ? "https://" + process.env.VERCEL_URL
@@ -27,7 +28,7 @@ export async function generateMetadata({
       title,
       type: "article",
       modifiedTime: date,
-      url: url + "/news/" + params.slug,
+      url: url + "/news/" + slug,
       images: {
         height: 1080,
         width: 1920,
@@ -48,10 +49,9 @@ export async function generateMetadata({
 
 export default async function NewsPage({
   params,
-}: {
-  params: { slug: string };
-}) {
-  const { title, date, content } = await getNews(params.slug);
+}: PageProps) {
+  const { slug } = await params;
+  const { title, date, content } = await getNews(slug);
   return (
     <ContentContainer>
       <article className="flex flex-col gap-4">

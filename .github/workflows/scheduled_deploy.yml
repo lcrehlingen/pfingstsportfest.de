@@ -1,0 +1,13 @@
+name: Deploy 
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
+jobs: 
+  webhook: 
+    name: Ping webhook
+    runs-on: ubuntu-latest 
+    steps: 
+      - name: Trigger Deploy Hook
+        run: | 
+          curl -X POST "${{ secrets.CF_DEPLOY_HOOK }}

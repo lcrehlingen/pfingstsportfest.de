@@ -2,6 +2,8 @@ import wactSilver from "../../../public/wact_silver_white.png";
 import europeanAthltics from "../../../public/european_athletics.png";
 import Link from "next/link";
 import ExportedImage from "next-image-export-optimizer";
+import { TOTAL_PRIZEMONEY } from "@/utils/constants";
+
 export default function WorldAthletics() {
   return (
     <section className="bg-tourDarkBlue">
@@ -16,8 +18,13 @@ export default function WorldAthletics() {
           </p>
           <p>
             Das Meeting bietet den Athleten eine hohe Qualität und einen
-            Preisgeldpool von 78.000€ welcher sich auf die besten sechs Athleten
-            jeder Disziplin verteilt.
+            Preisgeldpool von{" "}
+            {new Intl.NumberFormat("de-DE", {
+              style: "currency",
+              currency: "EUR",
+              maximumFractionDigits: 0,
+            }).format(TOTAL_PRIZEMONEY)}{" "}
+            welcher sich auf die besten sechs Athleten jeder Disziplin verteilt.
           </p>
           <Link
             href="/ausschreibung"

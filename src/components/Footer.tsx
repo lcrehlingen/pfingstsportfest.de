@@ -107,7 +107,6 @@ export default function Footer() {
         <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
         <div className="flex flex-wrap justify-between gap-4">
           <span className="text-sm sm:text-center ">
-            © {new Date().getFullYear()}{" "}
             <a href="https://lcrehlingen.de" className="hover:underline">
               LC Rehlingen
             </a>

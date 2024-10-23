@@ -2,7 +2,10 @@ import background from "../../public/background.jpeg";
 import Link from "next/link";
 import { EDITION_DATE } from "@/data";
 import { daysAway } from "@/utils/date";
-import { EVENT_DATE } from "@/utils/constants";
+import {
+  EVENT_DATE,
+  NATIONAL_LIVESTREAM,
+} from "@/utils/constants";
 import ExportedImage from "next-image-export-optimizer";
 
 export default function Hero() {
@@ -50,14 +53,17 @@ export default function Hero() {
               </a>
             </div>
             <div className="flex flex-row gap-4">
-              {/*<a
-                href="https://www.youtube.com/watch?v=0vQL8Yz00h0"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex max-w-fit items-center rounded-lg bg-sky-500 px-5 py-2.5 text-center text-lg font-medium text-white"
-              >
-                Live-Stream
-              </a>*/}
+              {daysAway(EVENT_DATE) <= 0 && (
+                <a
+                  href={NATIONAL_LIVESTREAM}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex max-w-fit items-center rounded-lg bg-sky-500 px-5 py-2.5 text-center text-lg font-medium text-white"
+                >
+                  Live-Stream
+                </a>
+              )}
+
               {daysAway(EVENT_DATE) > 7 && (
                 <Link
                   href="/ergebnisse"

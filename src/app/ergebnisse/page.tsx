@@ -1,6 +1,6 @@
 import ContentContainer from "@/components/ContentContainer";
 import Title from "@/components/Title";
-import { EVENT_DATE } from "@/utils/constants";
+import { EVENT_DATE, LIVE_RESULTS, RESULT_LINKS } from "@/utils/constants";
 import { daysAway } from "@/utils/date";
 import { promises as fs } from "fs";
 import path from "path";
@@ -29,39 +29,24 @@ export default async function Ergebnisse() {
   return (
     <ContentContainer>
       <Title>Ergebnisse</Title>
-      <div className="flex flex-row gap-4">
-        {/*<a
-          href="https://www.youtube.com/watch?v=0vQL8Yz00h0"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex max-w-fit items-center rounded-lg bg-sky-500 px-5 py-2.5 text-center text-lg font-medium text-white"
-        >
-          Live-Stream
-        </a>
-        <a
-          href="https://www.youtube.com/watch?v=nts7TqhqbOM "
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex max-w-fit items-center rounded-lg bg-red-500 px-5 py-2.5 text-center text-lg font-medium text-tourDarkBlue"
-        >
-          Live-Stream (English)
-  </a>*/}
-        {/**<a
-          href="https://photofinish.lcrehlingen.de/pfingsten2024"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex max-w-fit items-center rounded-lg bg-green-500 px-5 py-2.5 text-center text-lg font-medium text-tourDarkBlue"
-        >
-          Photofinish
-        </a>**/}
-      </div>
+      {daysAway(EVENT_DATE) < 7 && (
+        <div className="flex flex-row gap-4">
+          {RESULT_LINKS.map((link, index) => (
+            <a
+              key={index}
+              href={link.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${link.color} inline-flex max-w-fit items-center rounded-lg px-5 py-2.5 text-center text-lg font-medium text-white`}
+            >
+              {link.name}
+            </a>
+          ))}
+        </div>
+      )}
       <article className="prose prose-xl max-w-none prose-table:tracking-wide">
         {daysAway(EVENT_DATE) < 7 && (
-          <iframe
-            src="https://red.laportal.net/Competitions/Details/12570"
-            className="w-full"
-            height={1000}
-          />
+          <iframe src={LIVE_RESULTS} className="w-full" height={1000} />
         )}
 
         <table>
