@@ -5,22 +5,22 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  '@types/react': npm:types-react@19.0.0-rc.1
-  '@types/react-dom': npm:types-react-dom@19.0.0-rc.1
+  '@types/react': npm:types-react@19.0.0-alpha.3
+  '@types/react-dom': npm:types-react-dom@19.0.0-alpha.3
 
 importers:
 
   .:
     dependencies:
       '@types/node':
-        specifier: 22.7.6
-        version: 22.7.6
+        specifier: 22.9.0
+        version: 22.9.0
       '@types/react':
-        specifier: npm:types-react@19.0.0-rc.1
-        version: types-react@19.0.0-rc.1
+        specifier: npm:types-react@19.0.0-alpha.3
+        version: types-react@19.0.0-alpha.3
       '@types/react-dom':
-        specifier: npm:types-react-dom@19.0.0-rc.1
-        version: types-react-dom@19.0.0-rc.1
+        specifier: npm:types-react-dom@19.0.0-alpha.3
+        version: types-react-dom@19.0.0-alpha.3
       flowbite:
         specifier: ^2.5.2
         version: 2.5.2
@@ -31,11 +31,11 @@ importers:
         specifier: ^4.0.3
         version: 4.0.3
       next:
-        specifier: 15.0.1
-        version: 15.0.1(@opentelemetry/api@1.4.1)(react-dom@19.0.0-rc-69d4b800-20241021(react@19.0.0-rc-69d4b800-20241021))(react@19.0.0-rc-69d4b800-20241021)
+        specifier: 15.0.3
+        version: 15.0.3(@opentelemetry/api@1.4.1)(react-dom@19.0.0-rc-69d4b800-20241021(react@19.0.0-rc-69d4b800-20241021))(react@19.0.0-rc-69d4b800-20241021)
       next-image-export-optimizer:
         specifier: ^1.15.1
-        version: 1.15.1(next@15.0.1(@opentelemetry/api@1.4.1)(react-dom@19.0.0-rc-69d4b800-20241021(react@19.0.0-rc-69d4b800-20241021))(react@19.0.0-rc-69d4b800-20241021))(react@19.0.0-rc-69d4b800-20241021)
+        version: 1.15.1(next@15.0.3(@opentelemetry/api@1.4.1)(react-dom@19.0.0-rc-69d4b800-20241021(react@19.0.0-rc-69d4b800-20241021))(react@19.0.0-rc-69d4b800-20241021))(react@19.0.0-rc-69d4b800-20241021)
       react:
         specifier: 19.0.0-rc-69d4b800-20241021
         version: 19.0.0-rc-69d4b800-20241021
@@ -66,10 +66,10 @@ importers:
         version: 0.5.15(tailwindcss@3.4.14)
       autoprefixer:
         specifier: ^10.4.20
-        version: 10.4.20(postcss@8.4.47)
+        version: 10.4.20(postcss@8.4.49)
       postcss:
-        specifier: ^8.4.47
-        version: 8.4.47
+        specifier: ^8.4.49
+        version: 8.4.49
       tailwindcss:
         specifier: ^3.4.14
         version: 3.4.14
@@ -230,53 +230,53 @@ packages:
   '@jridgewell/trace-mapping@0.3.18':
     resolution: {integrity: sha512-w+niJYzMHdd7USdiH2U6869nqhD2nbfZXND5Yp93qIbEmnDNk7PD48o+YchRVpzMU7M6jVCbenTR7PA1FLQ9pA==}
 
-  '@next/env@15.0.1':
-    resolution: {integrity: sha512-lc4HeDUKO9gxxlM5G2knTRifqhsY6yYpwuHspBZdboZe0Gp+rZHBNNSIjmQKDJIdRXiXGyVnSD6gafrbQPvILQ==}
+  '@next/env@15.0.3':
+    resolution: {integrity: sha512-t9Xy32pjNOvVn2AS+Utt6VmyrshbpfUMhIjFO60gI58deSo/KgLOp31XZ4O+kY/Is8WAGYwA5gR7kOb1eORDBA==}
 
-  '@next/swc-darwin-arm64@15.0.1':
-    resolution: {integrity: sha512-C9k/Xv4sxkQRTA37Z6MzNq3Yb1BJMmSqjmwowoWEpbXTkAdfOwnoKOpAb71ItSzoA26yUTIo6ZhN8rKGu4ExQw==}
+  '@next/swc-darwin-arm64@15.0.3':
+    resolution: {integrity: sha512-s3Q/NOorCsLYdCKvQlWU+a+GeAd3C8Rb3L1YnetsgwXzhc3UTWrtQpB/3eCjFOdGUj5QmXfRak12uocd1ZiiQw==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [darwin]
 
-  '@next/swc-darwin-x64@15.0.1':
-    resolution: {integrity: sha512-uHl13HXOuq1G7ovWFxCACDJHTSDVbn/sbLv8V1p+7KIvTrYQ5HNoSmKBdYeEKRRCbEmd+OohOgg9YOp8Ux3MBg==}
+  '@next/swc-darwin-x64@15.0.3':
+    resolution: {integrity: sha512-Zxl/TwyXVZPCFSf0u2BNj5sE0F2uR6iSKxWpq4Wlk/Sv9Ob6YCKByQTkV2y6BCic+fkabp9190hyrDdPA/dNrw==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [darwin]
 
-  '@next/swc-linux-arm64-gnu@15.0.1':
-    resolution: {integrity: sha512-LvyhvxHOihFTEIbb35KxOc3q8w8G4xAAAH/AQnsYDEnOvwawjL2eawsB59AX02ki6LJdgDaHoTEnC54Gw+82xw==}
+  '@next/swc-linux-arm64-gnu@15.0.3':
+    resolution: {integrity: sha512-T5+gg2EwpsY3OoaLxUIofmMb7ohAUlcNZW0fPQ6YAutaWJaxt1Z1h+8zdl4FRIOr5ABAAhXtBcpkZNwUcKI2fw==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
 
-  '@next/swc-linux-arm64-musl@15.0.1':
-    resolution: {integrity: sha512-vFmCGUFNyk/A5/BYcQNhAQqPIw01RJaK6dRO+ZEhz0DncoW+hJW1kZ8aH2UvTX27zPq3m85zN5waMSbZEmANcQ==}
+  '@next/swc-linux-arm64-musl@15.0.3':
+    resolution: {integrity: sha512-WkAk6R60mwDjH4lG/JBpb2xHl2/0Vj0ZRu1TIzWuOYfQ9tt9NFsIinI1Epma77JVgy81F32X/AeD+B2cBu/YQA==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
 
-  '@next/swc-linux-x64-gnu@15.0.1':
-    resolution: {integrity: sha512-5by7IYq0NCF8rouz6Qg9T97jYU68kaClHPfGpQG2lCZpSYHtSPQF1kjnqBTd34RIqPKMbCa4DqCufirgr8HM5w==}
+  '@next/swc-linux-x64-gnu@15.0.3':
+    resolution: {integrity: sha512-gWL/Cta1aPVqIGgDb6nxkqy06DkwJ9gAnKORdHWX1QBbSZZB+biFYPFti8aKIQL7otCE1pjyPaXpFzGeG2OS2w==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
 
-  '@next/swc-linux-x64-musl@15.0.1':
-    resolution: {integrity: sha512-lmYr6H3JyDNBJLzklGXLfbehU3ay78a+b6UmBGlHls4xhDXBNZfgb0aI67sflrX+cGBnv1LgmWzFlYrAYxS1Qw==}
+  '@next/swc-linux-x64-musl@15.0.3':
+    resolution: {integrity: sha512-QQEMwFd8r7C0GxQS62Zcdy6GKx999I/rTO2ubdXEe+MlZk9ZiinsrjwoiBL5/57tfyjikgh6GOU2WRQVUej3UA==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
 
-  '@next/swc-win32-arm64-msvc@15.0.1':
-    resolution: {integrity: sha512-DS8wQtl6diAj0eZTdH0sefykm4iXMbHT4MOvLwqZiIkeezKpkgPFcEdFlz3vKvXa2R/2UEgMh48z1nEpNhjeOQ==}
+  '@next/swc-win32-arm64-msvc@15.0.3':
+    resolution: {integrity: sha512-9TEp47AAd/ms9fPNgtgnT7F3M1Hf7koIYYWCMQ9neOwjbVWJsHZxrFbI3iEDJ8rf1TDGpmHbKxXf2IFpAvheIQ==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [win32]
 
-  '@next/swc-win32-x64-msvc@15.0.1':
-    resolution: {integrity: sha512-4Ho2ggvDdMKlZ/0e9HNdZ9ngeaBwtc+2VS5oCeqrbXqOgutX6I4U2X/42VBw0o+M5evn4/7v3zKgGHo+9v/VjA==}
+  '@next/swc-win32-x64-msvc@15.0.3':
+    resolution: {integrity: sha512-VNAz+HN4OGgvZs6MOoVfnn41kBzT+M+tB+OK4cww6DNyWS6wKaDpaAm/qLeOUbnMh0oVx1+mg0uoYARF69dJyA==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [win32]
@@ -349,8 +349,8 @@ packages:
   '@types/ms@0.7.34':
     resolution: {integrity: sha512-nG96G3Wp6acyAgJqGasjODb+acrI7KltPiRxzHPXnP3NgI28bpQDRv53olbqGXbfcgF5aiiHmO3xpwEpS5Ld9g==}
 
-  '@types/node@22.7.6':
-    resolution: {integrity: sha512-/d7Rnj0/ExXDMcioS78/kf1lMzYk4BZV8MZGTBKzTGZ6/406ukkbYlIsZmMPhcR5KlkunDHQLrtAVmSq7r+mSw==}
+  '@types/node@22.9.0':
+    resolution: {integrity: sha512-vuyHg81vvWA1Z1ELfvLko2c8f34gyA0zaic0+Rllc5lbCnbSyuvb2Oxpm6TAUAC/2xZN3QGqxBNggD1nNR2AfQ==}
 
   '@types/resolve@1.20.2':
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
@@ -855,16 +855,16 @@ packages:
       next: '>=13.1.0'
       react: ^18.0.0-0
 
-  next@15.0.1:
-    resolution: {integrity: sha512-PSkFkr/w7UnFWm+EP8y/QpHrJXMqpZzAXpergB/EqLPOh4SGPJXv1wj4mslr2hUZBAS9pX7/9YLIdxTv6fwytw==}
-    engines: {node: '>=18.18.0'}
+  next@15.0.3:
+    resolution: {integrity: sha512-ontCbCRKJUIoivAdGB34yCaOcPgYXr9AAkV/IwqFfWWTXEPUgLYkSkqBhIk9KK7gGmgjc64B+RdoeIDM13Irnw==}
+    engines: {node: ^18.18.0 || ^19.8.0 || >= 20.0.0}
     hasBin: true
     peerDependencies:
       '@opentelemetry/api': ^1.1.0
       '@playwright/test': ^1.41.2
       babel-plugin-react-compiler: '*'
-      react: ^18.2.0 || 19.0.0-rc-69d4b800-20241021
-      react-dom: ^18.2.0 || 19.0.0-rc-69d4b800-20241021
+      react: ^18.2.0 || 19.0.0-rc-66855b96-20241106
+      react-dom: ^18.2.0 || 19.0.0-rc-66855b96-20241106
       sass: ^1.3.0
     peerDependenciesMeta:
       '@opentelemetry/api':
@@ -971,8 +971,8 @@ packages:
     resolution: {integrity: sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==}
     engines: {node: ^10 || ^12 || >=14}
 
-  postcss@8.4.47:
-    resolution: {integrity: sha512-56rxCq7G/XfB4EkXq9Egn5GCqugWvDFjafDOThIdMBsI15iqPqR5r15TfSr1YPYeEI19YeaXMCbY6u88Y76GLQ==}
+  postcss@8.4.49:
+    resolution: {integrity: sha512-OCVPnIObs4N29kxTjzLfUryOkvZEq+pf8jTF0lg8E7uETuWHA+v7j3c/xJmiqpX450191LlmZfUKkXxkTry7nA==}
     engines: {node: ^10 || ^12 || >=14}
 
   property-information@6.4.0:
@@ -1124,11 +1124,11 @@ packages:
   tslib@2.5.0:
     resolution: {integrity: sha512-336iVw3rtn2BUK7ORdIAHTyxHGRIHVReokCR3XjbckJMK7ms8FysBfhLR8IXnAgy7T0PTPNBWKiH514FOW/WSg==}
 
-  types-react-dom@19.0.0-rc.1:
-    resolution: {integrity: sha512-VSLZJl8VXCD0fAWp7DUTFUDCcZ8DVXOQmjhJMD03odgeFmu14ZQJHCXeETm3BEAhJqfgJaFkLnGkQv88sRx0fQ==}
+  types-react-dom@19.0.0-alpha.3:
+    resolution: {integrity: sha512-foCg3VSAoTLKBpU6FKgtHjOzqZVo7UVXfG/JnKM8imXq/+TvSGebj+KJlAVG6H1n+hiQtqpjHc+hk5FmZOJCqw==}
 
-  types-react@19.0.0-rc.1:
-    resolution: {integrity: sha512-RshndUfqTW6K3STLPis8BtAYCGOkMbtvYsi90gmVNDZBXUyUc5juf2PE9LfS/JmOlUIRO8cWTS/1MTnmhjDqyQ==}
+  types-react@19.0.0-alpha.3:
+    resolution: {integrity: sha512-u7IEgvEgACYFDGtaqBgh5tqtYxkfPgtE7sl3RjfsT4QTpRM9FADXoWomFYZVi55Upii3LUcaZYrKFyHqUTHpew==}
 
   typescript@5.6.3:
     resolution: {integrity: sha512-hjcS1mhfuyi4WW8IWtjP7brDrG2cuDZukyrYrSauoXGNgx0S7zceP07adYkJycEr56BOUTNPzbInooiN3fn1qw==}
@@ -1315,30 +1315,30 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
 
-  '@next/env@15.0.1': {}
+  '@next/env@15.0.3': {}
 
-  '@next/swc-darwin-arm64@15.0.1':
+  '@next/swc-darwin-arm64@15.0.3':
     optional: true
 
-  '@next/swc-darwin-x64@15.0.1':
+  '@next/swc-darwin-x64@15.0.3':
     optional: true
 
-  '@next/swc-linux-arm64-gnu@15.0.1':
+  '@next/swc-linux-arm64-gnu@15.0.3':
     optional: true
 
-  '@next/swc-linux-arm64-musl@15.0.1':
+  '@next/swc-linux-arm64-musl@15.0.3':
     optional: true
 
-  '@next/swc-linux-x64-gnu@15.0.1':
+  '@next/swc-linux-x64-gnu@15.0.3':
     optional: true
 
-  '@next/swc-linux-x64-musl@15.0.1':
+  '@next/swc-linux-x64-musl@15.0.3':
     optional: true
 
-  '@next/swc-win32-arm64-msvc@15.0.1':
+  '@next/swc-win32-arm64-msvc@15.0.3':
     optional: true
 
-  '@next/swc-win32-x64-msvc@15.0.1':
+  '@next/swc-win32-x64-msvc@15.0.3':
     optional: true
 
   '@nodelib/fs.scandir@2.1.5':
@@ -1406,7 +1406,7 @@ snapshots:
 
   '@types/ms@0.7.34': {}
 
-  '@types/node@22.7.6':
+  '@types/node@22.9.0':
     dependencies:
       undici-types: 6.19.8
 
@@ -1429,14 +1429,14 @@ snapshots:
     dependencies:
       sprintf-js: 1.0.3
 
-  autoprefixer@10.4.20(postcss@8.4.47):
+  autoprefixer@10.4.20(postcss@8.4.49):
     dependencies:
       browserslist: 4.24.0
       caniuse-lite: 1.0.30001669
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.1.1
-      postcss: 8.4.47
+      postcss: 8.4.49
       postcss-value-parser: 4.2.0
 
   bail@2.0.2: {}
@@ -2111,16 +2111,16 @@ snapshots:
 
   nanoid@3.3.7: {}
 
-  next-image-export-optimizer@1.15.1(next@15.0.1(@opentelemetry/api@1.4.1)(react-dom@19.0.0-rc-69d4b800-20241021(react@19.0.0-rc-69d4b800-20241021))(react@19.0.0-rc-69d4b800-20241021))(react@19.0.0-rc-69d4b800-20241021):
+  next-image-export-optimizer@1.15.1(next@15.0.3(@opentelemetry/api@1.4.1)(react-dom@19.0.0-rc-69d4b800-20241021(react@19.0.0-rc-69d4b800-20241021))(react@19.0.0-rc-69d4b800-20241021))(react@19.0.0-rc-69d4b800-20241021):
     dependencies:
-      next: 15.0.1(@opentelemetry/api@1.4.1)(react-dom@19.0.0-rc-69d4b800-20241021(react@19.0.0-rc-69d4b800-20241021))(react@19.0.0-rc-69d4b800-20241021)
+      next: 15.0.3(@opentelemetry/api@1.4.1)(react-dom@19.0.0-rc-69d4b800-20241021(react@19.0.0-rc-69d4b800-20241021))(react@19.0.0-rc-69d4b800-20241021)
       react: 19.0.0-rc-69d4b800-20241021
       sharp: 0.33.5
       typescript: 5.6.3
 
-  next@15.0.1(@opentelemetry/api@1.4.1)(react-dom@19.0.0-rc-69d4b800-20241021(react@19.0.0-rc-69d4b800-20241021))(react@19.0.0-rc-69d4b800-20241021):
+  next@15.0.3(@opentelemetry/api@1.4.1)(react-dom@19.0.0-rc-69d4b800-20241021(react@19.0.0-rc-69d4b800-20241021))(react@19.0.0-rc-69d4b800-20241021):
     dependencies:
-      '@next/env': 15.0.1
+      '@next/env': 15.0.3
       '@swc/counter': 0.1.3
       '@swc/helpers': 0.5.13
       busboy: 1.6.0
@@ -2130,14 +2130,14 @@ snapshots:
       react-dom: 19.0.0-rc-69d4b800-20241021(react@19.0.0-rc-69d4b800-20241021)
       styled-jsx: 5.1.6(react@19.0.0-rc-69d4b800-20241021)
     optionalDependencies:
-      '@next/swc-darwin-arm64': 15.0.1
-      '@next/swc-darwin-x64': 15.0.1
-      '@next/swc-linux-arm64-gnu': 15.0.1
-      '@next/swc-linux-arm64-musl': 15.0.1
-      '@next/swc-linux-x64-gnu': 15.0.1
-      '@next/swc-linux-x64-musl': 15.0.1
-      '@next/swc-win32-arm64-msvc': 15.0.1
-      '@next/swc-win32-x64-msvc': 15.0.1
+      '@next/swc-darwin-arm64': 15.0.3
+      '@next/swc-darwin-x64': 15.0.3
+      '@next/swc-linux-arm64-gnu': 15.0.3
+      '@next/swc-linux-arm64-musl': 15.0.3
+      '@next/swc-linux-x64-gnu': 15.0.3
+      '@next/swc-linux-x64-musl': 15.0.3
+      '@next/swc-win32-arm64-msvc': 15.0.3
+      '@next/swc-win32-x64-msvc': 15.0.3
       '@opentelemetry/api': 1.4.1
       sharp: 0.33.5
     transitivePeerDependencies:
@@ -2176,28 +2176,28 @@ snapshots:
 
   pirates@4.0.5: {}
 
-  postcss-import@15.1.0(postcss@8.4.47):
+  postcss-import@15.1.0(postcss@8.4.49):
     dependencies:
-      postcss: 8.4.47
+      postcss: 8.4.49
       postcss-value-parser: 4.2.0
       read-cache: 1.0.0
       resolve: 1.22.8
 
-  postcss-js@4.0.1(postcss@8.4.47):
+  postcss-js@4.0.1(postcss@8.4.49):
     dependencies:
       camelcase-css: 2.0.1
-      postcss: 8.4.47
+      postcss: 8.4.49
 
-  postcss-load-config@4.0.2(postcss@8.4.47):
+  postcss-load-config@4.0.2(postcss@8.4.49):
     dependencies:
       lilconfig: 3.0.0
       yaml: 2.3.4
     optionalDependencies:
-      postcss: 8.4.47
+      postcss: 8.4.49
 
-  postcss-nested@6.0.1(postcss@8.4.47):
+  postcss-nested@6.0.1(postcss@8.4.49):
     dependencies:
-      postcss: 8.4.47
+      postcss: 8.4.49
       postcss-selector-parser: 6.0.15
 
   postcss-selector-parser@6.0.10:
@@ -2218,7 +2218,7 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  postcss@8.4.47:
+  postcss@8.4.49:
     dependencies:
       nanoid: 3.3.7
       picocolors: 1.1.1
@@ -2393,11 +2393,11 @@ snapshots:
       normalize-path: 3.0.0
       object-hash: 3.0.0
       picocolors: 1.0.0
-      postcss: 8.4.47
-      postcss-import: 15.1.0(postcss@8.4.47)
-      postcss-js: 4.0.1(postcss@8.4.47)
-      postcss-load-config: 4.0.2(postcss@8.4.47)
-      postcss-nested: 6.0.1(postcss@8.4.47)
+      postcss: 8.4.49
+      postcss-import: 15.1.0(postcss@8.4.49)
+      postcss-js: 4.0.1(postcss@8.4.49)
+      postcss-load-config: 4.0.2(postcss@8.4.49)
+      postcss-nested: 6.0.1(postcss@8.4.49)
       postcss-selector-parser: 6.0.15
       resolve: 1.22.8
       sucrase: 3.32.0
@@ -2424,11 +2424,11 @@ snapshots:
 
   tslib@2.5.0: {}
 
-  types-react-dom@19.0.0-rc.1:
+  types-react-dom@19.0.0-alpha.3:
     dependencies:
-      '@types/react': types-react@19.0.0-rc.1
+      '@types/react': types-react@19.0.0-alpha.3
 
-  types-react@19.0.0-rc.1:
+  types-react@19.0.0-alpha.3:
     dependencies:
       csstype: 3.1.2
 

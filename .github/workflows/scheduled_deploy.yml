@@ -5,7 +5,7 @@ on:
     - cron: "0 0 * * *"
 jobs: 
   webhook: 
-    name: Ping webhook
+    name: Trigger Deploy Hook
     runs-on: ubuntu-latest 
     steps: 
       - name: Trigger Deploy Hook
