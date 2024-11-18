@@ -15,7 +15,7 @@
     "flowbite-react": "^0.10.2",
     "gray-matter": "^4.0.3",
     "next": "15.0.3",
-    "next-image-export-optimizer": "^1.15.1",
+    "next-image-export-optimizer": "^1.16.0",
     "react": "19.0.0-rc-69d4b800-20241021",
     "react-dom": "19.0.0-rc-69d4b800-20241021",
     "remark": "^15.0.1",

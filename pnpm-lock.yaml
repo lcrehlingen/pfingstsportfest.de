@@ -34,8 +34,8 @@ importers:
         specifier: 15.0.3
         version: 15.0.3(@opentelemetry/api@1.4.1)(react-dom@19.0.0-rc-69d4b800-20241021(react@19.0.0-rc-69d4b800-20241021))(react@19.0.0-rc-69d4b800-20241021)
       next-image-export-optimizer:
-        specifier: ^1.15.1
-        version: 1.15.1(next@15.0.3(@opentelemetry/api@1.4.1)(react-dom@19.0.0-rc-69d4b800-20241021(react@19.0.0-rc-69d4b800-20241021))(react@19.0.0-rc-69d4b800-20241021))(react@19.0.0-rc-69d4b800-20241021)
+        specifier: ^1.16.0
+        version: 1.16.0(next@15.0.3(@opentelemetry/api@1.4.1)(react-dom@19.0.0-rc-69d4b800-20241021(react@19.0.0-rc-69d4b800-20241021))(react@19.0.0-rc-69d4b800-20241021))(react@19.0.0-rc-69d4b800-20241021)
       react:
         specifier: 19.0.0-rc-69d4b800-20241021
         version: 19.0.0-rc-69d4b800-20241021
@@ -847,12 +847,12 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
-  next-image-export-optimizer@1.15.1:
-    resolution: {integrity: sha512-tx20p74EtW/VeIdoxPt9GtgagGJU3DVDXqBa0VgPYB2wiia6axiljiUeg9KoR1FPOduHxbjPPG3FtkKL0XN7Lg==}
+  next-image-export-optimizer@1.16.0:
+    resolution: {integrity: sha512-eQYR6Cia15ravkJDofJIQS9MNp5unqYeonqJrjKq+4Pw6BNAHMq1GOye5DDX4L6u209E6R1NUKIZx8ezbbWguw==}
     engines: {node: '>=16.0.0'}
     hasBin: true
     peerDependencies:
-      next: '>=13.1.0'
+      next: ^15.0.3
       react: ^18.0.0-0
 
   next@15.0.3:
@@ -2111,7 +2111,7 @@ snapshots:
 
   nanoid@3.3.7: {}
 
-  next-image-export-optimizer@1.15.1(next@15.0.3(@opentelemetry/api@1.4.1)(react-dom@19.0.0-rc-69d4b800-20241021(react@19.0.0-rc-69d4b800-20241021))(react@19.0.0-rc-69d4b800-20241021))(react@19.0.0-rc-69d4b800-20241021):
+  next-image-export-optimizer@1.16.0(next@15.0.3(@opentelemetry/api@1.4.1)(react-dom@19.0.0-rc-69d4b800-20241021(react@19.0.0-rc-69d4b800-20241021))(react@19.0.0-rc-69d4b800-20241021))(react@19.0.0-rc-69d4b800-20241021):
     dependencies:
       next: 15.0.3(@opentelemetry/api@1.4.1)(react-dom@19.0.0-rc-69d4b800-20241021(react@19.0.0-rc-69d4b800-20241021))(react@19.0.0-rc-69d4b800-20241021)
       react: 19.0.0-rc-69d4b800-20241021
