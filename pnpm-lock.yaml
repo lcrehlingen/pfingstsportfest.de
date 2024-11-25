@@ -42,8 +42,8 @@ importers:
         specifier: ^0.33.5
         version: 0.33.5
       typescript:
-        specifier: 5.6.3
-        version: 5.6.3
+        specifier: 5.7.2
+        version: 5.7.2
     devDependencies:
       '@tailwindcss/aspect-ratio':
         specifier: ^0.4.2
@@ -1212,8 +1212,8 @@ packages:
   tslib@2.5.0:
     resolution: {integrity: sha512-336iVw3rtn2BUK7ORdIAHTyxHGRIHVReokCR3XjbckJMK7ms8FysBfhLR8IXnAgy7T0PTPNBWKiH514FOW/WSg==}
 
-  typescript@5.6.3:
-    resolution: {integrity: sha512-hjcS1mhfuyi4WW8IWtjP7brDrG2cuDZukyrYrSauoXGNgx0S7zceP07adYkJycEr56BOUTNPzbInooiN3fn1qw==}
+  typescript@5.7.2:
+    resolution: {integrity: sha512-i5t66RHxDvVN40HfDd1PsEThGNnlMCMT3jMUuoh9/0TaqWevNontacunWyN02LA9/fIbEWlcHZcgTKb9QoaLfg==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -2268,7 +2268,7 @@ snapshots:
       next: 15.0.3(@opentelemetry/api@1.4.1)(react-dom@19.0.0-rc.1(react@19.0.0-rc.1))(react@19.0.0-rc.1)
       react: 19.0.0-rc.1
       sharp: 0.33.5
-      typescript: 5.6.3
+      typescript: 5.7.2
 
   next@15.0.3(@opentelemetry/api@1.4.1)(react-dom@19.0.0-rc.1(react@19.0.0-rc.1))(react@19.0.0-rc.1):
     dependencies:
@@ -2605,7 +2605,7 @@ snapshots:
 
   tslib@2.5.0: {}
 
-  typescript@5.6.3: {}
+  typescript@5.7.2: {}
 
   undici-types@6.19.8: {}
 
