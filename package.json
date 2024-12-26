@@ -11,10 +11,10 @@
     "flowbite": "^2.5.2",
     "flowbite-react": "^0.10.2",
     "gray-matter": "^4.0.3",
-    "next": "15.0.3",
+    "next": "15.1.2",
     "next-image-export-optimizer": "^1.18.0",
-    "react": "19.0.0-rc.1",
-    "react-dom": "19.0.0-rc.1",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
     "remark": "^15.0.1",
     "remark-gfm": "^4.0.0",
     "remark-html": "^16.0.1",
@@ -24,12 +24,12 @@
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/typography": "^0.5.15",
-    "@types/node": "22.10.1",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
+    "@types/node": "22.10.2",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.49",
-    "tailwindcss": "^3.4.15"
+    "tailwindcss": "^3.4.17"
   },
-  "packageManager": "pnpm@9.13.2"
+  "packageManager": "pnpm@9.15.1"
 }
