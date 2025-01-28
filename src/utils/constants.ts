@@ -1,6 +1,6 @@
-import { EDITION_DATE } from "@/data";
+import { EDITION_DATE_FROM } from "@/data";
 
-const EVENT_DATE = new Date(EDITION_DATE + 'T00:00:00.000Z');
+const EVENT_DATE = new Date(EDITION_DATE_FROM + 'T00:00:00.000Z');
 const TOTAL_PRIZEMONEY = 78000;
 const LIVE_RESULTS = "https://red.laportal.net/Competitions/Details/12570";
 const INTERNATIONAL_LIVESTREAM = "https://www.youtube.com/watch?v=nts7TqhqbOM";

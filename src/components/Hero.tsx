@@ -1,7 +1,6 @@
 import background from "../../public/background.jpeg";
 import Link from "next/link";
-import { EDITION_DATE } from "@/data";
-import { daysAway } from "@/utils/date";
+import { daysAway, formatEditionDate } from "@/utils/date";
 import {
   EVENT_DATE,
   NATIONAL_LIVESTREAM,
@@ -36,11 +35,7 @@ export default function Hero() {
                   Pfingstsportfest Rehlingen
                 </h1>
                 <h2 className="font-wa-headline text-4xl font-semibold text-white md:text-5xl">
-                  {new Date(EDITION_DATE).toLocaleDateString("de-DE", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })}
+                  {formatEditionDate()}
                 </h2>
               </div>
               <a
