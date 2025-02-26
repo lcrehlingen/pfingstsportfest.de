@@ -2,7 +2,7 @@ import { EDITION_DATE_FROM } from "@/data";
 
 const EVENT_DATE = new Date(EDITION_DATE_FROM + 'T00:00:00.000Z');
 const TOTAL_PRIZEMONEY = 78000;
-const LIVE_RESULTS = "https://red.laportal.net/Competitions/Details/12570";
+const LIVE_RESULTS = "https://red.laportal.net/Competitions/Details/15155";
 const INTERNATIONAL_LIVESTREAM = "https://www.youtube.com/watch?v=nts7TqhqbOM";
 const NATIONAL_LIVESTREAM = "https://www.youtube.com/watch?v=0vQL8Yz00h0";
 const PHOTOFINISH_LINK = "https://photofinish.lcrehlingen.de/pfingsten2025";

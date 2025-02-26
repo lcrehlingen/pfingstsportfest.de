@@ -8,15 +8,16 @@
     "start": "next start"
   },
   "dependencies": {
-    "flowbite": "^3.0.0",
+    "@tailwindcss/postcss": "^4.0.9",
+    "flowbite": "^3.1.2",
     "flowbite-react": "^0.10.2",
     "gray-matter": "^4.0.3",
-    "next": "15.1.6",
+    "next": "15.1.7",
     "next-image-export-optimizer": "^1.18.0",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "remark": "^15.0.1",
-    "remark-gfm": "^4.0.0",
+    "remark-gfm": "^4.0.1",
     "remark-html": "^16.0.1",
     "sharp": "^0.33.5",
     "typescript": "5.7.3"
@@ -24,12 +25,12 @@
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/typography": "^0.5.16",
-    "@types/node": "22.12.0",
-    "@types/react": "^19.0.8",
-    "@types/react-dom": "^19.0.3",
+    "@types/node": "22.13.5",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
     "autoprefixer": "^10.4.20",
-    "postcss": "^8.5.1",
+    "postcss": "^8.5.3",
     "tailwindcss": "^3.4.17"
   },
-  "packageManager": "pnpm@9.15.4"
+  "packageManager": "pnpm@10.5.1"
 }
