@@ -128,7 +128,7 @@ export default function Ausschreibung() {
               </tr>
               <tr>
                 <td></td>
-                <td>Kugelstoßen (07.06.2025)</td>
+                <td>Kugelstoßen</td>
               </tr>
             </tbody>
           </table>
