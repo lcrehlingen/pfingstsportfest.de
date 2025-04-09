@@ -20,7 +20,7 @@ export default function Ausschreibung() {
           Leichtathletik weltweit gelistet.
         </p>
         <ul>
-          <li>Datum: 07/08.06.2025</li>
+          <li>Datum: 08.06.2025</li>
           <li>
             Mail:{" "}
             <a href="mailto:pfingstsportfest@lcrehlingen.de">
