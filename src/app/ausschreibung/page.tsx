@@ -149,19 +149,19 @@ export default function Ausschreibung() {
               </tr>
               <tr>
                 <td>2</td>
-                <td>1200</td>
+                <td>1300</td>
               </tr>
               <tr>
                 <td>3</td>
-                <td>900</td>
+                <td>1000</td>
               </tr>
               <tr>
                 <td>4</td>
-                <td>600</td>
+                <td>700</td>
               </tr>
               <tr>
                 <td>5</td>
-                <td>400</td>
+                <td>500</td>
               </tr>
               <tr>
                 <td>6</td>
