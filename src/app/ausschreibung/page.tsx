@@ -99,10 +99,6 @@ export default function Ausschreibung() {
                 <td>3000m Hindernis</td>
               </tr>
               <tr>
-                <td></td>
-                <td>Speerwurf</td>
-              </tr>
-              <tr>
                 <td>Frauen</td>
                 <td>100m</td>
               </tr>

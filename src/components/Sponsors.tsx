@@ -7,7 +7,7 @@ import bitburger from "../../public/sponsors/bitburger.png";
 import sparkasse from "../../public/sponsors/sparkasse.png";
 import saartoto from "../../public/sponsors/saartoto.jpg";
 import shs from "../../public/sponsors/shs.png";
-import ntaatos from "../../public/sponsors/ntaatos.png";
+import mmpuma from "../../public/sponsors/puma_mm.png";
 
 import ministerPraesidentin from "../../public/sponsors/ministerpaesidentin.png";
 import innenministerium from "../../public/sponsors/innenministerium.png";
@@ -38,7 +38,7 @@ export default function Sponsors() {
         </div>
         <div className="grid grid-cols-2 col-span-2 gap-4 sm:grid-cols-3 md:grid-cols-4 md:gap-8 lg:grid-cols-5 pl-4">
         <div className="flex items-center justify-center">
-            <ExportedImage src={ntaatos} alt="NTA Saar und Atos Unify" />
+            <ExportedImage src={mmpuma} alt="M&M Sports + Puma" />
           </div>
           <div className="flex items-center justify-center">
             <ExportedImage src={meineVVB} alt="Vereinigte Volksbank" />
