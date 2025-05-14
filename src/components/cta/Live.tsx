@@ -1,4 +1,4 @@
-import { INTERNATIONAL_LIVESTREAM } from "@/utils/constants";
+import { INTERNATIONAL_LIVESTREAM, NATIONAL_LIVESTREAM } from "@/utils/constants";
 import sr from "../../../public/sr.jpg";
 import ExportedImage from "next-image-export-optimizer";
 
@@ -18,17 +18,17 @@ export default function Live() {
           Auch in diesem Jahr überträgt der Saarländische Rundfunk das Rehlinger
           Pfingstsportfest zwei Stunden live im Fernsehen und im Livestream.
         </p>
-        <p className="text-gray-500 md:text-lg">
+        {/*<p className="text-gray-500 md:text-lg">
           In Zusammenarbeit mit European Athletics wird es einen internationalen
           Livestream auf dem Youtube Kanal von European Athletics geben.
-        </p>
+        </p>*/}
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href={INTERNATIONAL_LIVESTREAM}
+          href={NATIONAL_LIVESTREAM}
           className="inline-flex max-w-fit items-center rounded-lg bg-tourDarkBlue px-5 py-2.5 text-center text-lg font-medium text-tourLightOrange"
         >
-          EA Livestream
+          Livestream
           <svg
             className="-mr-1 ml-2 h-5 w-5"
             fill="currentColor"
