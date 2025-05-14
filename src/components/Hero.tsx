@@ -59,22 +59,12 @@ export default function Hero() {
                 </a>
               )}
 
-              {daysAway(EVENT_DATE) > 7 && (
-                <Link
-                  href="/ergebnisse"
-                  className="inline-flex max-w-fit items-center rounded-lg bg-red-500 px-5 py-2.5 text-center text-lg font-medium text-tourDarkBlue"
-                >
-                  Ergebnisse
-                </Link>
-              )}
-              {daysAway(EVENT_DATE) < 7 && daysAway(EVENT_DATE) >= 0 && (
-                <Link
+              <Link
                   href="/zeitplan"
                   className="inline-flex max-w-fit items-center rounded-lg bg-red-500 px-5 py-2.5 text-center text-lg font-medium text-tourDarkBlue"
                 >
                   Zeitplan
-                </Link>
-              )}
+              </Link>
               {daysAway(EVENT_DATE) < 7 && daysAway(EVENT_DATE) >= 0 && (
                 <Link
                   href="/zeitplan"

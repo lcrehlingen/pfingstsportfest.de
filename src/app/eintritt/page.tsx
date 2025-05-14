@@ -16,15 +16,15 @@ export default function Ausschreibung() {
         Eintrittskarten können an der Tageskasse am Stadioneingang erworben
         werden. Die Tageskasse öffnet um 14:00 Uhr.{" "}
         <ul>
-          <li>Erwachsene: 12€</li>
-          <li>Schüler und Jugendliche (12 bis 18 Jahre): 5€</li>
+          <li>Erwachsene: 15€</li>
+          <li>Schüler und Jugendliche (12 bis 18 Jahre): 7€</li>
           <li>Schüler bis 11 Jahre: frei</li>
-          <li>Schwerbehinderte (mit Ausweis): 5€</li>
-          <li>Studenten (mit Ausweis): 5€</li>
-          <li>Tribüne: 25€</li>
+          <li>Schwerbehinderte (mit Ausweis): 7€</li>
+          <li>Studenten (mit Ausweis): 7€</li>
+          <li>Tribüne: 30€</li>
 
           <li>
-            2 Erwachsene + 2 zahlungspflichtige Kinder: 28€ (jedes weitere
+            2 Erwachsene + 2 zahlungspflichtige Kinder: 35€ (jedes weitere
             eigene Kind frei)
           </li>
         </ul>
