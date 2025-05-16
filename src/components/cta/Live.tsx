@@ -1,5 +1,5 @@
 import { INTERNATIONAL_LIVESTREAM, NATIONAL_LIVESTREAM } from "@/utils/constants";
-import sr from "../../../public/sr.jpg";
+import sr from "../../../public/sr.png";
 import ExportedImage from "next-image-export-optimizer";
 
 export default function Live() {

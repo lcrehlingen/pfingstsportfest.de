@@ -14,7 +14,7 @@ export default function Ausschreibung() {
       <Title>Eintritt</Title>
       <article className="prose prose-xl max-w-max prose-table:tracking-wide">
         Eintrittskarten können an der Tageskasse am Stadioneingang erworben
-        werden. Die Tageskasse öffnet um 14:00 Uhr.{" "}
+        werden. Die Tageskasse öffnet um 13:00 Uhr.{" "}
         <ul>
           <li>Erwachsene: 15€</li>
           <li>Schüler und Jugendliche (12 bis 18 Jahre): 7€</li>
