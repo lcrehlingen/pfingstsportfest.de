@@ -31,7 +31,7 @@ export default function Hero() {
           <div className="mx-auto max-w-screen-xl px-4 2xl:px-0 flex flex-col gap-4">
             <div>
               <div className="flex flex-col gap-4">
-                <h1 className="whitespace-nowrap font-wa-headline text-5xl font-semibold text-white md:text-6xl">
+                <h1 className="font-wa-headline text-5xl font-semibold text-white md:text-6xl">
                   Pfingstsportfest Rehlingen
                 </h1>
                 <h2 className="font-wa-headline text-4xl font-semibold text-white md:text-5xl">

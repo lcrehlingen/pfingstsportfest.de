@@ -13,7 +13,7 @@ const RESULT_LINKS = [
         "link": NATIONAL_LIVESTREAM,
         "color": "bg-sky-500"
     },
-    {
+    /*{
         "name": "Live-Stream (English)",
         "link": INTERNATIONAL_LIVESTREAM,
         "color": "bg-red-500"
@@ -22,7 +22,7 @@ const RESULT_LINKS = [
         "name": "Photofinish",
         "link": PHOTOFINISH_LINK,
         "color": "bg-green-500"
-    }
+    }*/
 ];
 
 export { EVENT_DATE, TOTAL_PRIZEMONEY, LIVE_RESULTS, RESULT_LINKS, INTERNATIONAL_LIVESTREAM, NATIONAL_LIVESTREAM };

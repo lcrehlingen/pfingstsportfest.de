@@ -7,6 +7,11 @@ import javelin from "../../../public/javelin_m.jpeg";
 import poleVault from "../../../public/polevault_m_bokanda.jpeg";
 import rehli from "../../../public/rehli.jpeg";
 import sprint from "../../../public/100m.jpg";
+import mihambo from "../../../public/mihambo_florian_walz.jpeg";
+import farken from "../../../public/farken_diego_menzi.jpg";
+import eighthundred from "../../../public/800m_diego_menzi.jpg";
+
+
 import Link from "next/link";
 import { Carousel } from "flowbite-react";
 import ExportedImage from "next-image-export-optimizer";
@@ -16,9 +21,27 @@ export default function Weltklasse() {
     <section className="mx-auto grid max-w-screen-xl grid-cols-1 items-center gap-8 px-4 md:grid md:grid-cols-2 xl:gap-16 2xl:px-0">
       <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
         <Carousel>
+           <ExportedImage
+            src={mihambo}
+            alt="Malaika MIhambo"
+            placeholder="blur"
+            className="block h-full w-full rounded-lg object-cover object-center"
+          />
           <ExportedImage
             src={javelin}
             alt="Julian Weber"
+            placeholder="blur"
+            className="block h-full w-full rounded-lg object-cover object-center"
+          />
+          <ExportedImage
+            src={farken}
+            alt="Robert Farken"
+            placeholder="blur"
+            className="block h-full w-full rounded-lg object-cover object-center"
+          />
+           <ExportedImage
+            src={eighthundred}
+            alt="800m Frauen"
             placeholder="blur"
             className="block h-full w-full rounded-lg object-cover object-center"
           />
