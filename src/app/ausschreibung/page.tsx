@@ -47,7 +47,7 @@ export default function Ausschreibung() {
             <ul>
               <li>15 min vor Start -Nachwuchsläufe</li>
               <li>20 min vor Start -Lauf</li>
-              <li>40 min vor Start- Wurf/Hochsprung</li>
+              <li>40 min vor Start- Wurf/Hochsprung/Weitsprung</li>
             </ul>
             <h2>Athleteneingang</h2>
             <p>
