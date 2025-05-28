@@ -179,7 +179,7 @@ export default function Ausschreibung() {
           Ausländische Starter per Mail an{" "}
           <a href="mailto:niklas.marion@lcrehlingen.de">
             niklas.marion@lcrehlingen.de
-          </a>
+          </a>. Meldeschluss ist der <strong>01.06.2025</strong>.
         </p>
         <div className="overflow-x-auto">
           <table>
