@@ -59,13 +59,7 @@ export default function Hero() {
                 </a>
               )}
 
-              <Link
-                  href="/zeitplan"
-                  className="inline-flex max-w-fit items-center rounded-lg bg-red-500 px-5 py-2.5 text-center text-lg font-medium text-tourDarkBlue"
-                >
-                  Zeitplan
-              </Link>
-              {daysAway(EVENT_DATE) < 7 && daysAway(EVENT_DATE) >= 0 && (
+              {daysAway(EVENT_DATE) < 21 && daysAway(EVENT_DATE) >= 0 && (
                 <Link
                   href="/zeitplan"
                   className="inline-flex max-w-fit items-center rounded-lg bg-red-500 px-5 py-2.5 text-center text-lg font-medium text-tourDarkBlue"
