@@ -48,7 +48,7 @@ export default function Hero() {
               </a>
             </div>
             <div className="flex flex-row gap-4">
-              {daysAway(EVENT_DATE) <= 0 && (
+              {daysAway(EVENT_DATE) <= 1 && (
                 <a
                   href={NATIONAL_LIVESTREAM}
                   target="_blank"
@@ -61,7 +61,7 @@ export default function Hero() {
 
               {daysAway(EVENT_DATE) < 21 && daysAway(EVENT_DATE) >= 0 && (
                 <Link
-                  href="/zeitplan"
+                  href="/ergebnisse"
                   className="inline-flex max-w-fit items-center rounded-lg bg-red-500 px-5 py-2.5 text-center text-lg font-medium text-tourDarkBlue"
                 >
                   Zeitplan
