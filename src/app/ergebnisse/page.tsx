@@ -21,6 +21,10 @@ const photofinish = [
     edition: 59,
     link: "https://photofinish.lcrehlingen.de/pfingsten2024",
   },
+  {
+    edition: 60,
+    link: "https://photofinish.lcrehlingen.de/pfingsten2025",
+  },
 ];
 
 export default async function Ergebnisse() {
@@ -31,7 +35,7 @@ export default async function Ergebnisse() {
       <Title>Ergebnisse</Title>
       {daysAway(EVENT_DATE) < 7 && (
         <div className="flex flex-row gap-4">
-          {RESULT_LINKS.map((link, index) => (
+          {/*RESULT_LINKS.map((link, index) => (
             <a
               key={index}
               href={link.link}
@@ -41,7 +45,7 @@ export default async function Ergebnisse() {
             >
               {link.name}
             </a>
-          ))}
+          ))*/}
         </div>
       )}
       <article className="prose prose-xl max-w-none prose-table:tracking-wide">

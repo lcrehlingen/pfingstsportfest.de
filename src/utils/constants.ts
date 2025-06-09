@@ -8,12 +8,12 @@ const NATIONAL_LIVESTREAM = "https://www.youtube.com/live/9CkmnrTXNPs";
 const PHOTOFINISH_LINK = "https://photofinish.lcrehlingen.de/pfingsten2025";
 
 const RESULT_LINKS = [
-    {
+    /*{
         "name": "Live-Stream",
         "link": NATIONAL_LIVESTREAM,
         "color": "bg-sky-500"
     },
-    /*{
+    {
         "name": "Live-Stream (English)",
         "link": INTERNATIONAL_LIVESTREAM,
         "color": "bg-red-500"

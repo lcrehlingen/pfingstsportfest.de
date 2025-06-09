@@ -1,4 +1,4 @@
-export const EDITION = 60;
-export const EDITION_DATE_FROM = '2025-06-08';
-export const EDITION_DATE_TO = '2025-06-08';
+export const EDITION = 61;
+export const EDITION_DATE_FROM = '2026-05-24';
+export const EDITION_DATE_TO = '2026-05-24';
 export const TITLE = `${EDITION}. Pfingstsportfest Rehlingen`

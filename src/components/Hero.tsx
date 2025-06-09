@@ -48,7 +48,7 @@ export default function Hero() {
               </a>
             </div>
             <div className="flex flex-row gap-4">
-              {daysAway(EVENT_DATE) <= 1 && (
+              {/*daysAway(EVENT_DATE) <= 1 && (
                 <a
                   href={NATIONAL_LIVESTREAM}
                   target="_blank"
@@ -57,7 +57,7 @@ export default function Hero() {
                 >
                   Live-Stream
                 </a>
-              )}
+              )*/}
 
               {daysAway(EVENT_DATE) < 21 && daysAway(EVENT_DATE) >= 0 && (
                 <Link
