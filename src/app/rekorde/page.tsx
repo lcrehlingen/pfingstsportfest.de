@@ -22,8 +22,8 @@ export default function Ausschreibung() {
               <tr>
                 <th>Disziplin</th>
                 <th>Name</th>
-                <th>Jahr</th>
                 <th>Leistung</th>
+                <th>Jahr</th>
               </tr>
             </thead>
             <tbody>
@@ -45,8 +45,8 @@ export default function Ausschreibung() {
               <tr>
                 <th>Disziplin</th>
                 <th>Name</th>
-                <th>Jahr</th>
                 <th>Leistung</th>
+                <th>Jahr</th>
               </tr>
             </thead>
             <tbody>
