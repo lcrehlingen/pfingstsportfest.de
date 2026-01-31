@@ -20,7 +20,7 @@ export default function Ausschreibung() {
           Leichtathletik weltweit gelistet.
         </p>
         <ul>
-          <li>Datum: 08.06.2025</li>
+          <li>Datum: 24.05.2026</li>
           <li>
             Mail:{" "}
             <a href="mailto:pfingstsportfest@lcrehlingen.de">
@@ -80,7 +80,7 @@ export default function Ausschreibung() {
               </tr>
               <tr>
                 <td></td>
-                <td>400m</td>
+                <td>400m Hürden</td>
               </tr>
               <tr>
                 <td></td>
@@ -92,11 +92,7 @@ export default function Ausschreibung() {
               </tr>
               <tr>
                 <td></td>
-                <td>400m Hürden</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>3000m Hindernis</td>
+                <td>Diskus (Mixed)</td>
               </tr>
               <tr>
                 <td>Frauen</td>
@@ -105,6 +101,10 @@ export default function Ausschreibung() {
               <tr>
                 <td></td>
                 <td>400m</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>400m Hürden</td>
               </tr>
               <tr>
                 <td></td>
@@ -125,6 +125,10 @@ export default function Ausschreibung() {
               <tr>
                 <td></td>
                 <td>Kugelstoßen</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Diskus (Mixed)</td>
               </tr>
             </tbody>
           </table>
@@ -179,7 +183,7 @@ export default function Ausschreibung() {
           Ausländische Starter per Mail an{" "}
           <a href="mailto:niklas.marion@lcrehlingen.de">
             niklas.marion@lcrehlingen.de
-          </a>. Meldeschluss ist der <strong>01.06.2025</strong>.
+          </a>. Meldeschluss ist der <strong>17.05.2025</strong>.
         </p>
         <div className="overflow-x-auto">
           <table>
