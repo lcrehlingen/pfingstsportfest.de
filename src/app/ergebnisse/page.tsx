@@ -33,7 +33,7 @@ export default async function Ergebnisse() {
   return (
     <ContentContainer>
       <Title>Ergebnisse</Title>
-      {daysAway(EVENT_DATE) < 7 && (
+      {daysAway(EVENT_DATE) < 2 && (
         <div className="flex flex-row gap-4">
           {RESULT_LINKS.map((link, index) => (
             <a
@@ -49,7 +49,7 @@ export default async function Ergebnisse() {
         </div>
       )}
       <article className="prose prose-xl max-w-none prose-table:tracking-wide">
-        {daysAway(EVENT_DATE) < 7 && (
+        {daysAway(EVENT_DATE) < 21 && (
           <iframe src={LIVE_RESULTS} className="w-full" height={1000} />
         )}
 

@@ -216,6 +216,11 @@ export default function Ausschreibung() {
                 <td>2:05,00 min</td>
               </tr>
               <tr>
+                <td>Männer</td>
+                <td>800m</td>
+                <td>2:00,00 min</td>
+              </tr>
+              <tr>
                 <td>WJ U14</td>
                 <td>800m</td>
                 <td>-</td>
@@ -234,6 +239,11 @@ export default function Ausschreibung() {
                 <td>WJ U20</td>
                 <td>800m</td>
                 <td>2:25,00 min</td>
+              </tr>
+              <tr>
+                <td>Frauen</td>
+                <td>800m</td>
+                <td>2:20,00 min</td>
               </tr>
             </tbody>
           </table>
