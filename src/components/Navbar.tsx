@@ -9,7 +9,7 @@ import { TITLE } from "@/data";
 export default function Navbar() {
   const links = [
     { name: "Aktuelles", href: "/news" },
-    { name: "Ausschreibung", href: "/ausschreibung" },
+    /*{ name: "Ausschreibung", href: "/ausschreibung" },*/
     /*{ name: "Zeitplan", href: "/zeitplan" },*/
     { name: "Ergebnisse", href: "/ergebnisse" },
     { name: "Rekorde", href: "/rekorde" },
