@@ -3,6 +3,7 @@ import Sponsors from "@/components/Sponsors";
 import Live from "@/components/cta/Live";
 import Weltklasse from "@/components/cta/Weltklasse";
 import WorldAthletics from "@/components/cta/WorldAthletics";
+import LatestNews from "@/components/cta/LatestNews";
 import { TITLE } from "@/data";
 import { Metadata } from "next";
 
@@ -13,7 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
     : "http://localhost:3000";
   const description =
     "🚀 Weltmeister, Olympiasieger oder Europameister - am Pfingstwochenende wird das Bungertstadion jedes Jahr zum Schauplatz für nationale und internationale Spitzenathleten.";
-  const title = TITLE
+  const title = TITLE;
   const image = {
     url: url + "/og-image.png",
     width: 1920,
@@ -39,14 +40,13 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function Home() {
   return (
-    <>
+    <main className="w-full bg-white flex flex-col flex-1">
       <Hero />
-      <div className="flex flex-col gap-16 py-8 lg:gap-20 bg-white">
-        <Weltklasse />
-        <WorldAthletics />
-        <Live />
-        <Sponsors />
-      </div>
-    </>
+      <Weltklasse />
+      <WorldAthletics />
+      <Live />
+      <LatestNews />
+      <Sponsors />
+    </main>
   );
 }

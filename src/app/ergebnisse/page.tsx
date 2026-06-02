@@ -4,11 +4,16 @@ import { EVENT_DATE, LIVE_RESULTS, RESULT_LINKS } from "@/utils/constants";
 import { daysAway } from "@/utils/date";
 import { promises as fs } from "fs";
 import path from "path";
+import ResultsTable from "./ResultsTable";
 
 export const metadata = {
   title: "Ergebnisse",
+  description:
+    "Ergebnisse, Live-Ergebnisse, Siegerlisten und das historische Ergebnis-Archiv des Internationalen Pfingstsportfests Rehlingen im Überblick.",
   openGraph: {
     title: "Ergebnisse",
+    description:
+      "Ergebnisse, Live-Ergebnisse, Siegerlisten und das historische Ergebnis-Archiv des Internationalen Pfingstsportfests Rehlingen im Überblick.",
   },
 };
 
@@ -29,68 +34,24 @@ const photofinish = [
 
 export default async function Ergebnisse() {
   const results = await getResults();
+  const daysAwayEvent = daysAway(EVENT_DATE);
 
   return (
     <ContentContainer>
-      <Title>Ergebnisse</Title>
-      {daysAway(EVENT_DATE) < 2 && (
-        <div className="flex flex-row gap-4">
-          {RESULT_LINKS.map((link, index) => (
-            <a
-              key={index}
-              href={link.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`${link.color} inline-flex max-w-fit items-center rounded-lg px-5 py-2.5 text-center text-lg font-medium text-white`}
-            >
-              {link.name}
-            </a>
-          ))}
-        </div>
-      )}
-      <article className="prose prose-xl max-w-none prose-table:tracking-wide">
-        {daysAway(EVENT_DATE) < 21 && (
-          <iframe src={LIVE_RESULTS} className="w-full" height={1000} />
-        )}
+      <div className="flex flex-col gap-2 text-center max-w-2xl mx-auto mb-4">
+        <Title>Ergebnisse</Title>
+        <p className="text-gray-400 text-sm md:text-base leading-relaxed">
+          Verfolgen Sie die aktuellen Zeiten, Weiten und Höhen des Pfingstsportfests live oder stöbern Sie im Archiv aller PDF-Ergebnislisten seit dem Jahr 2000.
+        </p>
+      </div>
 
-        <table>
-          <thead>
-            <tr>
-              <th>Jahr</th>
-              <th>Austragung</th>
-              <th>Ergebnisse</th>
-            </tr>
-          </thead>
-          <tbody>
-            {results.map((result, index) => (
-              <tr key={index}>
-                <td className="font-semibold">
-                  {new Date(result.date).getFullYear()}
-                </td>
-                <td className="font-semibold">
-                  {result.edition}. Internationales Pfingstsportfest
-                </td>
-                <td>
-                  <a href={`/results/${result.filename}`}>Ergebnisse</a>
-                  {photofinish
-                    .filter((pf) => pf.edition === result.edition)
-                    .map((pf) => (
-                      <a
-                        key={pf.edition}
-                        href={pf.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {" "}
-                        (Photofinish)
-                      </a>
-                    ))}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </article>
+      <ResultsTable
+        results={results}
+        daysAwayEvent={daysAwayEvent}
+        liveResultsLink={LIVE_RESULTS}
+        resultLinks={RESULT_LINKS}
+        photofinish={photofinish}
+      />
     </ContentContainer>
   );
 }

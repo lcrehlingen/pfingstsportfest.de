@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import Footer from "@/components/Footer";
 import { Metadata } from "next";
 import type { Viewport } from "next";
+import { TITLE } from "@/data";
 
 export async function generateMetadata(): Promise<Metadata> {
   const vercel = process.env.VERCEL_URL ? true : false;
@@ -16,6 +17,10 @@ export async function generateMetadata(): Promise<Metadata> {
     height: 1080,
   };
   return {
+    title: {
+      template: `%s | ${TITLE}`,
+      default: TITLE,
+    },
     metadataBase: new URL(url),
     openGraph: {
       images: image,
@@ -54,7 +59,7 @@ export default function RootLayout({
   return (
     <html lang="de">
       <body
-        className={`${worldAthleticsBold.variable} ${worldAthleticsRegular.variable} ${worldAthleticsHeadline.variable} flex min-h-screen flex-col justify-between font-wa-regular bg-tourDarkBlue`}
+        className={`${worldAthleticsBold.variable} ${worldAthleticsRegular.variable} ${worldAthleticsHeadline.variable} flex min-h-screen flex-col font-wa-regular bg-tourDarkBlue`}
       >
         <Navbar />
         {children}

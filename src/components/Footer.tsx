@@ -1,10 +1,24 @@
+"use client";
+
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="py-8 px-4 2xl:px-0 bg-tourDarkBlue text-white bottom-0 w-full">
-      <div className="mx-auto max-w-screen-xl">
-        <div className="md:flex md:justify-between">
-          <div className="mb-6 md:mb-0">
-            <a href="https://lcrehlingen.de" aria-label="LC Rehlingen">
+    <footer className="w-full bg-tourDarkBlue border-t border-white/10 text-white py-12 px-4 2xl:px-0">
+      <div className="mx-auto max-w-(--breakpoint-xl) flex flex-col gap-10">
+        
+        {/* Top Section: Brand Logo & Navigation Columns */}
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-8 items-start">
+          
+          {/* Brand Column (takes 2 span on desktop) */}
+          <div className="flex flex-col gap-4 md:col-span-2">
+            <a 
+              href="https://lcrehlingen.de" 
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LC Rehlingen Homepage"
+              className="inline-block transition-transform duration-300 hover:scale-102 max-w-xs"
+            >
               <svg
                 className="h-16 w-auto font-source-sans"
                 viewBox="0 0 1789 808"
@@ -12,16 +26,12 @@ export default function Footer() {
               >
                 <path
                   d="M8515 8060c-284-37-565-162-835-369-47-36-168-147-270-247-224-218-286-263-430-309-30-9-73-25-95-36-105-49-181-46-340 13-44 16-162 56-261 89-100 33-226 82-280 110-299 153-652 217-889 160-267-64-481-160-706-318-288-202-334-239-509-406-106-102-212-193-409-352-444-359-613-500-599-503 36-7 272 102 375 173 34 24 101 62 150 85 198 92 440 239 771 467 106 73 211 142 235 154 23 12 83 52 132 89 73 54 519 359 562 383 6 4 42-17 80-47 226-177 431-270 778-355 264-64 382-80 591-81 297-1 379 29 594 218 176 155 326 306 394 397 108 142 317 310 499 400 142 70 214 88 460 115 159 18 358-20 442-84 77-59 121-214 96-338-39-188-311-438-696-640-94-49-141-79-143-92-5-25 14-20 208 56 350 138 545 249 690 397 129 131 182 248 182 405 1 99-12 141-67 226-119 184-194 222-470 240-166 11-157 11-240 0zM10750 6599c-216-32-409-112-790-329-345-196-488-276-534-298-169-83-380-34-744 171-280 157-377 189-577 191l-130 1-7-68c-9-90 5-119 86-193 87-80 224-163 359-219 62-25 128-54 147-66 185-106 290-134 485-127 122 5 135 7 219 42 240 100 444 210 866 466 403 244 520 294 722 310 199 15 393 58 413 90s-357 53-515 29z"
-                  style={{
-                    fill: "red",
-                  }}
+                  style={{ fill: "#d12630" }}
                   transform="matrix(.1 0 0 -.1 0 808)"
                 />
                 <path
                   d="M5914 6552c-6-4-15-32-19-62-14-112-54-270-87-341-64-138-297-425-484-595-53-49-145-134-203-189-176-167-368-302-750-527-194-115-650-376-756-433-356-192-637-424-910-750-226-271-377-481-448-620-13-27-61-108-106-179-88-140-200-356-276-531-79-181-274-662-281-692-13-51-33-71-77-78-50-8-119-37-167-70-19-13-84-45-144-70-412-175-668-353-841-584-87-115-214-331-230-389-7-26-19-63-28-82-8-19-24-62-35-95s-30-86-41-117C9 87 4 25 20 15c5-3 31 29 57 71 173 278 555 628 938 857 280 168 483 316 639 467 165 159 304 341 418 545 24 44 134 235 243 425 279 486 283 492 315 571 31 73 114 233 158 304 14 22 70 125 125 230 144 274 161 298 289 411 217 192 281 234 563 374 266 132 481 222 730 305 141 47 321 130 538 248 108 58 135 79 305 238 103 95 222 207 264 248 274 263 485 870 397 1142-32 98-52 123-85 101z"
-                  style={{
-                    fill: "red",
-                  }}
+                  style={{ fill: "#d12630" }}
                   transform="matrix(.1 0 0 -.1 0 808)"
                 />
                 <path
@@ -30,9 +40,7 @@ export default function Footer() {
                 />
                 <path
                   d="M6265 3980c-373-54-807-187-1060-327-130-72-265-159-333-217-24-20-48-36-53-36s-9-6-9-14c0-12 7-11 38 4 116 55 500 159 737 199 264 45 779 71 1008 53 170-14 287-32 287-45 0-34-536-576-755-762-171-146-215-182-318-262-44-35-117-102-161-149-44-48-168-158-276-244-194-155-382-327-442-402l-31-39 29 18c237 149 899 609 1307 908 246 179 613 492 772 656 124 129 145 169 145 279 0 90-13 127-62 178-85 86-239 156-418 188-103 18-322 26-405 14z"
-                  style={{
-                    fill: "red",
-                  }}
+                  style={{ fill: "#d12630" }}
                   transform="matrix(.1 0 0 -.1 0 808)"
                 />
                 <path
@@ -41,81 +49,143 @@ export default function Footer() {
                 />
               </svg>
             </a>
+            <p className="text-sm text-gray-400 leading-relaxed mt-2 max-w-sm">
+              Das Pfingstsportfest Rehlingen ist ein renommiertes Leichtathletik-Meeting der World Athletics Continental Tour (Silver Status), organisiert vom Leichtathletik-Club Rehlingen e.V. im saarländischen Bungertstadion.
+            </p>
           </div>
-          <div className="gap-12 flex justify-between flex-wrap">
+
+          {/* Navigation Link Columns (3 columns) */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:col-span-3 w-full">
+            
+            {/* Column 1: Kontakt */}
             <div className="flex flex-col gap-4">
-              <h2 className="text-sm font-semibold  uppercase ">Kontakt</h2>
-              <ul className="flex flex-col gap-4">
+              <h3 className="font-wa-headline text-xs font-bold tracking-wider text-tourLightOrange uppercase">
+                Kontakt & Sponsoring
+              </h3>
+              <ul className="flex flex-col gap-2.5 text-sm font-medium">
                 <li>
-                  <a href="mailto:pfingstsportfest@lcrehlingen.de">
-                    Athletenverpflichtung
+                  <a 
+                    href="mailto:pfingstsportfest@lcrehlingen.de"
+                    className="text-gray-300 hover:text-white transition duration-300 flex items-center gap-1 group"
+                  >
+                    <span>Athletenverpflichtung</span>
+                    <svg className="h-3.5 w-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-tourLightOrange shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:klein.thomas24@googlemail.com" className="hover:underline">
-                    Sponsoring
+                  <a 
+                    href="mailto:klein.thomas24@googlemail.com"
+                    className="text-gray-300 hover:text-white transition duration-300 flex items-center gap-1 group"
+                  >
+                    <span>Sponsoring-Anfragen</span>
+                    <svg className="h-3.5 w-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-tourLightOrange shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
                   </a>
                 </li>
               </ul>
             </div>
+
+            {/* Column 2: Social Media */}
             <div className="flex flex-col gap-4">
-              <h2 className="text-sm font-semibold uppercase ">
-                Folge uns auf
-              </h2>
-              <ul className="flex flex-col gap-4">
+              <h3 className="font-wa-headline text-xs font-bold tracking-wider text-tourLightOrange uppercase">
+                Social Media
+              </h3>
+              <ul className="flex flex-col gap-2.5 text-sm font-medium">
                 <li>
-                  <a
+                  <a 
                     href="https://www.instagram.com/weltklasse_in_rehlingen/"
-                    className="hover:underline "
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-300 hover:text-white transition duration-300 flex items-center gap-1 group"
                   >
-                    Instagram
+                    <span>Instagram</span>
+                    <svg className="h-3.5 w-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-tourLightOrange shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
                   </a>
                 </li>
                 <li>
-                  <a
+                  <a 
                     href="https://www.facebook.com/PfingstsportfestRehlingen/"
-                    className="hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-300 hover:text-white transition duration-300 flex items-center gap-1 group"
                   >
-                    Facebook
+                    <span>Facebook</span>
+                    <svg className="h-3.5 w-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-tourLightOrange shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
                   </a>
                 </li>
               </ul>
             </div>
-            <div className="flex flex-col gap-4">
-              <h2 className="text-sm font-semibold uppercase">Legal</h2>
-              <ul className="flex flex-col gap-4">
+
+            {/* Column 3: Legal */}
+            <div className="flex flex-col gap-4 col-span-2 sm:col-span-1">
+              <h3 className="font-wa-headline text-xs font-bold tracking-wider text-tourLightOrange uppercase">
+                Rechtliches
+              </h3>
+              <ul className="flex flex-col gap-2.5 text-sm font-medium">
                 <li>
-                  <a
+                  <a 
                     href="https://lcrehlingen.de/datenschutz"
-                    className="hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-300 hover:text-white transition duration-300 flex items-center gap-1 group"
                   >
-                    Datenschutz
+                    <span>Datenschutz</span>
+                    <svg className="h-3.5 w-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-tourLightOrange shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
                   </a>
                 </li>
                 <li>
-                  <a
+                  <a 
                     href="https://lcrehlingen.de/impressum"
-                    className="hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-300 hover:text-white transition duration-300 flex items-center gap-1 group"
                   >
-                    Impressum
+                    <span>Impressum</span>
+                    <svg className="h-3.5 w-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-tourLightOrange shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
                   </a>
                 </li>
               </ul>
             </div>
+
           </div>
         </div>
-        <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
-        <div className="flex flex-wrap justify-between gap-4">
-          <span className="text-sm sm:text-center ">
-            <a href="https://lcrehlingen.de" className="hover:underline">
-              LC Rehlingen
+
+        {/* Divider with low-opacity */}
+        <hr className="w-full border-t border-white/10 my-2" />
+
+        {/* Bottom Section: Copyright & Social Badges */}
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
+          <p className="text-sm text-gray-500 font-medium text-center sm:text-left">
+            © {currentYear} Pfingstsportfest Rehlingen. Organisiert vom{" "}
+            <a 
+              href="https://lcrehlingen.de" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-gray-400 hover:text-tourLightOrange transition duration-300 font-semibold underline decoration-dotted decoration-white/20 hover:decoration-tourLightOrange"
+            >
+              LC Rehlingen e.V.
             </a>
-          </span>
-          <div className="flex flex-row gap-4">
+          </p>
+          
+          {/* Circular Hover Social Badges */}
+          <div className="flex items-center gap-3">
             <a
               href="https://www.facebook.com/PfingstsportfestRehlingen/"
-              className="text-gray-500 hover:text-gray-200"
-              aria-label="Facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 border border-white/10 text-gray-400 hover:text-white hover:bg-tourLightOrange hover:border-tourLightOrange hover:shadow-lg hover:shadow-tourLightOrange/20 transition-all duration-300 transform hover:-translate-y-0.5"
+              aria-label="Folge uns auf Facebook"
             >
               <svg
                 className="w-5 h-5"
@@ -132,8 +202,10 @@ export default function Footer() {
             </a>
             <a
               href="https://instagram.com/weltklasse_in_rehlingen"
-              className="text-gray-500 hover:text-gray-200 "
-              aria-label="Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 border border-white/10 text-gray-400 hover:text-white hover:bg-tourLightOrange hover:border-tourLightOrange hover:shadow-lg hover:shadow-tourLightOrange/20 transition-all duration-300 transform hover:-translate-y-0.5"
+              aria-label="Folge uns auf Instagram"
             >
               <svg
                 className="w-5 h-5"
@@ -150,6 +222,7 @@ export default function Footer() {
             </a>
           </div>
         </div>
+
       </div>
     </footer>
   );

@@ -2,68 +2,30 @@ import eventRecordsM from "@/assets/records_m.json";
 import eventRecordsW from "@/assets/records_w.json";
 import ContentContainer from "@/components/ContentContainer";
 import Title from "@/components/Title";
+import RecordsTable from "./RecordsTable";
 
 export const metadata = {
   title: "Stadionrekorde",
+  description:
+    "Die historischen Meilensteine des Pfingstsportfests Rehlingen. Durchsuchen Sie alle offiziellen Stadionrekorde der Männer- und Frauen-Disziplinen im Bungertstadion.",
   openGraph: {
     title: "Stadionrekorde",
+    description:
+      "Die historischen Meilensteine des Pfingstsportfests Rehlingen. Durchsuchen Sie alle offiziellen Stadionrekorde der Männer- und Frauen-Disziplinen im Bungertstadion.",
   }
 };
 
-export default function Ausschreibung() {
+
+export default function RekordePage() {
   return (
-    <>
-      <ContentContainer>
+    <ContentContainer>
+      <div className="flex flex-col gap-2 text-center max-w-2xl mx-auto mb-4">
         <Title>Stadionrekorde</Title>
-        <article className="prose prose-xl max-w-none prose-table:tracking-wide">
-          <h3 id="m">Männer</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Disziplin</th>
-                <th>Name</th>
-                <th>Leistung</th>
-                <th>Jahr</th>
-              </tr>
-            </thead>
-            <tbody>
-              {eventRecordsM.map((record, index) => (
-                <tr key={index}>
-                  <td className="font-semibold">{record.Disziplin}</td>
-                  <td>
-                    {record.Name} ({record.Land})
-                  </td>
-                  <td>{record.Leistung}</td>
-                  <td>{record.Jahr}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          <h3 id="w">Frauen</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Disziplin</th>
-                <th>Name</th>
-                <th>Leistung</th>
-                <th>Jahr</th>
-              </tr>
-            </thead>
-            <tbody>
-              {eventRecordsW.map((record, index) => (
-                <tr key={index}>
-                  <td className="font-semibold">{record.Disziplin}</td>
-                  <td>
-                    {record.Name} ({record.Land})
-                  </td>
-                  <td>{record.Leistung}</td>
-                  <td>{record.Jahr}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </article>
-      </ContentContainer>
-    </>
+        <p className="text-gray-400 text-sm md:text-base leading-relaxed">
+          Die historischen Meilensteine des Pfingstsportfests Rehlingen. Durchsuchen Sie alle offiziellen Stadionrekorde der Männer- und Frauen-Disziplinen im Bungertstadion.
+        </p>
+      </div>
+      <RecordsTable recordsM={eventRecordsM} recordsW={eventRecordsW} />
+    </ContentContainer>
   );
 }

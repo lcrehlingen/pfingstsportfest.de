@@ -1,52 +1,33 @@
-import Link from "next/link";
 import { promises as fs } from "fs";
 import path from "path";
 import matter from "gray-matter";
 import Title from "@/components/Title";
 import ContentContainer from "@/components/ContentContainer";
-import ExportedImage from "next-image-export-optimizer";
+import NewsGrid from "./NewsGrid";
 
 export const metadata = {
   title: "Aktuelles",
+  description:
+    "Berichte, Neuigkeiten und exklusive Ankündigungen rund um das Pfingstsportfest Rehlingen. Bleiben Sie immer auf dem neuesten Stand!",
   openGraph: {
     title: "Aktuelles",
+    description:
+      "Berichte, Neuigkeiten und exklusive Ankündigungen rund um das Pfingstsportfest Rehlingen. Bleiben Sie immer auf dem neuesten Stand!",
   }
 };
 
-export default async function News() {
+export default async function NewsPage() {
   const news = await getNews();
+  
   return (
     <ContentContainer>
-      <Title>Aktuelles</Title>
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {news.map((items, key) => (
-          <article className="rounded-md bg-white" key={key}>
-            <Link href={`news/${items.slug}`}>
-              <div className="aspect-h-9 aspect-w-16">
-                <ExportedImage
-                  src={`/` + items.image}
-                  width={1920}
-                  height={1080}
-                  alt={items.title}
-                  className="w-full rounded-t-md"
-                />
-              </div>
-              <div className="ml-4 flex flex-1 flex-col justify-between gap-4 py-4 ">
-                <div className="flex items-center">
-                  <span className="block text-sm text-gray-400">
-                    {new Date(items.date).toLocaleDateString("de-DE", {
-                      day: "2-digit",
-                      month: "2-digit",
-                      year: "numeric"
-                    })}
-                  </span>
-                </div>
-                <h3 className="font-wa-headline text-xl">{items.title}</h3>
-              </div>
-            </Link>
-          </article>
-        ))}
+      <div className="flex flex-col gap-2 text-center max-w-2xl mx-auto mb-4">
+        <Title>Aktuelles</Title>
+        <p className="text-gray-400 text-sm md:text-base leading-relaxed">
+          Berichte, Neuigkeiten und exklusive Ankündigungen rund um das Pfingstsportfest Rehlingen. Bleiben Sie immer auf dem neuesten Stand!
+        </p>
       </div>
+      <NewsGrid news={news} />
     </ContentContainer>
   );
 }

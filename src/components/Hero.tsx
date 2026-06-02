@@ -1,78 +1,96 @@
+"use client";
+
 import background from "../../public/background.jpeg";
 import Link from "next/link";
 import { daysAway, formatEditionDate } from "@/utils/date";
-import {
-  EVENT_DATE,
-  NATIONAL_LIVESTREAM,
-} from "@/utils/constants";
+import { EVENT_DATE } from "@/utils/constants";
 import ExportedImage from "next-image-export-optimizer";
 
 export default function Hero() {
+  const dynamicActive = daysAway(EVENT_DATE) < 28 && daysAway(EVENT_DATE) >= 0;
+
   return (
-    <section
-      className="
-      relative
-      min-h-[70vh]
-      content-start
-      items-center
-      justify-center
-    "
-    >
-      <div className="absolute flex h-full w-full items-center bg-white ">
+    <section className="relative min-h-[75vh] flex items-center justify-start overflow-hidden bg-tourDarkBlue">
+      {/* Background Image with Cinematic Zoom Effect */}
+      <div className="absolute inset-0 select-none pointer-events-none">
         <ExportedImage
-          className="absolute left-0 top-0 h-full w-full object-cover"
+          className="absolute left-0 top-0 h-full w-full object-cover transition-transform duration-10000 ease-out scale-105"
           src={background}
           priority
           placeholder="blur"
-          alt="100m Sprint Hintergrundbild"
+          alt="100m Sprint Hintergrundbild im Bungertstadion"
         />
-        <span className="absolute h-full w-full bg-black opacity-50"></span>
-        <div className="absolute w-full">
-          <div className="mx-auto max-w-screen-xl px-4 2xl:px-0 flex flex-col gap-4">
-            <div>
-              <div className="flex flex-col gap-4">
-                <h1 className="font-wa-headline text-5xl font-semibold text-white md:text-6xl">
-                  Pfingstsportfest Rehlingen
-                </h1>
-                <h2 className="font-wa-headline text-4xl font-semibold text-white md:text-5xl">
-                  {formatEditionDate()}
-                </h2>
-              </div>
-              <a
-                href="https://goo.gl/maps/jQbZfb5od2j4bcb49"
-                target="_blank"
-                rel="noreferrer"
-                className="mt-4 inline-block text-3xl font-semibold text-[#C1FB6E] md:text-4xl"
-              >
-                Bungertstadion
-              </a>
-            </div>
-            <div className="flex flex-row gap-4">
-              {/*daysAway(EVENT_DATE) <= 1 && (
-                <a
-                  href={NATIONAL_LIVESTREAM}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex max-w-fit items-center rounded-lg bg-sky-500 px-5 py-2.5 text-center text-lg font-medium text-white"
-                >
-                  Live-Stream
-                </a>
-              )*/}
+      </div>
 
-              {daysAway(EVENT_DATE) < 21 && daysAway(EVENT_DATE) >= 0 && (
-                <Link
-                  href="/ergebnisse"
-                  className="inline-flex max-w-fit items-center rounded-lg bg-red-500 px-5 py-2.5 text-center text-lg font-medium text-tourDarkBlue"
-                >
-                  Zeitplan
-                </Link>
-              )}
-              {daysAway(EVENT_DATE) < 28 && daysAway(EVENT_DATE) >= 0 && (
+      {/* Modern Radial & Linear Gradients Overlay for Legibility and Depth */}
+      <div className="absolute inset-0 bg-gradient-to-r from-tourDarkBlue via-tourDarkBlue/85 to-transparent opacity-95"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-tourDarkBlue/90 via-transparent to-transparent"></div>
+
+      {/* Hero Content */}
+      <div className="relative w-full z-10 py-16 lg:py-24">
+        <div className="mx-auto max-w-(--breakpoint-xl) px-4 2xl:px-0 flex flex-col gap-6">
+          <div className="flex flex-col gap-3">
+            {/* World Athletics Badge */}
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-tourLightOrange/10 border border-tourLightOrange/30 text-tourLightOrange max-w-fit animate-fadeIn">
+              🏆 World Athletics Continental Tour - Silver Meeting
+            </span>
+
+            <div className="flex flex-col gap-2">
+              <h1 className="font-wa-headline text-5xl font-extrabold text-white md:text-7xl leading-tight tracking-tight drop-shadow-sm">
+                Pfingstsportfest
+                <span className="block text-tourLightOrange">Rehlingen</span>
+              </h1>
+              <h2 className="font-wa-headline text-3xl font-bold text-gray-200 md:text-5xl mt-2">
+                {formatEditionDate()}
+              </h2>
+            </div>
+
+            <a
+              href="https://goo.gl/maps/jQbZfb5od2j4bcb49"
+              target="_blank"
+              rel="noreferrer"
+              className="mt-2 inline-flex items-center gap-2 text-2xl font-bold text-[#C1FB6E] hover:text-white transition duration-300 md:text-3xl max-w-fit"
+            >
+              <svg
+                className="h-6 w-6 shrink-0"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                ></path>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                ></path>
+              </svg>
+              Bungertstadion Rehlingen
+            </a>
+          </div>
+
+          {/* Interactive Calls to Action */}
+          <div className="flex flex-wrap gap-4 mt-4">
+            {dynamicActive ? (
+              <>
+                {daysAway(EVENT_DATE) < 21 && (
+                  <Link
+                    href="/ergebnisse"
+                    className="inline-flex items-center rounded-xl bg-tourOrange hover:bg-tourLightOrange px-6 py-3.5 text-center text-lg font-bold text-white transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg shadow-tourOrange/20 hover:shadow-tourOrange/30"
+                  >
+                    Zeitplan
+                  </Link>
+                )}
                 <Link
                   href="/eintritt"
-                  className="inline-flex max-w-fit items-center rounded-lg bg-white px-5 py-2.5 text-center text-sm font-medium text-tourDarkBlue"
+                  className="inline-flex items-center rounded-xl bg-white hover:bg-gray-100 px-6 py-3.5 text-center text-lg font-bold text-tourDarkBlue transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg shadow-white/10"
                 >
-                  Eintritt
+                  Tickets & Eintritt
                   <svg
                     className="-mr-1 ml-2 h-5 w-5"
                     fill="currentColor"
@@ -86,10 +104,51 @@ export default function Hero() {
                     ></path>
                   </svg>
                 </Link>
-              )}
-            </div>
+              </>
+            ) : (
+              <>
+                {/* Permanent fallback buttons when the event is far away */}
+                <Link
+                  href="/news"
+                  className="inline-flex items-center rounded-xl bg-tourOrange hover:bg-tourLightOrange px-6 py-3.5 text-center text-lg font-bold text-white transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg shadow-tourOrange/20"
+                >
+                  Aktuelles News
+                </Link>
+                <Link
+                  href="/eintritt"
+                  className="inline-flex items-center rounded-xl bg-white hover:bg-gray-100 px-6 py-3.5 text-center text-lg font-bold text-tourDarkBlue transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg"
+                >
+                  Eintritt & Tickets
+                </Link>
+                <Link
+                  href="/rekorde"
+                  className="inline-flex items-center rounded-xl bg-tourDarkBlue/40 border border-white/20 hover:border-white/50 backdrop-blur-xs px-6 py-3.5 text-center text-lg font-bold text-white transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg"
+                >
+                  Stadionrekorde
+                </Link>
+              </>
+            )}
           </div>
         </div>
+      </div>
+
+      {/* Floating Scroll Indicator */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 animate-bounce select-none pointer-events-none">
+        <span className="text-xs text-white/40 uppercase tracking-widest font-semibold">Entdecken</span>
+        <svg
+          className="h-5 w-5 text-white/40"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M19 14l-7 7m0 0l-7-7m7 7V3"
+          ></path>
+        </svg>
       </div>
     </section>
   );
