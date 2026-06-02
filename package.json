@@ -19,21 +19,16 @@
     "remark": "^15.0.1",
     "remark-gfm": "^4.0.1",
     "remark-html": "^16.0.1",
-    "sharp": "^0.33.5",
-    "typescript": "5.8.2"
+    "sharp": "^0.34.5",
+    "typescript": "6.0.3"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.19",
-    "@types/node": "22.13.10",
+    "@types/node": "25.9.1",
     "@types/react": "^19.2.16",
     "@types/react-dom": "^19.2.3",
-    "postcss": "^8.5.3",
+    "postcss": "^8.5.15",
     "tailwindcss": "^4.3.0"
   },
-  "packageManager": "pnpm@10.6.4",
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "sharp"
-    ]
-  }
+  "packageManager": "pnpm@11.5.1"
 }
