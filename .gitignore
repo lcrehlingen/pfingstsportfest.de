@@ -33,3 +33,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+public/**/nextImageExportOptimizer/*
+next-image-export-optimizer-hashes.json
+.flowbite-react

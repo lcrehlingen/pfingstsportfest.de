@@ -1,6 +1,51 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "flowbite-react/plugin/tailwindcss";
+@plugin "@tailwindcss/typography";
+@source "../../.flowbite-react/class-list.json";
+
+@theme {
+  --color-tourLightOrange: #ff8040;
+  --color-tourDarkBlue: #293847;
+  --color-tourOrange: #fa4517;
+  --color-tourRed: #d12630;
+
+  --font-wa-bold: var(--font-wa-bold);
+  --font-wa-regular: var(--font-wa-regular);
+  --font-wa-headline: var(--font-wa-headline);
+
+  --animate-cursor: cursor .6s linear infinite alternate;
+  --animate-type: type 1.8s ease-out .8s 1 normal both;
+  --animate-type-reverse: type 1.8s ease-out 0s infinite alternate-reverse both;
+}
+
+@utility prose {
+  --tw-prose-body: var(--color-white);
+  --tw-prose-headings: var(--color-white);
+  --tw-prose-bold: var(--color-white);
+  --tw-prose-links: var(--color-tourLightOrange);
+  
+  & th {
+    color: var(--color-white);
+  }
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
 
 html,body
 {

@@ -16,58 +16,95 @@ import saarlouis from "../../public/sponsors/saarlouis.png";
 import ExportedImage from "next-image-export-optimizer";
 
 export default function Sponsors() {
+  const publicPartners = [
+    { src: ministerPraesidentin, alt: "Die Ministerpräsidentin des Saarlandes" },
+    { src: saarlouis, alt: "Landkreis Saarlouis" },
+    { src: gemeinde, alt: "Gemeinde Rehlingen-Siersburg" },
+    { src: innenministerium, alt: "Ministerium für Inneres, Bauen und Sport" },
+  ];
+
+  const mainSponsors = [
+    { src: mmpuma, alt: "M&M Sports + Puma" },
+    { src: meineVVB, alt: "Vereinigte Volksbank (meine VVB)" },
+    { src: globus, alt: "Globus Baumarkt" },
+    { src: ikk, alt: "IKK Südwest" },
+    { src: vse, alt: "VSE Aktiengesellschaft" },
+    { src: heitz, alt: "Heitz & Sohn Bauunternehmung" },
+    { src: bitburger, alt: "Bitburger Braugruppe" },
+    { src: sparkasse, alt: "Sparkasse Saarlouis" },
+    { src: saartoto, alt: "Saartoto" },
+    { src: shs, alt: "SHS Strukturholding Saar" },
+  ];
+
   return (
-    <section className="mx-auto flex max-w-screen-xl flex-col gap-8 px-4 2xl:px-0" id="sponsoren">
-      <h2 className="text-center font-wa-headline text-4xl tracking-tight text-gray-900">
-        Unsere Partner und <span>Hauptsponsoren</span>
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 ">
-        <div className="grid grid-cols-2 md:border-r-2 border-b-2 pb-8 sm:pb-0 md:border-b-0 md:pr-8">
-          <div className="flex items-center justify-center">
-            <ExportedImage src={ministerPraesidentin} alt="Die Ministerpräsidentin" />
+    <section className="w-full bg-gray-50 py-16 lg:py-24" id="sponsoren">
+      <div className="mx-auto max-w-(--breakpoint-xl) px-4 2xl:px-0 flex flex-col gap-12 lg:gap-16">
+        
+        {/* Title */}
+        <div className="text-center flex flex-col gap-3 max-w-2xl mx-auto">
+          <span className="text-xs font-bold uppercase tracking-wider text-tourOrange bg-tourOrange/10 px-3 py-1 rounded-full max-w-fit mx-auto">
+            🤝 Unsere Partner
+          </span>
+          <h2 className="font-wa-headline text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl lg:text-5xl leading-tight">
+            Partner & <span className="text-tourOrange">Sponsoren</span>
+          </h2>
+          <p className="text-gray-500 text-sm md:text-base">
+            Ein sportliches Großereignis dieser Klasse ist nur durch die großzügige Unterstützung starker Partner und Sponsoren aus Politik und Wirtschaft möglich. Wir danken herzlich für die Zusammenarbeit!
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+          {/* Column 1: Public Partners & Schirmherrschaft */}
+          <div className="flex flex-col gap-5">
+            <div className="flex items-center gap-2 border-b border-gray-200 pb-3">
+              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-tourDarkBlue text-white text-[10px] font-bold">1</span>
+              <h3 className="font-wa-bold font-bold text-gray-800 tracking-wide uppercase text-sm">
+                Schirmherrschaft & Öffentliche Hand
+              </h3>
+            </div>
+            
+            <div className="grid grid-cols-2 gap-4">
+              {publicPartners.map((partner, index) => (
+                <div 
+                  key={index}
+                  className="bg-white border border-gray-100 rounded-2xl p-4 flex items-center justify-center aspect-4/3 shadow-xs hover:shadow-md hover:border-gray-200 transition-all duration-300 group transform hover:-translate-y-0.5"
+                >
+                  <ExportedImage
+                    src={partner.src}
+                    alt={partner.alt}
+                    className="max-h-16 w-auto object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="flex items-center justify-center">
-            <ExportedImage src={saarlouis} alt="Vereinigte Volksbank" />
-          </div>
-          <div className="flex items-center justify-center">
-            <ExportedImage src={gemeinde} alt="Vereinigte Volksbank" />
-          </div>
-          <div className="flex items-center justify-center">
-            <ExportedImage src={innenministerium} alt="Innenministerium" />
+
+          {/* Columns 2-3: Main Corporate Sponsors */}
+          <div className="flex flex-col gap-5 lg:col-span-2">
+            <div className="flex items-center gap-2 border-b border-gray-200 pb-3">
+              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-tourOrange text-white text-[10px] font-bold">2</span>
+              <h3 className="font-wa-bold font-bold text-gray-800 tracking-wide uppercase text-sm">
+                Hauptsponsoren & Wirtschaftspartner
+              </h3>
+            </div>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+              {mainSponsors.map((sponsor, index) => (
+                <div 
+                  key={index}
+                  className="bg-white border border-gray-100 rounded-2xl p-4 flex items-center justify-center aspect-4/3 shadow-xs hover:shadow-md hover:border-gray-200 transition-all duration-300 group transform hover:-translate-y-0.5"
+                >
+                  <ExportedImage
+                    src={sponsor.src}
+                    alt={sponsor.alt}
+                    className="max-h-16 w-auto object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-        <div className="grid grid-cols-2 col-span-2 gap-4 sm:grid-cols-3 md:grid-cols-4 md:gap-8 lg:grid-cols-5 pl-4">
-        <div className="flex items-center justify-center">
-            <ExportedImage src={mmpuma} alt="M&M Sports + Puma" />
-          </div>
-          <div className="flex items-center justify-center">
-            <ExportedImage src={meineVVB} alt="Vereinigte Volksbank" />
-          </div>
-          <div className="flex items-center justify-center">
-            <ExportedImage src={globus} alt="Globus Baumarkt" />
-          </div>
-          <div className="flex items-center justify-center">
-            <ExportedImage src={ikk} alt="IKK Südwuest" />
-          </div>
-          <div className="flex items-center justify-center">
-            <ExportedImage src={vse} alt="VSE" />
-          </div>
-          <div className="flex items-center justify-center">
-            <ExportedImage src={heitz} alt="Heitz & Sohn Bauunternehmung" />
-          </div>
-          <div className="flex items-center justify-center">
-            <ExportedImage src={bitburger} alt="Bitburger" />
-          </div>
-          <div className="flex items-center justify-center">
-            <ExportedImage src={sparkasse} alt="Sparkasse Saarlouis" />
-          </div>
-          <div className="flex items-center justify-center">
-            <ExportedImage src={saartoto} alt="Saartoto" />
-          </div>
-          <div className="flex items-center justify-center">
-            <ExportedImage src={shs} alt="SHS Strukturholding Saar" />
-          </div>
-        </div>
+
       </div>
     </section>
   );
