@@ -46,7 +46,7 @@ export default function Live() {
               Auch in diesem Jahr überträgt der Saarländische Rundfunk (SR) das Rehlinger Pfingstsportfest live im Fernsehen und im Web-Livestream.
             </p>
             <p className="text-base text-gray-500">
-              Verpassen Sie keine Sekunde der Entscheidung: Mit Zeitlupen, Experten-Analysen und packenden Nahaufnahmen bringt der SR die Gänsehaut-Atmosphäre des Stadions direkt auf Ihren Bildschirm.
+              Verpassen Sie keine Sekunde der Entscheidung: Mit Zeitlupen, Experten-Analysen und packenden Nahaufnahmen bringt der SR die Atmosphäre des Stadions direkt auf Ihren Bildschirm.
             </p>
           </div>
 

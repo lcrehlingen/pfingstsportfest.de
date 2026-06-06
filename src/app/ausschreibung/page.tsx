@@ -34,12 +34,12 @@ export default function Ausschreibung() {
     { class: "MJ U16", event: "800m", limit: "ohne Limit" },
     { class: "MJ U18", event: "800m", limit: "2:12,00 min" },
     { class: "MJ U20", event: "800m", limit: "2:05,00 min" },
-    { class: "Männer", event: "800m", limit: "2:00,00 min" },
+    /* { class: "Männer", event: "800m", limit: "2:00,00 min" }, */
     { class: "WJ U14", event: "800m", limit: "ohne Limit" },
     { class: "WJ U16", event: "800m", limit: "ohne Limit" },
     { class: "WJ U18", event: "800m", limit: "2:30,00 min" },
     { class: "WJ U20", event: "800m", limit: "2:25,00 min" },
-    { class: "Frauen", event: "800m", limit: "2:20,00 min" },
+    /* { class: "Frauen", event: "800m", limit: "2:20,00 min" }, */
   ];
 
   return (
@@ -245,7 +245,7 @@ export default function Ausschreibung() {
               Prämien & Preisgelder
             </h2>
             <p className="text-sm text-gray-300">
-              Der Preisgeldpool verteilt sich pro offiziellem WA-Hauptwettbewerb auf die besten sechs Platzierten wie folgt:
+              Der Preisgeldpool verteilt sich pro offiziellem Disiziplin auf die besten sechs Platzierten wie folgt:
             </p>
           </div>
           
