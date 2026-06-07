@@ -126,9 +126,20 @@ export default function Footer() {
             {/* Column 3: Legal */}
             <div className="flex flex-col gap-4 col-span-2 sm:col-span-1">
               <h3 className="font-wa-headline text-xs font-bold tracking-wider text-tourLightOrange uppercase">
-                Rechtliches
+                Rechtliches & Presse
               </h3>
               <ul className="flex flex-col gap-2.5 text-sm font-medium">
+                <li>
+                  <a 
+                    href="/presse"
+                    className="text-gray-300 hover:text-white transition duration-300 flex items-center gap-1 group"
+                  >
+                    <span>Presse & Akkreditierung</span>
+                    <svg className="h-3.5 w-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-tourLightOrange shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                  </a>
+                </li>
                 <li>
                   <a 
                     href="https://lcrehlingen.de/datenschutz"
