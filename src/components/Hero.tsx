@@ -1,6 +1,8 @@
 "use client";
 
-import background from "../../public/background.jpeg";
+import { useState, useEffect } from "react";
+import backgroundLongjump from "../../public/background_longjump.jpg";
+import backgroundHurdles from "../../public/background_hurdles.jpg";
 import Link from "next/link";
 import { daysAway, formatEditionDate } from "@/utils/date";
 import { EVENT_DATE } from "@/utils/constants";
@@ -8,23 +10,56 @@ import ExportedImage from "next-image-export-optimizer";
 
 export default function Hero() {
   const dynamicActive = daysAway(EVENT_DATE) < 28 && daysAway(EVENT_DATE) >= 0;
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  const handleScroll = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const hero = document.getElementById("hero-section");
+    if (hero) {
+      const nextSection = hero.nextElementSibling;
+      if (nextSection) {
+        nextSection.scrollIntoView({ behavior: "smooth", block: "start" });
+        return;
+      }
+    }
+    // Fallback if DOM element is not found
+    window.scrollTo({
+      top: window.innerHeight * 0.75,
+      behavior: "smooth",
+    });
+  };
 
   return (
-    <section className="relative min-h-[75vh] flex items-center justify-start overflow-hidden bg-tourDarkBlue">
+    <section id="hero-section" className="relative min-h-[75vh] flex items-center justify-start overflow-hidden bg-tourDarkBlue">
       {/* Background Image with Cinematic Zoom Effect */}
       <div className="absolute inset-0 select-none pointer-events-none">
         <ExportedImage
-          className="absolute left-0 top-0 h-full w-full object-cover transition-transform duration-10000 ease-out scale-105"
-          src={background}
-          priority
+          className={`absolute left-0 top-0 h-full w-full object-cover transition-transform duration-10000 ease-out lg:hidden ${
+            isMounted ? "scale-105" : "scale-100"
+          }`}
+          src={backgroundLongjump}
+          preload
           placeholder="blur"
-          alt="100m Sprint Hintergrundbild im Bungertstadion"
+          alt="Weitsprung Hintergrundbild im Bungertstadion"
+        />
+        <ExportedImage
+          className={`hidden lg:block absolute left-0 top-0 h-full w-full object-cover transition-transform duration-10000 ease-out ${
+            isMounted ? "scale-105" : "scale-100"
+          }`}
+          src={backgroundHurdles}
+          preload
+          placeholder="blur"
+          alt="Hürdenlauf Hintergrundbild im Bungertstadion"
         />
       </div>
 
       {/* Modern Radial & Linear Gradients Overlay for Legibility and Depth */}
-      <div className="absolute inset-0 bg-gradient-to-r from-tourDarkBlue via-tourDarkBlue/85 to-transparent opacity-95"></div>
-      <div className="absolute inset-0 bg-gradient-to-t from-tourDarkBlue/90 via-transparent to-transparent"></div>
+      <div className="absolute inset-0 bg-linear-to-r from-tourDarkBlue via-tourDarkBlue/60 to-transparent opacity-95 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-linear-to-t from-tourDarkBlue/80 via-transparent to-transparent pointer-events-none"></div>
 
       {/* Hero Content */}
       <div className="relative w-full z-10 py-16 lg:py-24">
@@ -112,7 +147,7 @@ export default function Hero() {
                   href="/news"
                   className="inline-flex items-center rounded-xl bg-tourOrange hover:bg-tourLightOrange px-6 py-3.5 text-center text-lg font-bold text-white transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg shadow-tourOrange/20"
                 >
-                  Aktuelles News
+                  Aktuelle News
                 </Link>
                 <Link
                   href="/eintritt"
@@ -133,10 +168,16 @@ export default function Hero() {
       </div>
 
       {/* Floating Scroll Indicator */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 animate-bounce select-none pointer-events-none">
-        <span className="text-xs text-white/40 uppercase tracking-widest font-semibold">Entdecken</span>
+      <button
+        onClick={handleScroll}
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 animate-bounce select-none cursor-pointer group focus:outline-hidden z-20"
+        aria-label="Nach unten scrollen"
+      >
+        <span className="text-xs text-white/40 uppercase tracking-widest font-semibold group-hover:text-white/80 transition duration-300">
+          Entdecken
+        </span>
         <svg
-          className="h-5 w-5 text-white/40"
+          className="h-5 w-5 text-white/40 group-hover:text-white/80 transition duration-300"
           fill="none"
           stroke="currentColor"
           strokeWidth="2.5"
@@ -149,7 +190,8 @@ export default function Hero() {
             d="M19 14l-7 7m0 0l-7-7m7 7V3"
           ></path>
         </svg>
-      </div>
+      </button>
     </section>
   );
 }
+

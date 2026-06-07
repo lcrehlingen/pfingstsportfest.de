@@ -137,7 +137,7 @@ export default async function NewsPage({
               height={1080}
               alt={title}
               className="w-full h-full object-cover"
-              priority
+              preload
             />
           </div>
         )}
