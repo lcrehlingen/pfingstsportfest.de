@@ -2,6 +2,7 @@
 title: 'Ein Meeting der Extraklasse'
 date: '2023-06-05'
 image: 'images/2023/Robert_Farken-Rolf_Ruppenthal.jpg'
+photographer: 'Rolf Ruppenthal'
 ---
 
 Das 58. Pfingstsportfest hielt, was es versprochen hatte. Bei fast optimalen Bedingungen (nur der Wind verwehte manche Leistungen) erzielten die Athleten aus über 30 Ländern exzellente Leistungen. Im Laufe des dreistündigen Hauptprogramms erlebten die über 3.000 Zuschauer zwei neue Meetingrekorde und eine berauschende Serie von Weltklasse-Leistungen. Über 100 Meter der Frauen lief die Luxemburgerin **Patrizia van der Weken** zweimal Luxemburgischen Rekord. Zunächst mit 11,17 Sekunden und im Finale mit 11,12 Sekunden. Damit unterbot sie den vier Jahre alten Meeting-Rekord von Laura Müller um drei Hundertstel. Der zweite Rekord fiel im Stabhochsprung. **Bo Kanda Lita Baehre** steigerte die Bestmarke von 5,72 Metern zunächst auf 5,73 und schließlich auf 5,76 Meter. Die beste Leistung des Tages vollbrachte Speerwurf-Europameister **Julian Weber** mit 88,37 Metern. Über 1.500 Meter überraschte der Leipziger **Robert Farken** mit der besten Laufleistung des Tages. Seine 3:32,10 Minuten liegen nur 52 Hundertstel über dem Deutschen Rekord von Thomas Wessinghage aus dem Jahr 1980! Gleich zu Beginn feierte das Publikum die junge Kugelstoßerin **Yemisi Ogunleye** (MTG Mannheim) für ihre WM-Qualifikation mit 19,31 Metern. Das animierte das Publikum zu großem Beifall und gab das Startsignal für die hervorragende Stimmung während der Veranstaltung. Über 800 Meter der Frauen verfehlte die Schweizerin **Audrey Werro** den Meetingrekord der Französin Renelle Lamote (1:59,39 Min.) nur um 28 Hundertstelsekunden. Der hochklassigste Wettbewerb war der 1.500-Meter-Lauf der Männer. Vier Läufer blieben unter der Weltklasse-Marke von 3:35,00 Minuten. Neun unter 3:40,00 Minuten. Beste technische Disziplin war der Stabhochsprung, in dem drei Springer den alten Meetingrekord (5,72 m) mit 5,76 bzw. 5,73 Metern übertrafen
@@ -66,5 +67,3 @@ Die Punktzahl setzt sich aus zwei Elementen zusammen: aus den erbrachten Einzell
 Die aktuelle Weltrangliste 2023, die am 3. Juni 487 Meetings erfasst, sieht das Rehlinger Pfingstsportfest an 20. Stelle. An der Spitze stehen das Diamond-League-Meeting vom 2. Juni in Florenz mit 93.687 Punkten und der Grand Prix Los Angeles vom 26. Mai mit 92.749 Punkten. Bei diesen beiden Meetings fiel jeweils ein Weltrekord, für den 120 Extrapunkte vergeben werden. Die täglich aktualisierte Rangliste der Meetings findet man hier:
 
 [https://worldathletics.org/records/competition-performance-rankings](https://worldathletics.org/records/competition-performance-rankings)
-
-Foto: Rolf Ruppenthal

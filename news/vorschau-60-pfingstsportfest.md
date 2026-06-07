@@ -2,6 +2,7 @@
 title: 'Vorschau auf das 60. Pfingstsportfest'
 date: '2025-05-27'
 image: 'mihambo_florian_walz.jpeg'
+photographer: 'Florian Walz'
 ---
 
 **Rehlinger Zuschauer freuen sich auf Top-Athletinnen**
