@@ -59,10 +59,44 @@ export default async function NewsPage({
   params,
 }: PageProps) {
   const { slug } = await params;
-  const { title, date, image, content, photographer } = await getNews(slug);
+  const { title, date, image, content, photographer, description } = await getNews(slug);
+
+  const vercel = process.env.VERCEL_URL ? true : false;
+  const baseUrl = vercel
+    ? "https://" + process.env.VERCEL_URL
+    : "https://pfingstsportfest.de";
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    headline: title,
+    image: [`${baseUrl}/${image}`],
+    datePublished: new Date(date).toISOString(),
+    dateModified: new Date(date).toISOString(),
+    author: [
+      {
+        "@type": "Organization",
+        name: "LC Rehlingen e.V.",
+        url: baseUrl,
+      },
+    ],
+    publisher: {
+      "@type": "Organization",
+      name: "LC Rehlingen e.V.",
+      logo: {
+        "@type": "ImageObject",
+        url: `${baseUrl}/favicon.ico`,
+      },
+    },
+    description: description,
+  };
 
   return (
     <ContentContainer>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="flex flex-col gap-6 max-w-4xl mx-auto w-full text-white">
         
         {/* Navigation Back Link */}
