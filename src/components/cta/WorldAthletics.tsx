@@ -81,14 +81,14 @@ export default function WorldAthletics() {
         <div className="grid grid-cols-2 items-center justify-center gap-6 w-full mt-4 lg:mt-0">
           <div className="relative group p-6 bg-white/5 border border-white/10 rounded-3xl backdrop-blur-xs flex items-center justify-center hover:bg-white/10 hover:border-white/20 transition-all duration-300 transform hover:-translate-y-1">
             <ExportedImage
-              className="w-full h-auto object-contain max-h-[140px]"
+              className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto object-contain"
               src={wactSilver}
               alt="World Athletics Continental Tour Silver Logo"
             />
           </div>
           <div className="relative group p-6 bg-white/5 border border-white/10 rounded-3xl backdrop-blur-xs flex items-center justify-center hover:bg-white/10 hover:border-white/20 transition-all duration-300 transform hover:-translate-y-1">
             <ExportedImage
-              className="w-full h-auto object-contain max-h-[140px]"
+              className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto object-contain"
               src={europeanAthltics}
               alt="European Athletics Quality Event Logo"
             />
