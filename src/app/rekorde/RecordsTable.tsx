@@ -15,6 +15,31 @@ interface RecordsTableProps {
   recordsW: RecordItem[];
 }
 
+const COUNTRY_MAP: Record<string, string> = {
+  NAM: "Namibia",
+  NGR: "Nigeria",
+  USA: "USA",
+  RSA: "Südafrika",
+  GER: "Deutschland",
+  KEN: "Kenia",
+  BAH: "Bahamas",
+  CAN: "Kanada",
+  GBR: "Großbritannien",
+  TUR: "Türkei",
+  BUL: "Bulgarien",
+  GDR: "DDR",
+  SWE: "Schweden",
+  RUS: "Russland",
+  CUB: "Kuba",
+  LUX: "Luxemburg",
+  CSSR: "Tschechoslowakei",
+  NIG: "Niger",
+  FRA: "Frankreich",
+  ETH: "Äthiopien",
+  CZE: "Tschechien",
+  SUI: "Schweiz",
+};
+
 export default function RecordsTable({ recordsM, recordsW }: RecordsTableProps) {
   const [activeTab, setActiveTab] = useState<"m" | "w">("m");
   const [searchQuery, setSearchQuery] = useState("");
@@ -23,10 +48,12 @@ export default function RecordsTable({ recordsM, recordsW }: RecordsTableProps) 
 
   const filteredRecords = currentRecords.filter((record) => {
     const query = searchQuery.toLowerCase();
+    const mappedCountry = (COUNTRY_MAP[record.Land] || record.Land).toLowerCase();
     return (
       record.Disziplin.toLowerCase().includes(query) ||
       record.Name.toLowerCase().includes(query) ||
       record.Land.toLowerCase().includes(query) ||
+      mappedCountry.includes(query) ||
       record.Jahr.toLowerCase().includes(query) ||
       record.Leistung.toLowerCase().includes(query)
     );
@@ -142,8 +169,8 @@ export default function RecordsTable({ recordsM, recordsW }: RecordsTableProps) 
                       {record.Name}
                     </td>
                     <td className="py-4 px-6">
-                      <span className="inline-flex items-center px-2 py-0.5 rounded-md bg-white/10 border border-white/5 text-xs text-gray-300 font-bold tracking-wide">
-                        {record.Land}
+                      <span className="inline-flex items-center px-2.5 py-1 rounded-md bg-white/10 border border-white/5 text-xs text-gray-300 font-bold tracking-wide">
+                        {COUNTRY_MAP[record.Land] || record.Land}
                       </span>
                     </td>
                     <td className="py-4 px-6 text-right font-black text-base text-[#C1FB6E]">
@@ -177,8 +204,8 @@ export default function RecordsTable({ recordsM, recordsW }: RecordsTableProps) 
                       {record.Name}
                     </h4>
                   </div>
-                  <span className="inline-flex items-center px-2 py-0.5 rounded-md bg-white/10 border border-white/5 text-xs text-gray-300 font-bold tracking-wide">
-                    {record.Land}
+                  <span className="inline-flex items-center px-2.5 py-1 rounded-md bg-white/10 border border-white/5 text-xs text-gray-300 font-bold tracking-wide">
+                    {COUNTRY_MAP[record.Land] || record.Land}
                   </span>
                 </div>
 
