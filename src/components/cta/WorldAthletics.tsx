@@ -1,5 +1,6 @@
 import wactSilver from "../../../public/wact_silver_white.png";
 import europeanAthltics from "../../../public/european_athletics.png";
+import dlvLogo from "../../../public/Logo-DLV-lang.svg";
 import Link from "next/link";
 import ExportedImage from "next-image-export-optimizer";
 import { TOTAL_PRIZEMONEY } from "@/utils/constants";
@@ -79,20 +80,42 @@ export default function WorldAthletics() {
 
         {/* Right Side: Logos in Premium Card Displays */}
         <div className="grid grid-cols-2 items-center justify-center gap-6 w-full mt-4 lg:mt-0">
-          <div className="relative group p-6 bg-white/5 border border-white/10 rounded-3xl backdrop-blur-xs flex items-center justify-center hover:bg-white/10 hover:border-white/20 transition-all duration-300 transform hover:-translate-y-1">
+          <a
+            href="https://worldathletics.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative group p-6 bg-white/5 border border-white/10 rounded-3xl backdrop-blur-xs flex items-center justify-center hover:bg-white/10 hover:border-white/20 transition-all duration-300 transform hover:-translate-y-1"
+          >
             <ExportedImage
               className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto object-contain"
               src={wactSilver}
               alt="World Athletics Continental Tour Silver Logo"
             />
-          </div>
-          <div className="relative group p-6 bg-white/5 border border-white/10 rounded-3xl backdrop-blur-xs flex items-center justify-center hover:bg-white/10 hover:border-white/20 transition-all duration-300 transform hover:-translate-y-1">
+          </a>
+          <a
+            href="https://european-athletics.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative group p-6 bg-white/5 border border-white/10 rounded-3xl backdrop-blur-xs flex items-center justify-center hover:bg-white/10 hover:border-white/20 transition-all duration-300 transform hover:-translate-y-1"
+          >
             <ExportedImage
               className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto object-contain"
               src={europeanAthltics}
-              alt="European Athletics Quality Event Logo"
+              alt="European Athletics Logo"
             />
-          </div>
+          </a>
+          <a
+            href="https://leichtathletik.de"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="col-span-2 relative group p-6 bg-white border border-white/10 rounded-3xl flex items-center justify-center hover:bg-white/95 transition-all duration-300 transform hover:-translate-y-1 w-full"
+          >
+            <ExportedImage
+              className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain"
+              src={dlvLogo}
+              alt="Deutscher Leichtathletik-Verband"
+            />
+          </a>
         </div>
       </div>
     </section>
