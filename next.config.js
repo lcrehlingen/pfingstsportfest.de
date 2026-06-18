@@ -2,7 +2,6 @@ const withFlowbiteReact = require("flowbite-react/plugin/nextjs");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
   images: {
     loader: "custom",
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],

@@ -6,15 +6,17 @@ import OutsideClickHandler from "./OutsideClickHandler";
 import { usePathname } from "next/navigation";
 import { TITLE, EDITION } from "@/data";
 
-export default function Navbar() {
+export default function Navbar({ dict }: { dict: any }) {
+  const pathname = usePathname();
+  const isEnglish = pathname?.startsWith("/en") || false;
+
   const links = [
-    { name: "Aktuelles", href: "/news" },
-    { name: "Ergebnisse", href: "/ergebnisse" },
-    { name: "Rekorde", href: "/rekorde" },
-    { name: "Sponsoren", href: "/#sponsoren" },
+    { name: dict.navbar.news, href: isEnglish ? "/en/news" : "/news" },
+    { name: dict.navbar.results, href: isEnglish ? "/en/ergebnisse" : "/ergebnisse" },
+    { name: dict.navbar.records, href: isEnglish ? "/en/rekorde" : "/rekorde" },
+    { name: dict.navbar.sponsors, href: isEnglish ? "/en/#sponsoren" : "/#sponsoren" },
   ];
   const [opened, setOpened] = useState(false);
-  const pathname = usePathname();
 
   useEffect(() => {
     if (opened) {
@@ -34,7 +36,7 @@ export default function Navbar() {
             
             {/* Logo Lockup */}
             <Link
-              href="/"
+              href={isEnglish ? "/en" : "/"}
               className="group flex items-center gap-2.5 font-wa-headline text-xl font-black tracking-tight text-white hover:opacity-95 transition"
             >
               <span className="bg-linear-to-r from-tourOrange to-tourLightOrange text-white text-xs md:text-sm px-2.5 py-1 rounded-md font-extrabold tracking-wider shadow-sm shadow-tourOrange/20">
@@ -70,10 +72,10 @@ export default function Navbar() {
 
               {/* Dedicated high-impact CTA Button */}
               <Link
-                href="/eintritt"
+                href={isEnglish ? "/en/eintritt" : "/eintritt"}
                 className="inline-flex items-center justify-center rounded-xl bg-tourOrange hover:bg-tourLightOrange px-4.5 py-2 text-center text-sm font-extrabold text-white transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg shadow-tourOrange/10 border border-tourOrange/10"
               >
-                Tickets
+                {dict.navbar.tickets}
               </Link>
             </div>
 
@@ -149,10 +151,10 @@ export default function Navbar() {
               
               <div className="border-t border-white/5 pt-3">
                 <Link
-                  href="/eintritt"
+                  href={isEnglish ? "/en/eintritt" : "/eintritt"}
                   className="flex items-center justify-center rounded-xl bg-tourOrange hover:bg-tourLightOrange py-3 text-center text-base font-bold text-white transition-all duration-300"
                 >
-                  Tickets & Eintritt
+                  {dict.navbar.ticketsMobile}
                 </Link>
               </div>
             </div>

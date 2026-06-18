@@ -1,0 +1,44 @@
+{
+  "zeitplan": {
+    "title": "Zeitplan & Startlisten",
+    "description": "Planen Sie Ihren Stadionbesuch oder verfolgen Sie Startzeiten und Riegen-Einteilungen der Athleten im Bungertstadion.",
+    "activeLive": "Live-Daten Aktiv",
+    "liveInfo": "Der Zeitplan und die Startlisten werden live über <strong class=\"text-white\">laportal.net</strong> bereitgestellt. Nutzen Sie die Suche innerhalb des Zeitplans, um bestimmte Disziplinen, Riegen oder Athletennamen zu filtern.",
+    "openTab": "In neuem Tab öffnen ↗",
+    "dashboardTitle": "laportal.net LIVE-Dashboard",
+    "venueTitle": "Bungertstadion Rehlingen",
+    "iframeTitle": "Offizieller Zeitplan & Startlisten",
+    "countdownHeader": "Wettkampf-Countdown",
+    "countdownDays": "Tage",
+    "countdownSoon": "In Kürze",
+    "countdownSub": "bis zum Startschuss",
+    "inPreparation": "Zeitplan in Vorbereitung",
+    "prepInfo1": "Der Zeitplan wird ca. <strong class=\"text-white\">4 Wochen vor dem Pfingstsportfest</strong> direkt an dieser Stelle veröffentlicht.",
+    "prepInfo2": "Eine Woche vor dem Event werden die Startlisten über das Live-Ergebnisportal bereitgestellt.",
+    "browseArchive": "Ergebnis-Archiv durchstöbern",
+    "viewRecords": "Stadionrekorde ansehen",
+    "secureTickets": "Tickets sichern",
+    "ticketsInfo": "Sitzplatzkarten für die überdachte Haupttribüne sind limitiert und begehrt! Informieren Sie sich frühzeitig.",
+    "ticketButton": "Preise & Eintrittskarten"
+  },
+  "navbar": {
+    "news": "Aktuelles",
+    "results": "Ergebnisse",
+    "records": "Rekorde",
+    "sponsors": "Sponsoren",
+    "tickets": "Tickets",
+    "ticketsMobile": "Tickets & Eintritt"
+  },
+  "footer": {
+    "description": "Das Pfingstsportfest Rehlingen ist ein renommiertes Leichtathletik-Meeting der World Athletics Continental Tour (Silver Status), organisiert vom Leichtathletik-Club Rehlingen e.V. im saarländischen Bungertstadion.",
+    "contactHeader": "Kontakt & Sponsoring",
+    "athleteLiaison": "Athletenverpflichtung",
+    "sponsoring": "Sponsoring-Anfragen",
+    "socialHeader": "Social Media",
+    "legalHeader": "Rechtliches & Presse",
+    "press": "Presse & Akkreditierung",
+    "privacy": "Datenschutz",
+    "imprint": "Impressum",
+    "copyrightPrefix": "Organisiert vom"
+  }
+}

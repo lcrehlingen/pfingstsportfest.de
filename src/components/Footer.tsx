@@ -1,7 +1,31 @@
 "use client";
 
-export default function Footer() {
+import { usePathname, useRouter } from "next/navigation";
+
+export default function Footer({ dict }: { dict: any }) {
   const currentYear = new Date().getFullYear();
+  const pathname = usePathname();
+  const router = useRouter();
+  const isEnglish = pathname?.startsWith("/en") || false;
+
+  const handleLanguageChange = (newLocale: "de" | "en") => {
+    // Set explicit locale selection cookie (expiry: 1 year)
+    document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000`;
+
+    // Calculate dynamic localized path target
+    let targetPath = pathname || "/";
+    if (newLocale === "en") {
+      if (!targetPath.startsWith("/en")) {
+        targetPath = `/en${targetPath === "/" ? "" : targetPath}`;
+      }
+    } else {
+      if (targetPath.startsWith("/en")) {
+        targetPath = targetPath.replace(/^\/en/, "") || "/";
+      }
+    }
+
+    router.push(targetPath);
+  };
 
   return (
     <footer className="w-full bg-tourDarkBlue border-t border-white/10 text-white py-12 px-4 2xl:px-0">
@@ -50,7 +74,7 @@ export default function Footer() {
               </svg>
             </a>
             <p className="text-sm text-gray-400 leading-relaxed mt-2 max-w-sm">
-              Das Pfingstsportfest Rehlingen ist ein renommiertes Leichtathletik-Meeting der World Athletics Continental Tour (Silver Status), organisiert vom Leichtathletik-Club Rehlingen e.V. im saarländischen Bungertstadion.
+              {dict.footer.description}
             </p>
           </div>
 
@@ -60,7 +84,7 @@ export default function Footer() {
             {/* Column 1: Kontakt */}
             <div className="flex flex-col gap-4">
               <h3 className="font-wa-headline text-xs font-bold tracking-wider text-tourLightOrange uppercase">
-                Kontakt & Sponsoring
+                {dict.footer.contactHeader}
               </h3>
               <ul className="flex flex-col gap-2.5 text-sm font-medium">
                 <li>
@@ -68,7 +92,7 @@ export default function Footer() {
                     href="mailto:pfingstsportfest@lcrehlingen.de"
                     className="text-gray-300 hover:text-white transition duration-300 flex items-center gap-1 group"
                   >
-                    <span>Athletenverpflichtung</span>
+                    <span>{dict.footer.athleteLiaison}</span>
                     <svg className="h-3.5 w-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-tourLightOrange shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                     </svg>
@@ -79,7 +103,7 @@ export default function Footer() {
                     href="mailto:klein.thomas24@googlemail.com"
                     className="text-gray-300 hover:text-white transition duration-300 flex items-center gap-1 group"
                   >
-                    <span>Sponsoring-Anfragen</span>
+                    <span>{dict.footer.sponsoring}</span>
                     <svg className="h-3.5 w-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-tourLightOrange shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                     </svg>
@@ -91,7 +115,7 @@ export default function Footer() {
             {/* Column 2: Social Media */}
             <div className="flex flex-col gap-4">
               <h3 className="font-wa-headline text-xs font-bold tracking-wider text-tourLightOrange uppercase">
-                Social Media
+                {dict.footer.socialHeader}
               </h3>
               <ul className="flex flex-col gap-2.5 text-sm font-medium">
                 <li>
@@ -126,15 +150,15 @@ export default function Footer() {
             {/* Column 3: Legal */}
             <div className="flex flex-col gap-4 col-span-2 sm:col-span-1">
               <h3 className="font-wa-headline text-xs font-bold tracking-wider text-tourLightOrange uppercase">
-                Rechtliches & Presse
+                {dict.footer.legalHeader}
               </h3>
               <ul className="flex flex-col gap-2.5 text-sm font-medium">
                 <li>
                   <a 
-                    href="/presse"
+                    href={isEnglish ? "/en/presse" : "/presse"}
                     className="text-gray-300 hover:text-white transition duration-300 flex items-center gap-1 group"
                   >
-                    <span>Presse & Akkreditierung</span>
+                    <span>{dict.footer.press}</span>
                     <svg className="h-3.5 w-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-tourLightOrange shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                     </svg>
@@ -147,7 +171,7 @@ export default function Footer() {
                     rel="noopener noreferrer"
                     className="text-gray-300 hover:text-white transition duration-300 flex items-center gap-1 group"
                   >
-                    <span>Datenschutz</span>
+                    <span>{dict.footer.privacy}</span>
                     <svg className="h-3.5 w-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-tourLightOrange shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                     </svg>
@@ -160,7 +184,7 @@ export default function Footer() {
                     rel="noopener noreferrer"
                     className="text-gray-300 hover:text-white transition duration-300 flex items-center gap-1 group"
                   >
-                    <span>Impressum</span>
+                    <span>{dict.footer.imprint}</span>
                     <svg className="h-3.5 w-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-tourLightOrange shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                     </svg>
@@ -178,7 +202,7 @@ export default function Footer() {
         {/* Bottom Section: Copyright & Social Badges */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
           <p className="text-sm text-gray-500 font-medium text-center sm:text-left">
-            © {currentYear} Pfingstsportfest Rehlingen. Organisiert vom{" "}
+            © {currentYear} Pfingstsportfest Rehlingen. {dict.footer.copyrightPrefix}{" "}
             <a 
               href="https://lcrehlingen.de" 
               target="_blank" 
@@ -189,8 +213,37 @@ export default function Footer() {
             </a>
           </p>
           
-          {/* Circular Hover Social Badges */}
-          <div className="flex items-center gap-3">
+          {/* Language Switcher & Social Badges */}
+          <div className="flex items-center gap-5">
+            {/* Language Switcher */}
+            <div className="flex items-center gap-1 bg-white/5 border border-white/10 rounded-xl p-1 text-[11px] font-black tracking-wide">
+              <button
+                onClick={() => handleLanguageChange("de")}
+                className={`px-2.5 py-1.5 rounded-lg transition-all duration-300 ${
+                  !isEnglish 
+                    ? "bg-tourLightOrange text-white shadow-md shadow-tourLightOrange/20" 
+                    : "text-gray-400 hover:text-white"
+                }`}
+              >
+                DE
+              </button>
+              <button
+                onClick={() => handleLanguageChange("en")}
+                className={`px-2.5 py-1.5 rounded-lg transition-all duration-300 ${
+                  isEnglish 
+                    ? "bg-tourLightOrange text-white shadow-md shadow-tourLightOrange/20" 
+                    : "text-gray-400 hover:text-white"
+                }`}
+              >
+                EN
+              </button>
+            </div>
+
+            {/* Vertical Divider */}
+            <span className="h-5 w-[1px] bg-white/10 hidden sm:inline-block"></span>
+
+            {/* Circular Hover Social Badges */}
+            <div className="flex items-center gap-3">
             <a
               href="https://www.facebook.com/PfingstsportfestRehlingen/"
               target="_blank"
@@ -231,6 +284,7 @@ export default function Footer() {
                 />
               </svg>
             </a>
+          </div>
           </div>
         </div>
 

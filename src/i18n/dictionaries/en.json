@@ -1,0 +1,44 @@
+{
+  "zeitplan": {
+    "title": "Schedule & Startlists",
+    "description": "Plan your stadium visit or track start times and team divisions of the athletes in the Bungertstadion.",
+    "activeLive": "Live Data Active",
+    "liveInfo": "The schedule and startlists are provided live via <strong class=\"text-white\">laportal.net</strong>. Use the search within the schedule to filter for specific disciplines, heats, or athlete names.",
+    "openTab": "Open in new tab ↗",
+    "dashboardTitle": "laportal.net LIVE-Dashboard",
+    "venueTitle": "Bungertstadion Rehlingen",
+    "iframeTitle": "Official Schedule & Startlists",
+    "countdownHeader": "Competition Countdown",
+    "countdownDays": "Days",
+    "countdownSoon": "Soon",
+    "countdownSub": "until the starting gun",
+    "inPreparation": "Schedule in Preparation",
+    "prepInfo1": "The schedule will be published directly here approx. <strong class=\"text-white\">4 weeks before the Pfingstsportfest</strong>.",
+    "prepInfo2": "One week before the event, the startlists will be made available via the live results portal.",
+    "browseArchive": "Browse Results Archive",
+    "viewRecords": "View Stadium Records",
+    "secureTickets": "Secure Tickets",
+    "ticketsInfo": "Seating tickets for the covered main grandstand are limited and in high demand! Inform yourself early.",
+    "ticketButton": "Prices & Entrance Tickets"
+  },
+  "navbar": {
+    "news": "Latest News",
+    "results": "Results",
+    "records": "Stadium Records",
+    "sponsors": "Sponsors",
+    "tickets": "Tickets",
+    "ticketsMobile": "Tickets & Admission"
+  },
+  "footer": {
+    "description": "The Pfingstsportfest Rehlingen is a renowned track and field meeting of the World Athletics Continental Tour (Silver Status), organized by the Leichtathletik-Club Rehlingen e.V. in the saarländische Bungert Stadium.",
+    "contactHeader": "Contact & Sponsoring",
+    "athleteLiaison": "Athlete Liaison",
+    "sponsoring": "Sponsorship Inquiries",
+    "socialHeader": "Social Media",
+    "legalHeader": "Legal & Press",
+    "press": "Press & Accreditation",
+    "privacy": "Privacy Policy",
+    "imprint": "Legal Notice",
+    "copyrightPrefix": "Organized by"
+  }
+}
