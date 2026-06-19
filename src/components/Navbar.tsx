@@ -11,6 +11,7 @@ export default function Navbar() {
     { name: "Aktuelles", href: "/news" },
     { name: "Ergebnisse", href: "/ergebnisse" },
     { name: "Rekorde", href: "/rekorde" },
+    { name: "Stadion (3D)", href: "/stadion" },
     { name: "Sponsoren", href: "/#sponsoren" },
   ];
   const [opened, setOpened] = useState(false);
