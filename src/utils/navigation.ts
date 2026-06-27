@@ -24,6 +24,7 @@ export const FOOTER_SOCIAL_LINKS: NavLink[] = [
 
 export const FOOTER_LEGAL_LINKS: NavLink[] = [
   { name: "Presse & Akkreditierung", href: "/presse" },
+  { name: "Meeting-Ranking", href: "/ranking" },
   { name: "Datenschutz", href: "https://lcrehlingen.de/datenschutz", target: "_blank", isExternal: true },
   { name: "Impressum", href: "https://lcrehlingen.de/impressum", target: "_blank", isExternal: true },
 ];

@@ -53,10 +53,10 @@ export default function WorldAthletics() {
             </div>
           </div>
 
-          <div className="pt-2">
+          <div className="flex flex-wrap gap-4 pt-2">
             <Link
               href="/ausschreibung"
-              className="inline-flex items-center gap-2 rounded-xl bg-white hover:bg-gray-100 px-6 py-3.5 text-center text-lg font-bold text-tourDarkBlue transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg shadow-white/5"
+              className="inline-flex items-center gap-2 rounded-xl bg-white hover:bg-gray-100 px-6 py-3.5 text-center text-base sm:text-lg font-bold text-tourDarkBlue transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg shadow-white/5"
             >
               Ausschreibung & Info
               <svg
@@ -71,6 +71,27 @@ export default function WorldAthletics() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                ></path>
+              </svg>
+            </Link>
+
+            <Link
+              href="/ranking"
+              className="inline-flex items-center gap-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 px-6 py-3.5 text-center text-base sm:text-lg font-bold text-white transition-all duration-300 transform hover:-translate-y-0.5"
+            >
+              Meeting-Ranking
+              <svg
+                className="h-5 w-5 text-tourLightOrange"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
                 ></path>
               </svg>
             </Link>
