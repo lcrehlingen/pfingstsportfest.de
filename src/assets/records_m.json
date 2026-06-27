@@ -1,150 +1,170 @@
 [
-    {
-      "Disziplin": "100 m",
-      "Name": "Frank Fredericks",
-      "Land": "NAM",
-      "Jahr": "1995",
-      "Leistung": "10,07 s"
-    },
-    {
-      "Disziplin": "100 m",
-      "Name": "Itsekiri Usheoritse",
-      "Land": "NGR",
-      "Jahr": "2019",
-      "Leistung": "10,07 s"
-    },
-    {
-      "Disziplin": "200 m",
-      "Name": "Frank Fredericks",
-      "Land": "NAM",
-      "Jahr": "1994",
-      "Leistung": "20,37 s"
-    },
-    {
-      "Disziplin": "400 m",
-      "Name": "Calvin Davis",
-      "Land": "USA",
-      "Jahr": "1996",
-      "Leistung": "45,16 s"
-    },
-    {
-      "Disziplin": "800 m",
-      "Name": "Mbulaene Mulaudzi",
-      "Land": "RSA",
-      "Jahr": "2003",
-      "Leistung": "1:43,25 min"
-    },
-    {
-      "Disziplin": "1000 m",
-      "Name": "Harald Norpoth",
-      "Land": "GER",
-      "Jahr": "1967",
-      "Leistung": "2:22,2 min"
-    },
-    {
-      "Disziplin": "1500 m",
-      "Name": "Laban Rotich",
-      "Land": "KEN",
-      "Jahr": "1997",
-      "Leistung": "3:30,41 min"
-    },
-    {
-      "Disziplin": "3000 m",
-      "Name": "Salim Jahwer Mushir",
-      "Land": "BAH",
-      "Jahr": "2004",
-      "Leistung": "7:42,08 min"
-    },
-    {
-      "Disziplin": "5000 m",
-      "Name": "Thomas Farfard",
-      "Land": "CAN",
-      "Jahr": "2024",
-      "Leistung": "13:22,93 min"
-    },
-    {
-      "Disziplin": "110 m Hürden",
-      "Name": "Derek Knight",
-      "Land": "USA",
-      "Jahr": "2001",
-      "Leistung": "13,59 s"
-    },
-    {
-      "Disziplin": "400 m Hürden",
-      "Name": "Alastair Chalmers",
-      "Land": "GBR",
-      "Jahr": "2025",
-      "Leistung": "48,30 s"
-    },
-    {
-      "Disziplin": "3000 m Hindernis",
-      "Name": "Wilson Boit Kipketer",
-      "Land": "KEN",
-      "Jahr": "1997",
-      "Leistung": "8:08,36 min"
-    },
-    {
-      "Disziplin": "Hochsprung",
-      "Name": "Jim Howard",
-      "Land": "USA",
-      "Jahr": "1987",
-      "Leistung": "2,36 m"
-    },
-    {
-      "Disziplin": "Stabhochsprung",
-      "Name": "Ersu Şaşma",
-      "Land": "TUR",
-      "Jahr": "2024",
-      "Leistung": "5,77 m"
-    },
-    {
-      "Disziplin": "Weitsprung",
-      "Name": "Christian Reif",
-      "Land": "GER",
-      "Jahr": "2014",
-      "Leistung": "8,00 m"
-    },
-    {
-      "Disziplin": "Dreisprung",
-      "Name": "Christo Markow",
-      "Land": "BUL",
-      "Jahr": "1984",
-      "Leistung": "16,67 m"
-    },
-    {
-      "Disziplin": "Kugelstoß",
-      "Name": "Udo Beyer",
-      "Land": "GDR",
-      "Jahr": "1984",
-      "Leistung": "22,04 m"
-    },
-    {
-      "Disziplin": "Diskuswurf",
-      "Name": "Daniel Ståhl",
-      "Land": "SWE",
-      "Jahr": "2026",
-      "Leistung": "69,01 m"
-    },
-    {
-      "Disziplin": "Speerwurf",
-      "Name": "Andreas Hofmann",
-      "Land": "GER",
-      "Jahr": "2018",
-      "Leistung": "91,44 m"
-    },
-    {
-      "Disziplin": "Hammerwurf",
-      "Name": "Igor Nikulin",
-      "Land": "RUS",
-      "Jahr": "1992",
-      "Leistung": "82,50 m"
-    },
-    {
-      "Disziplin": "4 x 100 m",
-      "Name": "Kuba",
-      "Land": "CUB",
-      "Jahr": "2000",
-      "Leistung": "39,03 s"
-    }
-  ]
-  
+  {
+    "Disziplin": "100 m",
+    "Name": "Frank Fredericks",
+    "Land": "NAM",
+    "Jahr": "1995",
+    "Leistung": "10,07 s",
+    "athleteId": 14213565
+  },
+  {
+    "Disziplin": "100 m",
+    "Name": "Itsekiri Usheoritse",
+    "Land": "NGR",
+    "Jahr": "2019",
+    "Leistung": "10,07 s",
+    "athleteId": 14602348
+  },
+  {
+    "Disziplin": "200 m",
+    "Name": "Frank Fredericks",
+    "Land": "NAM",
+    "Jahr": "1994",
+    "Leistung": "20,37 s",
+    "athleteId": 14213565
+  },
+  {
+    "Disziplin": "400 m",
+    "Name": "Calvin Davis",
+    "Land": "USA",
+    "Jahr": "1996",
+    "Leistung": "45,16 s",
+    "athleteId": 14235977
+  },
+  {
+    "Disziplin": "800 m",
+    "Name": "Mbulaene Mulaudzi",
+    "Land": "RSA",
+    "Jahr": "2003",
+    "Leistung": "1:43,25 min",
+    "athleteId": 14220770
+  },
+  {
+    "Disziplin": "1000 m",
+    "Name": "Harald Norpoth",
+    "Land": "GER",
+    "Jahr": "1967",
+    "Leistung": "2:22,2 min",
+    "athleteId": 14356445
+  },
+  {
+    "Disziplin": "1500 m",
+    "Name": "Laban Rotich",
+    "Land": "KEN",
+    "Jahr": "1997",
+    "Leistung": "3:30,41 min",
+    "athleteId": 14209668
+  },
+  {
+    "Disziplin": "3000 m",
+    "Name": "Salim Jahwer Mushir",
+    "Land": "BAH",
+    "Jahr": "2004",
+    "Leistung": "7:42,08 min",
+    "athleteId": 15283838
+  },
+  {
+    "Disziplin": "5000 m",
+    "Name": "Thomas Farfard",
+    "Land": "CAN",
+    "Jahr": "2024",
+    "Leistung": "13:22,93 min",
+    "athleteId": 14717427
+  },
+  {
+    "Disziplin": "110 m Hürden",
+    "Name": "Derek Knight",
+    "Land": "USA",
+    "Jahr": "2001",
+    "Leistung": "13,59 s",
+    "athleteId": 14243165
+  },
+  {
+    "Disziplin": "400 m Hürden",
+    "Name": "Alastair Chalmers",
+    "Land": "GBR",
+    "Jahr": "2025",
+    "Leistung": "48,30 s",
+    "athleteId": 14720465
+  },
+  {
+    "Disziplin": "3000 m Hindernis",
+    "Name": "Wilson Boit Kipketer",
+    "Land": "KEN",
+    "Jahr": "1997",
+    "Leistung": "8:08,36 min",
+    "athleteId": 14208245
+  },
+  {
+    "Disziplin": "Hochsprung",
+    "Name": "Jim Howard",
+    "Land": "USA",
+    "Jahr": "1987",
+    "Leistung": "2,36 m",
+    "athleteId": 14350218
+  },
+  {
+    "Disziplin": "Stabhochsprung",
+    "Name": "Ersu Şaşma",
+    "Land": "TUR",
+    "Jahr": "2024",
+    "Leistung": "5,77 m",
+    "athleteId": 14737427
+  },
+  {
+    "Disziplin": "Weitsprung",
+    "Name": "Christian Reif",
+    "Land": "GER",
+    "Jahr": "2014",
+    "Leistung": "8,00 m",
+    "athleteId": 14193797
+  },
+  {
+    "Disziplin": "Dreisprung",
+    "Name": "Christo Markow",
+    "Land": "BUL",
+    "Jahr": "1984",
+    "Leistung": "16,67 m",
+    "athleteId": 14174923
+  },
+  {
+    "Disziplin": "Kugelstoß",
+    "Name": "Udo Beyer",
+    "Land": "GDR",
+    "Jahr": "1984",
+    "Leistung": "22,04 m",
+    "athleteId": 14348116
+  },
+  {
+    "Disziplin": "Diskuswurf",
+    "Name": "Daniel Ståhl",
+    "Land": "SWE",
+    "Jahr": "2026",
+    "Leistung": "69,01 m",
+    "athleteId": 14375325
+  },
+  {
+    "Disziplin": "Speerwurf",
+    "Name": "Andreas Hofmann",
+    "Land": "GER",
+    "Jahr": "2018",
+    "Leistung": "91,44 m",
+    "athleteId": 14372011
+  },
+  {
+    "Disziplin": "Hammerwurf",
+    "Name": "Igor Nikulin",
+    "Land": "RUS",
+    "Jahr": "1992",
+    "Leistung": "82,50 m",
+    "athleteId": 14223373
+  },
+  {
+    "Disziplin": "4 x 100 m",
+    "Name": "Kuba",
+    "Land": "CUB",
+    "Jahr": "2000",
+    "Leistung": "39,03 s",
+    "athleteId": null
+  }
+]

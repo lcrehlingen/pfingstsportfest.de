@@ -1,13 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import SearchInput from "@/components/SearchInput";
 import EmptyState from "@/components/EmptyState";
+import GlassCard from "@/components/GlassCard";
+import CompetitionResultsModal from "@/components/CompetitionResultsModal";
 
 interface ResultItem {
   filename: string;
   date: number;
   edition: number;
+  competitionId?: number | null;
 }
 
 interface ResultLinkItem {
@@ -23,6 +26,11 @@ interface ResultsTableProps {
   resultLinks: ResultLinkItem[];
 }
 
+interface SelectedCompetition {
+  id: number;
+  name: string;
+}
+
 export default function ResultsTable({
   results,
   daysAwayEvent,
@@ -30,6 +38,33 @@ export default function ResultsTable({
   resultLinks,
 }: ResultsTableProps) {
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedComp, setSelectedComp] = useState<SelectedCompetition | null>(null);
+
+  // Synchronize browser history events for opening/closing the Results modal
+  useEffect(() => {
+    const handlePopState = (e: PopStateEvent) => {
+      // If back button is clicked and we are currently displaying competition results, close it
+      if (!e.state || !e.state.modal || !e.state.modal.startsWith("results-")) {
+        setSelectedComp(null);
+      }
+    };
+    window.addEventListener("popstate", handlePopState);
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+    };
+  }, []);
+
+  const handleOpenComp = (id: number, name: string) => {
+    window.history.pushState({ modal: `results-${id}` }, "");
+    setSelectedComp({ id, name });
+  };
+
+  const handleCloseComp = () => {
+    if (window.history.state && window.history.state.modal === `results-${selectedComp?.id}`) {
+      window.history.back();
+    }
+    setSelectedComp(null);
+  };
 
   const filteredResults = results.filter((result) => {
     const year = new Date(result.date).getFullYear().toString();
@@ -144,18 +179,31 @@ export default function ResultsTable({
                       </td>
                       <td className="py-4 px-6 text-right">
                         <div className="inline-flex items-center gap-2">
-                          {/* PDF results link */}
-                          <a
-                            href={`/results/${result.filename}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-black uppercase rounded-lg bg-tourOrange/10 border border-tourOrange/30 text-tourLightOrange hover:bg-tourOrange hover:text-white transition duration-300 shrink-0"
-                          >
-                            <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                              <path strokeLinecap="round" strokeLinejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                            </svg>
-                            Ergebnisse (PDF)
-                          </a>
+                          {result.competitionId ? (
+                            /* Interactive live results from World Athletics */
+                            <button
+                              onClick={() => handleOpenComp(result.competitionId!, `${result.edition}. Internationales Pfingstsportfest Rehlingen`)}
+                              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-black uppercase rounded-lg bg-tourOrange/15 border border-tourOrange/35 text-tourLightOrange hover:bg-tourOrange hover:text-white transition duration-300 shrink-0 cursor-pointer shadow-sm"
+                            >
+                              <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
+                              </svg>
+                              Interaktive Ergebnisse
+                            </button>
+                          ) : (
+                            /* Historical static PDF result files */
+                            <a
+                              href={`/results/${result.filename}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-black uppercase rounded-lg bg-white/5 border border-white/10 text-gray-300 hover:bg-white/10 hover:text-white transition duration-300 shrink-0"
+                            >
+                              <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                              </svg>
+                              Ergebnisse (PDF)
+                            </a>
+                          )}
                         </div>
                       </td>
                     </tr>
@@ -170,9 +218,10 @@ export default function ResultsTable({
             {filteredResults.map((result, index) => {
               const year = new Date(result.date).getFullYear();
               return (
-                <div
+                <GlassCard
                   key={index}
-                  className="bg-white/5 border border-white/10 rounded-2xl p-5 flex flex-col gap-4 relative overflow-hidden backdrop-blur-xs group"
+                  className="flex flex-col gap-4 group"
+                  hoverable={false}
                 >
                   {/* Colored Left Accent Border */}
                   <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-tourLightOrange"></div>
@@ -191,19 +240,33 @@ export default function ResultsTable({
 
                   {/* Mobile Action Buttons */}
                   <div className="pl-2 flex flex-col sm:flex-row gap-2.5 border-t border-white/5 pt-4 mt-1">
-                    <a
-                      href={`/results/${result.filename}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 inline-flex items-center justify-center gap-1.5 rounded-xl bg-tourOrange hover:bg-tourLightOrange text-white py-3 text-center text-sm font-bold transition-all duration-300"
-                    >
-                      <svg className="h-4 w-4 shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                      </svg>
-                      Ergebnisse (PDF)
-                    </a>
+                    {result.competitionId ? (
+                      /* Interactive results from World Athletics */
+                      <button
+                        onClick={() => handleOpenComp(result.competitionId!, `${result.edition}. Pfingstsportfest Rehlingen`)}
+                        className="flex-1 inline-flex items-center justify-center gap-1.5 rounded-xl bg-tourOrange hover:bg-tourLightOrange text-white py-3 text-center text-sm font-bold transition-all duration-300 cursor-pointer"
+                      >
+                        <svg className="h-4 w-4 shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
+                        </svg>
+                        Interaktive Ergebnisse
+                      </button>
+                    ) : (
+                      /* Historical PDF file link */
+                      <a
+                        href={`/results/${result.filename}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 inline-flex items-center justify-center gap-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 py-3 text-center text-sm font-bold transition-all duration-300"
+                      >
+                        <svg className="h-4 w-4 shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                        Ergebnisse (PDF)
+                      </a>
+                    )}
                   </div>
-                </div>
+                </GlassCard>
               );
             })}
           </div>
@@ -219,6 +282,15 @@ export default function ResultsTable({
             </p>
           }
           resetButtonText="Suche zurücksetzen"
+        />
+      )}
+
+      {/* Interactive Official World Athletics Results Overlay Panel */}
+      {selectedComp && (
+        <CompetitionResultsModal
+          competitionId={selectedComp.id}
+          competitionName={selectedComp.name}
+          onClose={handleCloseComp}
         />
       )}
 

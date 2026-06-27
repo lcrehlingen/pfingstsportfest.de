@@ -1,18 +1,52 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { RecordItem, COUNTRY_MAP, filterRecords } from "@/utils/records";
 import SearchInput from "@/components/SearchInput";
 import EmptyState from "@/components/EmptyState";
+import GlassCard from "@/components/GlassCard";
+import AthleteModal from "@/components/AthleteModal";
 
 interface RecordsTableProps {
   recordsM: RecordItem[];
   recordsW: RecordItem[];
 }
 
+interface SelectedAthleteInfo {
+  name: string;
+  id?: number | null;
+}
+
 export default function RecordsTable({ recordsM, recordsW }: RecordsTableProps) {
   const [activeTab, setActiveTab] = useState<"m" | "w">("m");
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedAthlete, setSelectedAthlete] = useState<SelectedAthleteInfo | null>(null);
+
+  // Synchronize browser history events for opening/closing the Athlete modal on the records page
+  useEffect(() => {
+    const handlePopState = (e: PopStateEvent) => {
+      // If back button is clicked and we are currently displaying an athlete profile, close it
+      if (!e.state || !e.state.modal || !e.state.modal.startsWith("athlete-")) {
+        setSelectedAthlete(null);
+      }
+    };
+    window.addEventListener("popstate", handlePopState);
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+    };
+  }, []);
+
+  const handleOpenAthlete = (name: string, id: number) => {
+    window.history.pushState({ modal: `athlete-${id}` }, "");
+    setSelectedAthlete({ name, id });
+  };
+
+  const handleCloseAthlete = () => {
+    if (window.history.state && window.history.state.modal === `athlete-${selectedAthlete?.id}`) {
+      window.history.back();
+    }
+    setSelectedAthlete(null);
+  };
 
   const currentRecords = activeTab === "m" ? recordsM : recordsW;
 
@@ -94,7 +128,16 @@ export default function RecordsTable({ recordsM, recordsW }: RecordsTableProps) 
                       {record.Disziplin}
                     </td>
                     <td className="py-4 px-6 text-lg font-extrabold text-white group-hover:text-tourLightOrange transition-all duration-300">
-                      {record.Name}
+                      {record.athleteId ? (
+                        <button
+                          onClick={() => handleOpenAthlete(record.Name, record.athleteId!)}
+                          className="hover:underline cursor-pointer text-left focus:outline-hidden focus:text-tourLightOrange transition-colors duration-300"
+                        >
+                          {record.Name}
+                        </button>
+                      ) : (
+                        record.Name
+                      )}
                     </td>
                     <td className="py-4 px-6">
                       <span className="inline-flex items-center px-2.5 py-1 rounded-md bg-white/10 border border-white/5 text-xs text-gray-300 font-bold tracking-wide">
@@ -116,9 +159,10 @@ export default function RecordsTable({ recordsM, recordsW }: RecordsTableProps) 
           {/* 2. Mobile Responsive Card List */}
           <div className="grid grid-cols-1 gap-4 md:hidden">
             {filteredRecords.map((record, index) => (
-              <div
+              <GlassCard
                 key={index}
-                className="bg-white/5 border border-white/10 rounded-2xl p-5 flex flex-col gap-4 relative overflow-hidden backdrop-blur-xs group"
+                className="flex flex-col gap-4 group"
+                hoverable={false}
               >
                 {/* Colored Left Accent Border */}
                 <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-tourLightOrange"></div>
@@ -129,7 +173,16 @@ export default function RecordsTable({ recordsM, recordsW }: RecordsTableProps) 
                       {record.Disziplin}
                     </span>
                     <h4 className="text-xl font-black text-white leading-tight group-hover:text-tourLightOrange transition-all duration-300">
-                      {record.Name}
+                      {record.athleteId ? (
+                        <button
+                          onClick={() => handleOpenAthlete(record.Name, record.athleteId!)}
+                          className="hover:underline cursor-pointer text-left focus:outline-hidden focus:text-tourLightOrange transition-colors duration-300"
+                        >
+                          {record.Name}
+                        </button>
+                      ) : (
+                        record.Name
+                      )}
                     </h4>
                   </div>
                   <span className="inline-flex items-center px-2.5 py-1 rounded-md bg-white/10 border border-white/5 text-xs text-gray-300 font-bold tracking-wide">
@@ -147,7 +200,7 @@ export default function RecordsTable({ recordsM, recordsW }: RecordsTableProps) 
                     <span className="text-xl font-black text-[#C1FB6E] tracking-tight">{record.Leistung}</span>
                   </div>
                 </div>
-              </div>
+              </GlassCard>
             ))}
           </div>
         </>
@@ -164,6 +217,15 @@ export default function RecordsTable({ recordsM, recordsW }: RecordsTableProps) 
             </p>
           }
           resetButtonText="Filter zurücksetzen"
+        />
+      )}
+
+      {/* Interactive Athlete In-Depth Profile Modal overlay */}
+      {selectedAthlete && selectedAthlete.id && (
+        <AthleteModal
+          athleteName={selectedAthlete.name}
+          athleteId={selectedAthlete.id}
+          onClose={handleCloseAthlete}
         />
       )}
 

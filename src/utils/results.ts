@@ -5,11 +5,23 @@ export interface ResultItem {
   filename: string;
   date: number;
   edition: number;
+  competitionId?: number | null;
 }
+
+const COMPETITION_ID_MAP: Record<number, number> = {
+  61: 7235370,
+  60: 7218861,
+  59: 7205496,
+  58: 7190976,
+  57: 7173606,
+  56: 7155941,
+  55: 7132085,
+};
 
 /**
  * Reads and parses PDF results from the public/results directory,
- * sorting them by event date descending (newest first).
+ * mapping modern editions to their World Athletics competition IDs
+ * and sorting them by event date descending (newest first).
  */
 export async function getResultsList(): Promise<ResultItem[]> {
   const postsDirectory = path.join(process.cwd(), "public", "results");
@@ -19,13 +31,15 @@ export async function getResultsList(): Promise<ResultItem[]> {
   const results = filenames
     .filter((filename) => regex.test(filename))
     .map((filename) => {
-      const [date, edition] = filename.split("_");
+      const [date, editionStr] = filename.split("_");
       const [day, month, year] = date.split("-");
+      const edition = parseInt(editionStr);
 
       return {
         filename,
         date: new Date(`${year}-${month}-${day}`).getTime(),
-        edition: parseInt(edition),
+        edition,
+        competitionId: COMPETITION_ID_MAP[edition] || null,
       };
     })
     .sort((a, b) => b.date - a.date);

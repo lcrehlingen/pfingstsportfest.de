@@ -4,6 +4,7 @@ export interface RecordItem {
   Land: string;
   Jahr: string;
   Leistung: string;
+  athleteId?: number | null;
 }
 
 export const COUNTRY_MAP: Record<string, string> = {

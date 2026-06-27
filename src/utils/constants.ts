@@ -5,6 +5,7 @@ const TOTAL_PRIZEMONEY = 78000;
 const LIVE_RESULTS = "https://red.laportal.net/Competitions/Details/18807";
 const INTERNATIONAL_LIVESTREAM = "https://www.youtube.com/@EuropeanAthletics/streams";
 const NATIONAL_LIVESTREAM = "https://www.youtube.com/@srdeins/streams";
+const WORLD_ATHLETICS_API = "https://worldathletics.pfingstsportfest.de";
 
 const RESULT_LINKS = [
     {
@@ -19,4 +20,4 @@ const RESULT_LINKS = [
     }
 ];
 
-export { EVENT_DATE, TOTAL_PRIZEMONEY, LIVE_RESULTS, RESULT_LINKS, INTERNATIONAL_LIVESTREAM, NATIONAL_LIVESTREAM };
+export { EVENT_DATE, TOTAL_PRIZEMONEY, LIVE_RESULTS, RESULT_LINKS, INTERNATIONAL_LIVESTREAM, NATIONAL_LIVESTREAM, WORLD_ATHLETICS_API };
