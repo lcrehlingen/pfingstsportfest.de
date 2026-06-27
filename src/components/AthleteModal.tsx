@@ -150,13 +150,13 @@ export default function AthleteModal({ athleteName, athleteId, onClose }: Athlet
 
       {/* Main Modal Card */}
       <GlassCard
-        className="relative w-full max-w-2xl max-h-[85vh] overflow-y-auto bg-tourDarkBlue/95 border border-white/10 p-6 md:p-8 rounded-3xl shadow-2xl flex flex-col gap-6 z-10 animate-zoomIn"
+        className="relative w-full max-w-2xl max-h-[92vh] md:max-h-[85vh] overflow-hidden bg-tourDarkBlue/95 border border-white/10 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl flex flex-col gap-4 sm:gap-6 z-10 animate-zoomIn"
         hoverable={false}
       >
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 md:top-6 md:right-6 p-2 rounded-xl text-gray-400 hover:text-white hover:bg-white/5 border border-transparent hover:border-white/5 transition duration-300 cursor-pointer"
+          className="absolute top-4 right-4 md:top-6 md:right-6 p-2 rounded-xl text-gray-400 hover:text-white hover:bg-white/5 border border-transparent hover:border-white/5 transition duration-300 cursor-pointer z-20"
           aria-label="Schließen"
         >
           <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -182,10 +182,10 @@ export default function AthleteModal({ athleteName, athleteId, onClose }: Athlet
         ) : (
           /* Profile Details Content */
           profile && (
-            <div className="flex flex-col gap-6 w-full text-white">
+            <div className="flex flex-col gap-4 sm:gap-6 w-full text-white overflow-hidden min-h-0">
               
-              {/* Header profile metadata */}
-              <div className="flex flex-col gap-2.5">
+              {/* Header profile metadata - added pr-10 to avoid close button overlap on mobile */}
+              <div className="flex flex-col gap-2.5 pr-10 md:pr-0">
                 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-tourLightOrange bg-tourLightOrange/10 border border-tourLightOrange/20 max-w-fit">
                   ⚡ Athleten-Steckbrief
                 </span>
@@ -258,7 +258,7 @@ export default function AthleteModal({ athleteName, athleteId, onClose }: Athlet
               </div>
 
               {/* Tab Content Panels */}
-              <div className="flex-1 overflow-y-auto max-h-[35vh] pr-1.5 min-h-[150px]">
+              <div className="flex-1 overflow-y-auto pr-1.5 min-h-37.5">
                 
                 {/* 1. Personal Bests */}
                 {activeSection === "pb" && (

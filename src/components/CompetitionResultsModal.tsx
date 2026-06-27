@@ -222,13 +222,13 @@ export default function CompetitionResultsModal({
 
       {/* Main Panel */}
       <GlassCard
-        className="relative w-full max-w-4xl h-[85vh] overflow-hidden bg-tourDarkBlue/95 border border-white/10 p-6 md:p-8 rounded-3xl shadow-2xl flex flex-col gap-6 z-10 animate-zoomIn"
+        className="relative w-full max-w-4xl h-[92vh] md:h-[85vh] overflow-hidden bg-tourDarkBlue/95 border border-white/10 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl flex flex-col gap-4 sm:gap-6 z-10 animate-zoomIn"
         hoverable={false}
       >
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 md:top-6 md:right-6 p-2 rounded-xl text-gray-400 hover:text-white hover:bg-white/5 border border-transparent hover:border-white/5 transition duration-300 cursor-pointer"
+          className="absolute top-4 right-4 md:top-6 md:right-6 p-2 rounded-xl text-gray-400 hover:text-white hover:bg-white/5 border border-transparent hover:border-white/5 transition duration-300 cursor-pointer z-20"
           aria-label="Schließen"
         >
           <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -237,7 +237,7 @@ export default function CompetitionResultsModal({
         </button>
 
         {/* Header Header Info block */}
-        <div className="flex flex-col gap-1 pr-10">
+        <div className="flex flex-col gap-1 pr-10 md:pr-0">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-tourLightOrange bg-tourLightOrange/10 border border-tourLightOrange/20 max-w-fit">
             📊 World Athletics Offizielle Ergebnisse
           </span>
@@ -279,7 +279,7 @@ export default function CompetitionResultsModal({
           <div className="flex-1 flex flex-col md:flex-row gap-6 overflow-hidden min-h-0">
             
             {/* Sidebar Event Selector */}
-            <div className="w-full md:w-64 flex flex-col gap-2.5 shrink-0 border-r border-white/10 pr-2 overflow-y-auto max-h-[200px] md:max-h-full">
+            <div className="w-full md:w-64 flex flex-col gap-2.5 shrink-0 border-b md:border-b-0 md:border-r border-white/10 pb-4 md:pb-0 pr-0 md:pr-4 overflow-y-visible md:overflow-y-auto max-h-45 md:max-h-full">
               <span className="text-[10px] text-gray-400 uppercase font-black tracking-widest px-2 mb-0.5 hidden md:block">Disziplinen</span>
               
               {/* Gender Segment Tab Switch */}
@@ -369,67 +369,69 @@ export default function CompetitionResultsModal({
 
                       {/* Performance Table */}
                       <div className="overflow-hidden bg-white/5 border border-white/5 rounded-2xl shadow-lg">
-                        <table className="w-full border-collapse text-left text-sm">
-                          <thead>
-                            <tr className="border-b border-white/10 bg-white/5 text-[10px] font-bold uppercase tracking-wider text-tourLightOrange">
-                              <th className="py-3 px-4 w-12 text-center">Pl.</th>
-                              <th className="py-3 px-4">Name</th>
-                              <th className="py-3 px-4 w-20">Land</th>
-                              <th className="py-3 px-4 w-24 text-right">Leistung</th>
-                              {showWindColumn && (
-                                <th className="py-3 px-4 w-20 text-right">Wind</th>
-                              )}
-                            </tr>
-                          </thead>
-                          <tbody className="divide-y divide-white/5 font-medium">
-                            {raceItem.results.map((row, rowIdx) => {
-                              return (
-                                <tr key={rowIdx} className="hover:bg-white/5 transition duration-200">
-                                  <td className="py-3 px-4 text-center font-mono font-bold text-gray-300">
-                                    {row.place && row.place >= 0 ? row.place : "-"}
-                                  </td>
-                                  <td className="py-3 px-4 text-sm font-extrabold text-white">
-                                    {row.athletes && row.athletes.length > 0 ? (
-                                      <div className="flex flex-wrap gap-x-2 gap-y-1">
-                                        {row.athletes.map((ath, athIdx) => {
-                                          const name = `${ath.firstname} ${ath.lastname}`;
-                                          return (
-                                            <div key={ath.id} className="inline-flex items-center">
-                                              <button
-                                                onClick={() => handleOpenAthlete(name, ath.id)}
-                                                className="hover:underline cursor-pointer text-left focus:outline-hidden focus:text-tourLightOrange transition"
-                                              >
-                                                {name}
-                                              </button>
-                                              {athIdx < row.athletes.length - 1 && <span className="text-gray-400 ml-1">,</span>}
-                                            </div>
-                                          );
-                                        })}
-                                      </div>
-                                    ) : (
-                                      "Unbekannt"
-                                    )}
-                                  </td>
-                                  <td className="py-3 px-4">
-                                    <span className="inline-flex items-center px-1.5 py-0.5 rounded-sm bg-white/10 text-[10px] text-gray-300 font-bold">
-                                      {row.country || COUNTRY_MAP[row.country]}
-                                    </span>
-                                  </td>
-                                  <td className="py-3 px-4 text-right font-black text-sm text-[#C1FB6E]">
-                                    {row.mark || "-"}
-                                  </td>
-                                  {showWindColumn && (
-                                    <td className="py-3 px-4 text-right text-xs font-mono text-gray-300">
-                                      {row.place !== null && row.place >= 0 && row.wind !== null && row.wind !== undefined
-                                        ? `${row.wind > 0 ? "+" : ""}${row.wind}`
-                                        : "-"}
+                        <div className="overflow-x-auto w-full scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent">
+                          <table className="w-full border-collapse text-left text-sm min-w-105 md:min-w-0">
+                            <thead>
+                              <tr className="border-b border-white/10 bg-white/5 text-[10px] font-bold uppercase tracking-wider text-tourLightOrange">
+                                <th className="py-3 px-4 w-12 text-center">Pl.</th>
+                                <th className="py-3 px-4">Name</th>
+                                <th className="py-3 px-4 w-20">Land</th>
+                                <th className="py-3 px-4 w-24 text-right">Leistung</th>
+                                {showWindColumn && (
+                                  <th className="py-3 px-4 w-20 text-right">Wind</th>
+                                )}
+                              </tr>
+                            </thead>
+                            <tbody className="divide-y divide-white/5 font-medium">
+                              {raceItem.results.map((row, rowIdx) => {
+                                return (
+                                  <tr key={rowIdx} className="hover:bg-white/5 transition duration-200">
+                                    <td className="py-3 px-4 text-center font-mono font-bold text-gray-300">
+                                      {row.place && row.place >= 0 ? row.place : "-"}
                                     </td>
-                                  )}
-                                </tr>
-                              );
-                            })}
-                          </tbody>
-                        </table>
+                                    <td className="py-3 px-4 text-sm font-extrabold text-white">
+                                      {row.athletes && row.athletes.length > 0 ? (
+                                        <div className="flex flex-wrap gap-x-2 gap-y-1">
+                                          {row.athletes.map((ath, athIdx) => {
+                                            const name = `${ath.firstname} ${ath.lastname}`;
+                                            return (
+                                              <div key={ath.id} className="inline-flex items-center">
+                                                <button
+                                                  onClick={() => handleOpenAthlete(name, ath.id)}
+                                                  className="hover:underline cursor-pointer text-left focus:outline-hidden focus:text-tourLightOrange transition"
+                                                >
+                                                  {name}
+                                                </button>
+                                                {athIdx < row.athletes.length - 1 && <span className="text-gray-400 ml-1">,</span>}
+                                              </div>
+                                            );
+                                          })}
+                                        </div>
+                                      ) : (
+                                        "Unbekannt"
+                                      )}
+                                    </td>
+                                    <td className="py-3 px-4">
+                                      <span className="inline-flex items-center px-1.5 py-0.5 rounded-sm bg-white/10 text-[10px] text-gray-300 font-bold">
+                                        {row.country || COUNTRY_MAP[row.country]}
+                                      </span>
+                                    </td>
+                                    <td className="py-3 px-4 text-right font-black text-sm text-[#C1FB6E]">
+                                      {row.mark || "-"}
+                                    </td>
+                                    {showWindColumn && (
+                                      <td className="py-3 px-4 text-right text-xs font-mono text-gray-300">
+                                        {row.place !== null && row.place >= 0 && row.wind !== null && row.wind !== undefined
+                                          ? `${row.wind > 0 ? "+" : ""}${row.wind}`
+                                          : "-"}
+                                      </td>
+                                    )}
+                                  </tr>
+                                );
+                              })}
+                            </tbody>
+                          </table>
+                        </div>
                       </div>
 
                     </div>
