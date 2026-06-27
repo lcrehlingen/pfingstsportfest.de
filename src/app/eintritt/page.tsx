@@ -1,16 +1,14 @@
 import ContentContainer from "@/components/ContentContainer";
 import Title from "@/components/Title";
+import { constructMetadata } from "@/utils/seo";
+import PageHeader from "@/components/PageHeader";
 
-export const metadata = {
+export const metadata = constructMetadata({
   title: "Eintritt & Tickets",
   description:
     "Sichern Sie sich Ihre Tickets für das Pfingstsportfest in Rehlingen. Übersicht über Stehplatz- und Sitzplatztribünen-Preise im Bungertstadion.",
-  openGraph: {
-    title: "Eintritt & Tickets",
-    description:
-      "Sichern Sie sich Ihre Tickets für das Pfingstsportfest in Rehlingen. Übersicht über Stehplatz- und Sitzplatztribünen-Preise im Bungertstadion.",
-  },
-};
+  path: "/eintritt",
+});
 
 export default function Eintritt() {
   const tickets = [
@@ -44,12 +42,10 @@ export default function Eintritt() {
     <ContentContainer>
       
       {/* Intro Header */}
-      <div className="flex flex-col gap-3 text-center max-w-2xl mx-auto mb-8">
-        <Title>Eintritt & Tickets</Title>
-        <p className="text-gray-400 text-sm md:text-base leading-relaxed">
-          Erleben Sie Leichtathletik auf Weltklasse-Niveau live im Bungertstadion. Eintrittskarten können unkompliziert am Wettkampftag direkt vor Ort erworben werden.
-        </p>
-      </div>
+      <PageHeader
+        title="Eintritt & Tickets"
+        description="Erleben Sie Leichtathletik auf Weltklasse-Niveau live im Bungertstadion. Eintrittskarten können unkompliziert am Wettkampftag direkt vor Ort erworben werden."
+      />
 
       {/* Premium Ticket Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch w-full mb-10">

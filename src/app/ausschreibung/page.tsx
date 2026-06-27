@@ -2,17 +2,15 @@ import ContentContainer from "@/components/ContentContainer";
 import Title from "@/components/Title";
 import { EVENT_DATE } from "@/utils/constants";
 import { daysAway, formatEditionDate } from "@/utils/date";
+import { constructMetadata } from "@/utils/seo";
+import PageHeader from "@/components/PageHeader";
 
-export const metadata = {
+export const metadata = constructMetadata({
   title: "Ausschreibung",
   description:
     "Offizielle Disziplinen, Prämien und Qualifikations-Standards für das Internationale Pfingstsportfest in Rehlingen.",
-  openGraph: {
-    title: "Ausschreibung",
-    description:
-      "Offizielle Disziplinen, Prämien und Qualifikations-Standards für das Internationale Pfingstsportfest in Rehlingen.",
-  },
-};
+  path: "/ausschreibung",
+});
 
 export default function Ausschreibung() {
   const daysAwayEvent = daysAway(EVENT_DATE);
@@ -46,12 +44,10 @@ export default function Ausschreibung() {
     <ContentContainer>
       
       {/* Page Header */}
-      <div className="flex flex-col gap-2.5 text-center max-w-2xl mx-auto mb-8">
-        <Title>Ausschreibung</Title>
-        <p className="text-gray-300 text-base md:text-lg leading-relaxed">
-          Offizielle Disziplinen, Prämien und Qualifikations-Standards für das Internationale Pfingstsportfest in Rehlingen.
-        </p>
-      </div>
+      <PageHeader
+        title="Ausschreibung"
+        description="Offizielle Disziplinen, Prämien und Qualifikations-Standards für das Internationale Pfingstsportfest in Rehlingen."
+      />
 
       <div className="flex flex-col gap-10 text-white">
         

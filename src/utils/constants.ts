@@ -5,7 +5,6 @@ const TOTAL_PRIZEMONEY = 78000;
 const LIVE_RESULTS = "https://red.laportal.net/Competitions/Details/18807";
 const INTERNATIONAL_LIVESTREAM = "https://www.youtube.com/@EuropeanAthletics/streams";
 const NATIONAL_LIVESTREAM = "https://www.youtube.com/@srdeins/streams";
-const PHOTOFINISH_LINK = "https://photofinish.lcrehlingen.de/pfingsten2025";
 
 const RESULT_LINKS = [
     {
@@ -17,12 +16,7 @@ const RESULT_LINKS = [
         "name": "Live-Stream (English)",
         "link": INTERNATIONAL_LIVESTREAM,
         "color": "bg-red-500"
-    },
-    /*{
-        "name": "Photofinish",
-        "link": PHOTOFINISH_LINK,
-        "color": "bg-green-500"
-    }*/
+    }
 ];
 
 export { EVENT_DATE, TOTAL_PRIZEMONEY, LIVE_RESULTS, RESULT_LINKS, INTERNATIONAL_LIVESTREAM, NATIONAL_LIVESTREAM };

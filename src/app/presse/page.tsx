@@ -1,15 +1,13 @@
 import ContentContainer from "@/components/ContentContainer";
 import Title from "@/components/Title";
 import { EDITION } from "@/data";
+import { constructMetadata } from "@/utils/seo";
 
-export const metadata = {
+export const metadata = constructMetadata({
   title: "Presse & Akkreditierung",
   description: `Offizielle Medien-Richtlinien, Vor-Ort-Services und Presse-Akkreditierung für das ${EDITION}. Internationale Pfingstsportfest in Rehlingen.`,
-  openGraph: {
-    title: "Presse & Akkreditierung",
-    description: `Offizielle Medien-Richtlinien, Vor-Ort-Services und Presse-Akkreditierung für das ${EDITION}. Internationale Pfingstsportfest in Rehlingen.`,
-  },
-};
+  path: "/presse",
+});
 
 export default function PresseAkkreditierung() {
   const mailtoLink = "mailto:pfingstsportfest@lcrehlingen.de?subject=Akkreditierungsanfrage%20" + EDITION + ".%20Pfingstsportfest%20Rehlingen&body=Hallo%20Medien-Team%2C%0A%0Ahiermit%20beantrage%20ich%20eine%20Presse-Akkreditierung%20f%C3%BCr%20das%20" + EDITION + ".%20Pfingstsportfest%20Rehlingen.%0A%0AMeine%20Daten%3A%0A-%20Vor-%20und%20Nachname%3A%20%0A-%20Medium%20%2F%20Redaktion%3A%20%0A-%20Art%20der%20Berichterstattung%20(Journalist%20%2F%20Fotograf%20%2F%20Video%20%2F%20Radio)%3A%20%0A-%20Nummer%20des%20Presseausweises%20(und%20Verband)%3A%20%0A-%20E-Mail-Adresse%3A%20%0A-%20Telefonnummer%3A%20%0A-%20Bemerkungen%20%2F%20Spezielle%20Anforderungen%3A%20%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen%0A";

@@ -1,39 +1,23 @@
 import { NextResponse } from "next/server";
-import { promises as fs } from "fs";
-import path from "path";
-import matter from "gray-matter";
+import { getAllNews } from "@/utils/news";
+import { getBaseUrl } from "@/utils/url";
 
 export const dynamic = "force-static";
 
 export async function GET() {
-  const vercel = process.env.VERCEL_URL ? true : false;
-  const baseUrl = vercel
-    ? "https://" + process.env.VERCEL_URL
-    : "https://pfingstsportfest.de";
+  const baseUrl = getBaseUrl("https://pfingstsportfest.de");
 
   let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">`;
 
   try {
-    const newsDirectory = path.join(process.cwd(), "news");
-    const filenames = await fs.readdir(newsDirectory);
-    const mdFiles = filenames.filter((filename) => filename.endsWith(".md"));
-
-    const articles = await Promise.all(
-      mdFiles.map(async (filename) => {
-        const slug = filename.replace(/\.md$/, "");
-        const filePath = path.join(newsDirectory, filename);
-        const fileContent = await fs.readFile(filePath, "utf8");
-        const { data } = matter(fileContent);
-        
-        return {
-          slug,
-          title: data.title || "",
-          date: data.date ? new Date(data.date) : new Date(),
-        };
-      })
-    );
+    const news = await getAllNews();
+    const articles = news.map((article) => ({
+      slug: article.slug,
+      title: article.title,
+      date: article.date ? new Date(article.date) : new Date(),
+    }));
 
     // Sort by publication date descending (newest first)
     articles.sort((a, b) => b.date.getTime() - a.date.getTime());

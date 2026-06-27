@@ -1,14 +1,21 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, ReactNode } from "react";
 
-function OutsideClickHandler({ children, onOutsideClick = () => {} }: any) {
+interface OutsideClickHandlerProps {
+  children: ReactNode;
+  onOutsideClick?: () => void;
+}
+
+export default function OutsideClickHandler({
+  children,
+  onOutsideClick = () => {},
+}: OutsideClickHandlerProps) {
   const wrapperRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    function handleClickOutside(event: any) {
-        wrapperRef.current
+    function handleClickOutside(event: MouseEvent) {
       if (
         wrapperRef.current &&
-        !wrapperRef.current.contains(event.target)
+        !wrapperRef.current.contains(event.target as Node)
       ) {
         onOutsideClick();
       }
@@ -23,5 +30,3 @@ function OutsideClickHandler({ children, onOutsideClick = () => {} }: any) {
 
   return <div ref={wrapperRef}>{children}</div>;
 }
-
-export default OutsideClickHandler;

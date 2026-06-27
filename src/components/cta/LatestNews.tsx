@@ -1,11 +1,9 @@
 import Link from "next/link";
-import { promises as fs } from "fs";
-import path from "path";
-import matter from "gray-matter";
 import ExportedImage from "next-image-export-optimizer";
+import { getAllNews } from "@/utils/news";
 
 export default async function LatestNews() {
-  const news = await getLatestNews();
+  const news = (await getAllNews()).slice(0, 3);
 
   if (news.length === 0) {
     return null; // Don't render anything if no news articles exist
@@ -124,42 +122,4 @@ export default async function LatestNews() {
       </div>
     </section>
   );
-}
-
-async function getLatestNews() {
-  try {
-    const postsDirectory = path.join(process.cwd(), "news");
-    const filenames = await fs.readdir(postsDirectory);
-    
-    // Read and parse all post data
-    const allPostsData = filenames.map(async (fileName) => {
-      const slug = fileName.replace(/\.md$/, "");
-      const fullPath = path.join(postsDirectory, fileName);
-      const fileContents = await fs.readFile(fullPath, "utf8");
-      const matterResult = matter(fileContents);
-
-      return {
-        slug,
-        date: matterResult.data.date,
-        title: matterResult.data.title,
-        image: matterResult.data.image,
-      };
-    });
-
-    const news = await Promise.all(allPostsData);
-    
-    // Sort and slice top 3
-    return news
-      .sort((a, b) => {
-        if (a.date < b.date) {
-          return 1;
-        } else {
-          return -1;
-        }
-      })
-      .slice(0, 3);
-  } catch (error) {
-    console.error("Error reading news directory in LatestNews component:", error);
-    return [];
-  }
 }

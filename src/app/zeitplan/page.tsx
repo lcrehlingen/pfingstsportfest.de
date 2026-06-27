@@ -3,13 +3,13 @@ import Title from "@/components/Title";
 import { EVENT_DATE, LIVE_RESULTS } from "@/utils/constants";
 import { daysAway } from "@/utils/date";
 import Link from "next/link";
+import { constructMetadata } from "@/utils/seo";
 
-export const metadata = {
+export const metadata = constructMetadata({
   title: "Zeitplan & Startlisten",
-  openGraph: {
-    title: "Zeitplan & Startlisten",
-  },
-};
+  description: "Der offizielle Zeitplan, Ablauf und Startlisten für das Internationale Pfingstsportfest in Rehlingen.",
+  path: "/zeitplan",
+});
 
 export default function ZeitplanPage() {
   const daysAwayEvent = daysAway(EVENT_DATE);

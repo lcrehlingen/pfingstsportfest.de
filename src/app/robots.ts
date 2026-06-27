@@ -1,12 +1,10 @@
 import { MetadataRoute } from "next";
+import { getBaseUrl } from "@/utils/url";
 
 export const dynamic = "force-static";
 
 export default function robots(): MetadataRoute.Robots {
-  const vercel = process.env.VERCEL_URL ? true : false;
-  const baseUrl = vercel
-    ? "https://" + process.env.VERCEL_URL
-    : "https://pfingstsportfest.de";
+  const baseUrl = getBaseUrl("https://pfingstsportfest.de");
 
   return {
     rules: {
@@ -22,4 +20,3 @@ export default function robots(): MetadataRoute.Robots {
     ],
   };
 }
-

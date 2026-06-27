@@ -1,15 +1,11 @@
 import { MetadataRoute } from "next";
-import { promises as fs } from "fs";
-import path from "path";
-import matter from "gray-matter";
+import { getAllNews } from "@/utils/news";
+import { getBaseUrl } from "@/utils/url";
 
 export const dynamic = "force-static";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const vercel = process.env.VERCEL_URL ? true : false;
-  const baseUrl = vercel
-    ? "https://" + process.env.VERCEL_URL
-    : "https://pfingstsportfest.de";
+  const baseUrl = getBaseUrl("https://pfingstsportfest.de");
 
   // Static routes
   const staticRoutes = [
@@ -30,29 +26,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: route === "" ? 1.0 : 0.8,
   }));
 
-  // Dynamic news routes
+  // Dynamic news routes fetched via centralized service
   let newsEntries: MetadataRoute.Sitemap = [];
   try {
-    const newsDirectory = path.join(process.cwd(), "news");
-    const filenames = await fs.readdir(newsDirectory);
-    const mdFiles = filenames.filter((filename) => filename.endsWith(".md"));
-
-    const dynamicNews = await Promise.all(
-      mdFiles.map(async (filename) => {
-        const slug = filename.replace(/\.md$/, "");
-        const filePath = path.join(newsDirectory, filename);
-        const fileContent = await fs.readFile(filePath, "utf8");
-        const { data } = matter(fileContent);
-        
-        return {
-          url: `${baseUrl}/news/${slug}`,
-          lastModified: data.date ? new Date(data.date) : new Date(),
-          changeFrequency: "weekly" as const,
-          priority: 0.6,
-        };
-      })
-    );
-    newsEntries = dynamicNews;
+    const news = await getAllNews();
+    newsEntries = news.map((article) => ({
+      url: `${baseUrl}/news/${article.slug}`,
+      lastModified: article.date ? new Date(article.date) : new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.6,
+    }));
   } catch (error) {
     console.error("Failed to generate sitemap news entries:", error);
   }

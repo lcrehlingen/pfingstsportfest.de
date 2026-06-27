@@ -1,13 +1,10 @@
-import { promises as fs } from "fs";
-import path from "path";
-import matter from "gray-matter";
-import { remark } from "remark";
-import html from "remark-html";
-import remarkGfm from "remark-gfm";
 import ContentContainer from "@/components/ContentContainer";
 import Link from "next/link";
 import ExportedImage from "next-image-export-optimizer";
 import type { Metadata } from "next";
+import { getNewsBySlug, getNewsSlugs } from "@/utils/news";
+import { getBaseUrl } from "@/utils/url";
+import { constructMetadata } from "@/utils/seo";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -19,52 +16,24 @@ export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const { title, date, image, description } = await getNews(slug);
-  const vercel = process.env.VERCEL_URL ? true : false;
-  const url = vercel
-    ? "https://" + process.env.VERCEL_URL
-    : "http://localhost:3000";
-  return {
+  const { title, date, image, description } = await getNewsBySlug(slug);
+  return constructMetadata({
     title,
     description,
-    alternates: {
-      canonical: `/news/${slug}`,
-    },
-    openGraph: {
-      title,
-      description,
-      type: "article",
-      modifiedTime: date,
-      url: url + "/news/" + slug,
-      images: {
-        height: 1080,
-        width: 1920,
-        url: url + "/" + image,
-      },
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-      images: {
-        height: 1080,
-        width: 1920,
-        url: url + "/" + image,
-      }
-    }
-  };
+    path: `/news/${slug}`,
+    image,
+    type: "article",
+    modifiedTime: date,
+  });
 }
 
 export default async function NewsPage({
   params,
 }: PageProps) {
   const { slug } = await params;
-  const { title, date, image, content, photographer, description } = await getNews(slug);
+  const { title, date, image, content, photographer, description } = await getNewsBySlug(slug);
 
-  const vercel = process.env.VERCEL_URL ? true : false;
-  const baseUrl = vercel
-    ? "https://" + process.env.VERCEL_URL
-    : "https://pfingstsportfest.de";
+  const baseUrl = getBaseUrl("https://pfingstsportfest.de");
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -171,7 +140,7 @@ export default async function NewsPage({
               height={1080}
               alt={title}
               className="w-full h-full object-cover"
-              preload
+              priority
             />
             {photographer && (
               <div className="absolute bottom-4 right-4 px-3 py-1.5 rounded-lg bg-black/60 backdrop-blur-md border border-white/10 text-[11px] font-medium text-gray-300 flex items-center gap-1.5 shadow-lg select-none">
@@ -232,41 +201,7 @@ export default async function NewsPage({
   );
 }
 
-async function getNews(slug: string) {
-  const markdownWithMeta = await fs.readFile(
-    path.join("news", slug + ".md"),
-    "utf-8"
-  );
-  const matterResult = matter(markdownWithMeta);
-  const content = await remark()
-    .use(remarkGfm)
-    .use(html)
-    .process(matterResult.content);
-
-  // Generate plain-text excerpt for metadata description
-  const plainText = matterResult.content
-    .replace(/[#*`_\[\]()\-]/g, "")
-    .replace(/\s+/g, " ")
-    .trim();
-  const description = plainText.length > 155 ? plainText.substring(0, 155).trim() + "..." : plainText;
-
-  return {
-    slug,
-    content: content.toString(),
-    description,
-    date: matterResult.data.date,
-    title: matterResult.data.title,
-    image: matterResult.data.image,
-    photographer: matterResult.data.photographer || null,
-  };
-}
-
 export async function generateStaticParams() {
-  const postsDirectory = path.join(process.cwd(), "news");
-  const filenames = await fs.readdir(postsDirectory);
-  return [
-    ...filenames.map((filename) => ({
-      slug: filename.replace(/\.md$/, ""),
-    })),
-  ];
+  const slugs = await getNewsSlugs();
+  return slugs.map((slug) => ({ slug }));
 }

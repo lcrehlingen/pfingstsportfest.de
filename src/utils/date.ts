@@ -10,8 +10,7 @@ export function daysAway(date: Date) {
   }
 
 export function formatEditionDate() {
-    // @ts-ignore
-   if(EDITION_DATE_FROM === EDITION_DATE_TO){
+   if ((EDITION_DATE_FROM as string) === (EDITION_DATE_TO as string)) {
     return new Date(EDITION_DATE_FROM).toLocaleDateString("de-DE", {
                         year: "numeric",
                         month: "long",

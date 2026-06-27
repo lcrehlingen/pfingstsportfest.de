@@ -5,14 +5,9 @@ import { useEffect, useState } from "react";
 import OutsideClickHandler from "./OutsideClickHandler";
 import { usePathname } from "next/navigation";
 import { TITLE, EDITION } from "@/data";
+import { MAIN_NAV_LINKS } from "@/utils/navigation";
 
 export default function Navbar() {
-  const links = [
-    { name: "Aktuelles", href: "/news" },
-    { name: "Ergebnisse", href: "/ergebnisse" },
-    { name: "Rekorde", href: "/rekorde" },
-    { name: "Sponsoren", href: "/#sponsoren" },
-  ];
   const [opened, setOpened] = useState(false);
   const pathname = usePathname();
 
@@ -48,7 +43,7 @@ export default function Navbar() {
             {/* Desktop Navigation Links & Action CTA */}
             <div className="hidden md:flex items-center gap-6">
               <ul className="flex items-center gap-1.5 font-wa-bold font-semibold">
-                {links.map((link) => {
+                {MAIN_NAV_LINKS.map((link) => {
                   const isHash = link.href.startsWith("/#");
                   const isActive = !isHash && (pathname === link.href || pathname?.startsWith(link.href + "/"));
                   return (
@@ -127,7 +122,7 @@ export default function Navbar() {
               }`}
             >
               <ul className="flex flex-col gap-2 font-wa-bold font-semibold">
-                {links.map((link) => {
+                {MAIN_NAV_LINKS.map((link) => {
                   const isHash = link.href.startsWith("/#");
                   const isActive = !isHash && (pathname === link.href || pathname?.startsWith(link.href + "/"));
                   return (
