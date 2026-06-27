@@ -383,26 +383,31 @@ export default function CompetitionResultsModal({
                           </thead>
                           <tbody className="divide-y divide-white/5 font-medium">
                             {raceItem.results.map((row, rowIdx) => {
-                              const athlete = row.athletes && row.athletes[0];
-                              const athleteName = athlete
-                                ? `${athlete.firstname} ${athlete.lastname}`
-                                : "Unbekannt";
-                              
                               return (
                                 <tr key={rowIdx} className="hover:bg-white/5 transition duration-200">
                                   <td className="py-3 px-4 text-center font-mono font-bold text-gray-300">
                                     {row.place && row.place >= 0 ? row.place : "-"}
                                   </td>
                                   <td className="py-3 px-4 text-sm font-extrabold text-white">
-                                    {athlete ? (
-                                      <button
-                                        onClick={() => handleOpenAthlete(athleteName, athlete.id)}
-                                        className="hover:underline cursor-pointer text-left focus:outline-hidden focus:text-tourLightOrange transition"
-                                      >
-                                        {athleteName}
-                                      </button>
+                                    {row.athletes && row.athletes.length > 0 ? (
+                                      <div className="flex flex-wrap gap-x-2 gap-y-1">
+                                        {row.athletes.map((ath, athIdx) => {
+                                          const name = `${ath.firstname} ${ath.lastname}`;
+                                          return (
+                                            <div key={ath.id} className="inline-flex items-center">
+                                              <button
+                                                onClick={() => handleOpenAthlete(name, ath.id)}
+                                                className="hover:underline cursor-pointer text-left focus:outline-hidden focus:text-tourLightOrange transition"
+                                              >
+                                                {name}
+                                              </button>
+                                              {athIdx < row.athletes.length - 1 && <span className="text-gray-400 ml-1">,</span>}
+                                            </div>
+                                          );
+                                        })}
+                                      </div>
                                     ) : (
-                                      athleteName
+                                      "Unbekannt"
                                     )}
                                   </td>
                                   <td className="py-3 px-4">
