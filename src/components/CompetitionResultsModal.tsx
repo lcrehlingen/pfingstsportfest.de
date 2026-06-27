@@ -422,7 +422,7 @@ export default function CompetitionResultsModal({
                                     {showWindColumn && (
                                       <td className="py-3 px-4 text-right text-xs font-mono text-gray-300">
                                         {row.place !== null && row.place >= 0 && row.wind !== null && row.wind !== undefined
-                                          ? `${row.wind > 0 ? "+" : ""}${row.wind}`
+                                          ? `${row.wind > 0 ? "+" : ""}${row.wind.toFixed(1)}`
                                           : "-"}
                                       </td>
                                     )}

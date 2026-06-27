@@ -143,6 +143,13 @@ export default function AthleteModal({ athleteName, athleteId, onClose }: Athlet
     return `${place}. Platz`;
   };
 
+  // Helper to format wind always in x.x format (exactly 1 decimal place) with optional plus prefix
+  const formatWind = (wind: number | null | undefined) => {
+    if (wind === null || wind === undefined) return "";
+    const formattedWind = wind.toFixed(1);
+    return ` (${wind > 0 ? "+" : ""}${formattedWind} m/s)`;
+  };
+
   return (
     <div className="fixed inset-0 z-[110] flex items-center justify-center p-4 bg-black/75 backdrop-blur-md animate-fadeIn">
       {/* Modal Backdrop Click Shield */}
@@ -273,7 +280,7 @@ export default function AthleteModal({ athleteName, athleteId, onClose }: Athlet
                             </span>
                           </div>
                           <div className="flex flex-col items-end gap-0.5 shrink-0 font-mono">
-                            <span className="text-sm font-black text-[#C1FB6E]">{pb.mark} {pb.wind ? `(${pb.wind > 0 ? "+" : ""}${pb.wind} m/s)` : ""}</span>
+                            <span className="text-sm font-black text-[#C1FB6E]">{pb.mark}{formatWind(pb.wind)}</span>
                             <span className="text-[10px] text-gray-400">{formatDate(pb.date)}</span>
                           </div>
                         </li>
@@ -297,7 +304,7 @@ export default function AthleteModal({ athleteName, athleteId, onClose }: Athlet
                             </span>
                           </div>
                           <div className="flex flex-col items-end gap-0.5 shrink-0 font-mono">
-                            <span className="text-sm font-black text-[#C1FB6E]">{sb.mark} {sb.wind ? `(${sb.wind > 0 ? "+" : ""}${sb.wind} m/s)` : ""}</span>
+                            <span className="text-sm font-black text-[#C1FB6E]">{sb.mark}{formatWind(sb.wind)}</span>
                             <span className="text-[10px] text-gray-400">{formatDate(sb.date)}</span>
                           </div>
                         </li>
