@@ -56,3 +56,26 @@ html,body
     overflow-x: hidden; 
     scroll-behavior: smooth;
 }
+
+::selection {
+  background-color: rgba(250, 69, 23, 0.3);
+  color: #ffffff;
+}
+
+@utility text-glow-orange {
+  text-shadow: 0 0 15px rgba(250, 69, 23, 0.4);
+}
+
+@utility text-glow-green {
+  text-shadow: 0 0 15px rgba(193, 251, 110, 0.45);
+}
+
+@utility shadow-glow-green {
+  box-shadow: 0 0 25px rgba(193, 251, 110, 0.2);
+}
+
+@utility shadow-glow-orange {
+  box-shadow: 0 0 25px rgba(250, 69, 23, 0.2);
+}
+
+

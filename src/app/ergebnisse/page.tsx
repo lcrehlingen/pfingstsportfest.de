@@ -21,7 +21,7 @@ export default async function Ergebnisse() {
     <ContentContainer>
       <PageHeader
         title="Ergebnisse"
-        description="Verfolgen Sie die aktuellen Zeiten, Weiten und Höhen des Pfingstsportfests live oder stöbern Sie im Archiv aller PDF-Ergebnislisten seit dem Jahr 2000."
+        description="Verfolgen Sie die aktuellen Zeiten, Weiten und Höhen des Pfingstsportfests live oder stöbern Sie im Archiv aller Ergebnislisten seit dem Jahr 2000."
         className="mb-4"
       />
 

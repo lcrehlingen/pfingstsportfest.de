@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { RecordItem, COUNTRY_MAP, filterRecords } from "@/utils/records";
+import { RecordItem, translateCountry, filterRecords } from "@/utils/records";
 import SearchInput from "@/components/SearchInput";
 import EmptyState from "@/components/EmptyState";
 import GlassCard from "@/components/GlassCard";
@@ -122,7 +122,7 @@ export default function RecordsTable({ recordsM, recordsW }: RecordsTableProps) 
                 {filteredRecords.map((record, index) => (
                   <tr
                     key={index}
-                    className="hover:bg-white/5 transition duration-200 group"
+                    className="hover:bg-white/10 hover:shadow-inner transition-all duration-300 group cursor-default"
                   >
                     <td className="py-4 px-6 font-bold text-gray-300 text-base">
                       {record.Disziplin}
@@ -141,7 +141,7 @@ export default function RecordsTable({ recordsM, recordsW }: RecordsTableProps) 
                     </td>
                     <td className="py-4 px-6">
                       <span className="inline-flex items-center px-2.5 py-1 rounded-md bg-white/10 border border-white/5 text-xs text-gray-300 font-bold tracking-wide">
-                        {COUNTRY_MAP[record.Land] || record.Land}
+                        {translateCountry(record.Land)}
                       </span>
                     </td>
                     <td className="py-4 px-6 text-right font-black text-base text-[#C1FB6E]">
@@ -186,7 +186,7 @@ export default function RecordsTable({ recordsM, recordsW }: RecordsTableProps) 
                     </h4>
                   </div>
                   <span className="inline-flex items-center px-2.5 py-1 rounded-md bg-white/10 border border-white/5 text-xs text-gray-300 font-bold tracking-wide">
-                    {COUNTRY_MAP[record.Land] || record.Land}
+                    {translateCountry(record.Land)}
                   </span>
                 </div>
 

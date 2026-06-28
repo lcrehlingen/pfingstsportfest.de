@@ -33,6 +33,15 @@ export const COUNTRY_MAP: Record<string, string> = {
 };
 
 /**
+ * Translates a country code to its full display name if available,
+ * otherwise returns the fallback/original code.
+ */
+export function translateCountry(code: string | null | undefined): string {
+  if (!code) return "";
+  return COUNTRY_MAP[code] || code;
+}
+
+/**
  * Filters standard record items by search query.
  */
 export function filterRecords(records: RecordItem[], searchQuery: string): RecordItem[] {
@@ -40,7 +49,7 @@ export function filterRecords(records: RecordItem[], searchQuery: string): Recor
   if (!query) return records;
 
   return records.filter((record) => {
-    const mappedCountry = (COUNTRY_MAP[record.Land] || record.Land).toLowerCase();
+    const mappedCountry = translateCountry(record.Land).toLowerCase();
     return (
       record.Disziplin.toLowerCase().includes(query) ||
       record.Name.toLowerCase().includes(query) ||

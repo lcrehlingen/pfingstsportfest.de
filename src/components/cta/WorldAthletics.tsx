@@ -35,9 +35,9 @@ export default function WorldAthletics() {
 
           {/* Premium Highlight Metric Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
-            <div className="p-5 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-xs">
+            <div className="p-5 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-xs shadow-inner">
               <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider block">Gesamt-Preisgeld</span>
-              <span className="text-3xl font-extrabold text-[#C1FB6E] mt-1 block">
+              <span className="text-3xl font-extrabold text-[#C1FB6E] mt-1 block text-glow-green">
                 {new Intl.NumberFormat("de-DE", {
                   style: "currency",
                   currency: "EUR",
@@ -100,14 +100,14 @@ export default function WorldAthletics() {
 
         {/* Right Side: Logos in Premium Card Displays */}
         <div className="grid grid-cols-2 items-center justify-center gap-6 w-full mt-4 lg:mt-0">
-          <div className="relative group p-6 bg-white/5 border border-white/10 rounded-3xl backdrop-blur-xs flex items-center justify-center hover:bg-white/10 hover:border-white/20 transition-all duration-300 transform hover:-translate-y-1">
+          <div className="relative group p-6 bg-white/5 border border-white/10 rounded-3xl backdrop-blur-xs flex items-center justify-center hover:bg-white/10 hover:border-white/20 hover:shadow-glow-orange transition-all duration-300 transform hover:-translate-y-1">
             <ExportedImage
               className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto object-contain"
               src={wactSilver}
               alt="World Athletics Continental Tour Silver Logo"
             />
           </div>
-          <div className="relative group p-6 bg-white/5 border border-white/10 rounded-3xl backdrop-blur-xs flex items-center justify-center hover:bg-white/10 hover:border-white/20 transition-all duration-300 transform hover:-translate-y-1">
+          <div className="relative group p-6 bg-white/5 border border-white/10 rounded-3xl backdrop-blur-xs flex items-center justify-center hover:bg-white/10 hover:border-white/20 hover:shadow-glow-green transition-all duration-300 transform hover:-translate-y-1">
             <ExportedImage
               className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto object-contain"
               src={europeanAthltics}

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import GlassCard from "./GlassCard";
 import AthleteModal from "./AthleteModal";
 import EmptyState from "./EmptyState";
-import { COUNTRY_MAP } from "@/utils/records";
+import { translateCountry } from "@/utils/records";
 import { WORLD_ATHLETICS_API } from "@/utils/constants";
 
 interface Athlete {
@@ -228,7 +228,7 @@ export default function CompetitionResultsModal({
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 md:top-6 md:right-6 p-2 rounded-xl text-gray-400 hover:text-white hover:bg-white/5 border border-transparent hover:border-white/5 transition duration-300 cursor-pointer z-20"
+          className="absolute top-4 right-4 md:top-6 md:right-6 p-2 rounded-xl text-gray-400 hover:text-white hover:bg-white/5 border border-transparent hover:border-white/5 transform hover:rotate-90 hover:scale-110 active:scale-95 transition-all duration-300 cursor-pointer z-20"
           aria-label="Schließen"
         >
           <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -385,7 +385,7 @@ export default function CompetitionResultsModal({
                             <tbody className="divide-y divide-white/5 font-medium">
                               {raceItem.results.map((row, rowIdx) => {
                                 return (
-                                  <tr key={rowIdx} className="hover:bg-white/5 transition duration-200">
+                                  <tr key={rowIdx} className="hover:bg-white/10 hover:shadow-inner transition-all duration-300 cursor-default">
                                     <td className="py-3 px-4 text-center font-mono font-bold text-gray-300">
                                       {row.place && row.place >= 0 ? row.place : "-"}
                                     </td>
@@ -413,7 +413,7 @@ export default function CompetitionResultsModal({
                                     </td>
                                     <td className="py-3 px-4">
                                       <span className="inline-flex items-center px-1.5 py-0.5 rounded-sm bg-white/10 text-[10px] text-gray-300 font-bold">
-                                        {row.country || COUNTRY_MAP[row.country]}
+                                        {translateCountry(row.country)}
                                       </span>
                                     </td>
                                     <td className="py-3 px-4 text-right font-black text-sm text-[#C1FB6E]">

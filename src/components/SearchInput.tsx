@@ -39,7 +39,7 @@ export default function SearchInput({
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
-        className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 hover:border-white/20 focus:border-tourLightOrange rounded-xl text-sm font-medium text-white placeholder-gray-400 focus:outline-hidden focus:ring-2 focus:ring-tourLightOrange/20 transition duration-300"
+        className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 hover:border-white/20 focus:border-tourLightOrange rounded-xl text-sm font-medium text-white placeholder-gray-400 focus:outline-hidden focus:ring-4 focus:ring-tourLightOrange/15 focus:shadow-glow-orange transition duration-300"
       />
       {value && (
         <button

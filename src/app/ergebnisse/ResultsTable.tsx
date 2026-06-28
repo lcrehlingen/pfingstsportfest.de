@@ -83,7 +83,7 @@ export default function ResultsTable({
       
       {/* Live / Meet Season Active Dashboard */}
       {daysAwayEvent < 21 && (
-        <div className="flex flex-col gap-4 p-5 bg-gradient-to-r from-red-950/40 to-tourOrange/15 border border-red-500/20 rounded-2xl backdrop-blur-xs animate-pulse">
+        <div className="flex flex-col gap-4 p-5 bg-gradient-to-r from-red-950/40 to-tourOrange/15 border border-red-500/30 rounded-2xl backdrop-blur-md animate-pulse shadow-glow-orange">
           <div className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-red-500 animate-ping"></span>
             <span className="text-xs font-black uppercase tracking-widest text-red-400">Live-Saison Aktiv</span>

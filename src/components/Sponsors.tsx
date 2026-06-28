@@ -33,7 +33,7 @@ export default function Sponsors() {
               {PUBLIC_PARTNERS.map((partner, index) => (
                 <div 
                   key={index}
-                  className="bg-white border border-gray-100 rounded-2xl p-4 flex items-center justify-center aspect-4/3 shadow-xs hover:shadow-md hover:border-gray-200 transition-all duration-300 group transform hover:-translate-y-0.5"
+                  className="bg-white border border-gray-100 rounded-2xl p-4 flex items-center justify-center aspect-4/3 shadow-xs hover:shadow-lg hover:border-tourLightOrange/30 hover:scale-[1.03] hover:shadow-glow-orange/5 transition-all duration-500 group transform hover:-translate-y-0.5"
                 >
                   <ExportedImage
                     src={partner.src}
@@ -58,7 +58,7 @@ export default function Sponsors() {
               {MAIN_SPONSORS.map((sponsor, index) => (
                 <div 
                   key={index}
-                  className="bg-white border border-gray-100 rounded-2xl p-4 flex items-center justify-center aspect-4/3 shadow-xs hover:shadow-md hover:border-gray-200 transition-all duration-300 group transform hover:-translate-y-0.5"
+                  className="bg-white border border-gray-100 rounded-2xl p-4 flex items-center justify-center aspect-4/3 shadow-xs hover:shadow-lg hover:border-tourLightOrange/30 hover:scale-[1.03] hover:shadow-glow-orange/5 transition-all duration-500 group transform hover:-translate-y-0.5"
                 >
                   <ExportedImage
                     src={sponsor.src}

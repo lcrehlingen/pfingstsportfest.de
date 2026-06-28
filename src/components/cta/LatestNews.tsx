@@ -48,7 +48,7 @@ export default async function LatestNews() {
         {/* News Grid */}
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {news.map((item) => (
-            <article key={item.slug} className="group flex flex-col bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            <article key={item.slug} className="group flex flex-col bg-white rounded-2xl border border-gray-100 hover:border-tourLightOrange/30 overflow-hidden shadow-xs hover:shadow-xl hover:shadow-glow-orange/5 transition-all duration-300 transform hover:-translate-y-1">
               <Link href={`/news/${item.slug}`} className="flex flex-col h-full">
                 {/* Image Container with Zoom effect */}
                 <div className="relative aspect-video w-full overflow-hidden bg-gray-100">

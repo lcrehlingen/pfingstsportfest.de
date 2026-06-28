@@ -6,10 +6,17 @@ import OutsideClickHandler from "./OutsideClickHandler";
 import { usePathname } from "next/navigation";
 import { TITLE, EDITION } from "@/data";
 import { MAIN_NAV_LINKS } from "@/utils/navigation";
+import { EVENT_DATE } from "@/utils/constants";
+import { daysAway } from "@/utils/date";
 
 export default function Navbar() {
   const [opened, setOpened] = useState(false);
   const pathname = usePathname();
+  const [isEventDay, setIsEventDay] = useState(false);
+
+  useEffect(() => {
+    setIsEventDay(daysAway(EVENT_DATE) === 0);
+  }, []);
 
   useEffect(() => {
     if (opened) {
@@ -23,7 +30,7 @@ export default function Navbar() {
         setOpened(false);
       }}
     >
-      <header className="sticky top-0 z-50 w-full bg-tourDarkBlue/90 backdrop-blur-md border-b border-white/10 transition-all duration-300">
+      <header className="sticky top-0 z-50 w-full bg-tourDarkBlue/75 backdrop-blur-xl border-b border-white/10 transition-all duration-300">
         <div className="mx-auto max-w-(--breakpoint-xl) px-4 2xl:px-0 w-full relative">
           <nav className="w-full text-white py-4 text-lg flex justify-between items-center">
             
@@ -50,13 +57,19 @@ export default function Navbar() {
                     <li key={link.name}>
                       <Link
                         href={link.href}
-                        className={`px-3.5 py-2 rounded-xl text-base font-bold tracking-wide transition-all duration-300 block border border-transparent ${
+                        className={`px-3.5 py-2 rounded-xl text-base font-bold tracking-wide transition-all duration-300 flex items-center border border-transparent transform hover:scale-105 active:scale-95 ${
                           isActive
                             ? "text-white bg-white/10 border-white/5"
                             : "text-gray-300 hover:text-white hover:bg-white/5"
                         }`}
                       >
                         {link.name}
+                        {link.name === "Ergebnisse" && isEventDay && (
+                          <span className="relative flex h-2 w-2 ml-1.5 shrink-0">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                          </span>
+                        )}
                       </Link>
                     </li>
                   );
@@ -129,13 +142,19 @@ export default function Navbar() {
                     <li key={link.name}>
                       <Link
                         href={link.href}
-                        className={`px-4 py-3 rounded-xl text-base font-bold tracking-wide transition-all duration-300 block ${
+                        className={`px-4 py-3 rounded-xl text-base font-bold tracking-wide transition-all duration-300 flex items-center ${
                           isActive
                             ? "text-white bg-white/10"
                             : "text-gray-300 hover:text-white hover:bg-white/5"
                         }`}
                       >
                         {link.name}
+                        {link.name === "Ergebnisse" && isEventDay && (
+                          <span className="relative flex h-2 w-2 ml-1.5 shrink-0">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                          </span>
+                        )}
                       </Link>
                     </li>
                   );

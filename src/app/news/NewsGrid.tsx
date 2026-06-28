@@ -43,7 +43,7 @@ export default function NewsGrid({ news }: NewsGridProps) {
           {paginatedNews.map((item) => (
             <article
               key={item.slug}
-              className="group flex flex-col bg-white/5 border border-white/10 rounded-2xl overflow-hidden shadow-xs hover:shadow-2xl hover:border-white/20 transition-all duration-300 transform hover:-translate-y-1 backdrop-blur-xs"
+              className="group flex flex-col bg-white/5 border border-white/10 hover:border-tourLightOrange/30 rounded-2xl overflow-hidden shadow-xs hover:shadow-2xl hover:shadow-glow-orange/5 transition-all duration-300 transform hover:-translate-y-1 backdrop-blur-md"
             >
               <Link href={`/news/${item.slug}`} className="flex flex-col h-full">
                 {/* Card Cover Image with zoom effect */}

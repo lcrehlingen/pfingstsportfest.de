@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import GlassCard from "./GlassCard";
 import EmptyState from "./EmptyState";
-import { COUNTRY_MAP } from "@/utils/records";
+import { translateCountry } from "@/utils/records";
 import { WORLD_ATHLETICS_API } from "@/utils/constants";
 
 interface Performance {
@@ -163,7 +163,7 @@ export default function AthleteModal({ athleteName, athleteId, onClose }: Athlet
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 md:top-6 md:right-6 p-2 rounded-xl text-gray-400 hover:text-white hover:bg-white/5 border border-transparent hover:border-white/5 transition duration-300 cursor-pointer z-20"
+          className="absolute top-4 right-4 md:top-6 md:right-6 p-2 rounded-xl text-gray-400 hover:text-white hover:bg-white/5 border border-transparent hover:border-white/5 transform hover:rotate-90 hover:scale-110 active:scale-95 transition-all duration-300 cursor-pointer z-20"
           aria-label="Schließen"
         >
           <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -203,7 +203,7 @@ export default function AthleteModal({ athleteName, athleteId, onClose }: Athlet
 
                 <div className="flex flex-wrap items-center gap-3 mt-1.5">
                   <span className="inline-flex items-center px-2.5 py-1 rounded-md bg-white/10 border border-white/5 text-xs text-gray-300 font-bold tracking-wide">
-                    🏳️ {COUNTRY_MAP[profile.country] || profile.country}
+                    🏳️ {translateCountry(profile.country)}
                   </span>
                   {profile.birthdate && (
                     <span className="text-xs text-gray-400 font-medium">
