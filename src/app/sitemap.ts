@@ -15,7 +15,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/ergebnisse",
     "/news",
     "/presse",
-    "/pressespiegel",
     "/ranking",
     "/rekorde",
     "/zeitplan",
